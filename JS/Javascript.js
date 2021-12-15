@@ -3529,7 +3529,8 @@
 //       this.render();
 //       this.timer = setInterval(() => this.render(), 1000);
 //     }
-//   }
+// }
+
  
 
 // class Animal {
@@ -5481,8 +5482,1672 @@
 
 // // setTimeout( ()=>{obj.say()},2000)
 
-function sum(a,b){
-    console.log(a*b)
-}
-let double = sum.bind(null,2)
-let triple = sum.bind(null,3)
+// function sum(a,b){
+//     console.log(a*b)
+// }
+// let double = sum.bind(null,2)
+// let triple = sum.bind(null,3)
+
+// function sayHi() {
+//     alert( this.name );
+//   }
+//   sayHi.test = 5;
+  
+//   let bound = sayHi.bind({
+//     name: "Вася"
+//   });
+  
+//   alert( bound() )
+
+// function askPassword(ok, fail) {
+//     let password = prompt("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+//   }
+  
+//   let user = {
+//     name: 'Вася',
+  
+//     ok() {
+//       alert(`${this.name} logged in`);
+//     },
+  
+//     fail() {
+//       alert(`${this.name} failed to log in`);
+//     },
+  
+//   };
+// //   user.ok=user.ok.bind(user)
+
+// for(let key in user){
+//     if(typeof user[key]==`function`){
+//         user[key]=user[key].bind(user)
+//     }
+// }
+//   askPassword(user.ok, user.fail);
+
+// function askPassword(ok, fail) {
+//     let password = prompt("Password?", '');
+//     if (password == "rockstar") ok();
+//     else fail();
+//   }
+  
+//   let user = {
+//     name: 'John',
+  
+//     login(result) {
+//       alert( this.name + (result ? ' logged in' : ' failed to log in') );
+//     }
+//   };
+  
+//   askPassword(user.login.bind(user,true),user.login.bind(user,false)); // ?
+
+// function pow(x,y){
+//     if(y===1){
+//         return x
+//     }return x*pow(x,y-1)
+
+// }
+
+// console.log(pow(2,3))
+
+// let company = {
+//     sales: [{
+//       name: 'John',
+//       salary: 1000
+//     }, {
+//       name: 'Alice',
+//       salary: 600
+//     }],
+  
+//     development: {
+//       sites: [{
+//         name: 'Peter',
+//         salary: 2000
+//       }, {
+//         name: 'Alex',
+//         salary: 1800
+//       }],
+  
+//       internals: [{
+//         name: 'Jack',
+//         salary: 1300
+//       }]
+//     }
+//   };
+
+//   function count(department){
+    
+//       if(Array.isArray(department)){
+//           return department.reduce((prev,next)=>prev+next.salary,0)
+//       } else{
+//         let sum = 0
+//           for(let key of Object.values(department)){
+//              sum+=count(key)
+//           }
+//           return sum
+//         }
+        
+//       }
+//   console.log(count(company))
+
+
+// function sumto(n){
+//     if(n==1){
+//         return n
+//     }else return n+sumto(n-1)
+// }
+// console.log(sumto(10000))
+
+
+// function fac (n){
+//     if(n==1){
+//         return n
+//     }else return n*fac(n-1)
+// }
+// console.log(fac(5))
+
+// function fib(n){
+//     if(n<=1){
+//         return n 
+//     }else return(fib(n-2)+fib(n-1))
+// }
+// console.log(fib(7))
+
+// let list = {
+//     value: 1,
+//     next: {
+//       value: 2,
+//       next: {
+//         value: 3,
+//         next: {
+//           value: 4,
+//           next: null
+//         }
+//       }
+//     }
+//   };
+
+//   function get(list){
+//     if(typeof Object.values(list)=='number'){
+//         return Object.keys(list)
+//     }else 
+//     for(let key in list){
+//         return get(key)
+//     }
+//   }
+//   console.log(get(list))
+
+// function find(a,b){
+//     if(Math.max(a,b)%Math.min(a,b)==0){
+//         return Math.min(a,b)
+//     } else return find(Math.max(a,b),Math.min(a,b)--)
+   
+// }
+// find(10,20)
+
+// function find(a,b,c=b){
+    
+//     if(a%c==0 && b%c==0){
+//         return c
+//     }else  return find(a,b,c-1)
+// }
+// console.log(find(1,1))
+
+// let a = 16;
+// let b = 30;
+// for(let i=a;i>0;i--){
+//     if(b%i==0){
+//         console.log(i); break 
+//     }
+   
+// }
+
+// function repeat(str,num){
+//     let newstr = " "
+//     if(num>1){
+//         return str+repeat(str,--num)
+        
+//     }else return str
+// }
+// console.log(repeat("h",5))
+
+// function sum(n){
+//     let count=0
+//     if(n<1){
+//        return count+=n%10
+        
+//     }else  return sum(count)
+    
+// }
+// console.log(sum(12345))
+
+// function digital_root(n) {
+//     return (n - 1) %9+1;
+//   }
+//   console.log(digital_root(123456))
+
+// function spam(count){
+   
+//    if(count>1){
+//        return "hue"+spam(count-1,"hue")
+//    }return "hue"
+//   }
+//   console.log(spam(8))
+
+// function num(n){
+//     return Number(n.toString().split("").map(item=>item*item).join(""))
+// }
+// console.log(num(3212))
+
+// function x(num){
+    
+//     return function(num2){
+//         return num+num2
+//     }
+// }
+
+// console.log(x(2)(3))
+// let newarr =[100,3,5,677]
+// let arr = [3,5,677,100,11,12,1,2]
+// console.log(arr.filter(check))
+// function check(arr,newarr){
+// for(let i = 0;i<=arr.length;i++){
+//     if(arr[i]=newarr[i])
+//     console.log(arr[i])
+// }
+// }
+// check(arr,newarr)
+// console.log(check(arr,newarr))
+
+
+// function inbewteen(arr){
+//     let newarr = []
+//     return function(min,max){
+//         return arr.filter (item=>item>min && item<max)
+//     }
+
+// }
+// let x = inbewteen(arr)
+// console.log(x(2,7))
+
+// let users = [
+//     { name: "John",age: 20, surname: "Johnson" },
+//     { name: "Pete",age: 18, surname: "Peterson" },
+//     { name: "Ann",age: 19, surname: "Hathaway" }
+//   ];
+// //   console.log(users.sort((a,b)=>a.surname>b.aurname?1:-1))
+
+//   function sortby(arr){
+//     return function(x){
+//         arr.sort((a,b)=>a[x]>b[x]?1:-1)
+//         return arr
+//     }
+//   }
+//   console.log(sortby(users)('age'))
+
+// function cons(x){
+//     return ((a,b)=>a[x]>b[x]?1:-1)
+        
+    
+// }
+// console.log(users.sort(cons('age')))
+
+// function makeArmy() {
+//     let shooters = [];
+  
+//     let i = 0;
+//     while (i < 10) {
+//       let shooter = function() { // функция shooter
+//         alert( i ); // должна выводить порядковый номер
+//         shooters.push(shooter);
+//         i++;
+//       };
+      
+      
+//     }
+  
+//     return shooters;
+//   }
+  
+//   let army = makeArmy();
+  
+//   army[0](); // у 0-го стрелка будет номер 10
+//   army[5]();
+
+//   function make(){
+//       let shooters = []
+//       return function(){
+//           let i=0;
+//           while (i<10){
+//             shooters.push(i);
+//             i++
+            
+//           }
+//           return shooters;
+//       }
+//   }
+
+// function add(n){
+//     return function(){
+//         return 3+n
+//     }
+// }
+// console.log(add(3)())
+// function add(a,b){
+//     return a+b
+// }
+
+// let double = add.bind(null,2)
+// console.log(double(3))
+
+
+// var greet_abe = function() {
+//     let name = 'Abe';
+//     return "Hello, " + name + '!';
+//   };
+//   name = 'Ben';
+//   var greet_ben = function() {
+//     return "Hello, " + name + '!';
+//   };
+//   console.log(greet_abe())
+// let arr = [1,2,3,4,5]
+// // console.log(arr.map(item=>item*2))
+
+// function get(arr){
+//     return function(num){
+//         return arr.map(item=>item*num)
+//     }
+// }
+
+// console.log(get(arr)(2))
+
+// let a = setTimeout(function print(){
+//     let count = 0;
+//     function c(){
+//          return count++
+//     }
+//     setTimeout(c,1000)
+// },1000)
+// console.log(a)
+
+// function print(from,to){
+//     for(let i =from;i<=to;i++){
+//          setInterval(i,1000)
+//     }
+// }
+// // setInterval(print,1000,1,10)
+// print(1,10)
+
+// function create(from,to){
+//     let current  = from
+//     let timer = setInterval(() => {
+//         console.log(current)
+//         current++
+//         if(current ==to){
+//             clearInterval(timer)
+//         }
+//     }, 1000);
+    
+// }
+// create(1,10)
+
+// function print(from,to){
+//     let current = from;
+    
+//     setTimeout(function go(){
+//         console.log(current)
+//         current++
+//         if(current<to){setTimeout(go,1000)
+//         }
+       
+        
+//     },1000)
+
+    
+
+// }
+// print(1,5)
+
+
+// function f(from,to){
+//     console.log(from)
+//     let time=setTimeout(f,1000,++from)
+//     if(from>4){
+//         clearTimeout(time) 
+//     }
+    
+   
+    
+// }
+// setTimeout(f,1000,1)
+
+
+// function count(from,to){
+//     let timer = setInterval(function(){
+//         from<=to?console.log(from++):clearInterval(timer)},1000)
+// }
+// count(1,4)
+
+// let a =setTimeout(function count(sum){
+
+
+//     if(sum<4){
+//         console.log(++sum)
+//     }else clearTimeout(a)
+// a=setTimeout(count,1000,1)
+
+// },1000)
+
+// function count(from,to){
+//     let a = setTimeout(function go(){
+//         console.log(from)
+//         if(from<to){
+//             from++
+//             setTimeout(go,1000)
+//         }clearTimeout(a)
+//     },1000)
+// }
+
+// count(1,4)
+
+// function count(from,to){
+//     let a = setTimeout(function go(){
+//         if(from<=to){
+//             console.log(from)
+//             from++
+//             setTimeout(go,1000)
+//         }clearTimeout(a)
+//     },1000)
+
+// }
+// count(1,4)
+
+
+// function fact(num){
+    
+//     if(num===1){
+//         return num
+//     }return num*fact(num-1)
+// }
+// console.log(fact(15))
+
+
+// function fact(num){
+//     let i=num-1
+//     let a= setTimeout(function b(){
+       
+//        if (i>1){
+           
+//            console.log(num*=i);
+//            i--
+           
+//            setTimeout(b,1000)
+//         }clearTimeout(a)  
+//     },1000)
+// }
+// fact(15)
+
+// function start(){
+   
+//     let a = setTimeout(function b(){
+//         console.log(new Date())
+//         setTimeout(b,1000)
+//     },1000)
+   
+// }
+// start()
+// function start(){
+//     console.log(new Date())
+    
+// }
+// setInterval(start,1000)
+
+
+
+   
+    // let a = setTimeout(function b(){
+    //     console.log(new Date)
+    //     setTimeout(b,1000)
+    // },1000)
+
+    // function fact(n){
+    //     if(n==1){
+    //         return n
+    //     }else return n*fact(n-1)
+    // }
+    // console.log(fact(15))
+//
+
+
+    // console.log(fact(15))
+
+//      function memoize(f){
+//      let cache = {}
+//      return function(){
+//         // console.log(arguments)
+//          let key = arguments.length + Array.prototype.join.call(arguments,",")
+//         // let key = arguments.toString()
+//          if(key in cache){
+//             return cache[key]
+            
+            
+//          }else return cache[key] = f.apply(this,arguments)
+//      }
+//  }
+// fact=memoize(fact)
+//     console.log(fact(15))
+//  worker.slow = cache(worker.slow)
+//  console.log(worker.slow(2,7,6))
+
+    // function fact(n){
+    //     if(n<=1){
+    //         return n
+    //     }return (fact(n-1)+fact(n-2))
+    // }
+// console.log(fact(15))
+// let worker = {
+//     slow(min, max) {
+//       return min + max;
+//     }
+//   };
+// let worker = {
+//     someMethod() {
+//       return 1;
+//     },
+  
+//     slow(x) {
+//       // здесь может быть страшно тяжёлая задача для процессора
+//       alert("Called with " + x);
+//       return x * this.someMethod(); // (*)
+//     }
+//   };
+  /////////////////////////////////////CACHING FUNCTION//////////////////////////////////////////////////////////
+    // function cache(func){
+    //     let map = new Map()
+    //     return function(){
+    //         let x=arguments
+    //         if(map.has(x)){
+    //             return map.get(x)
+    //         }
+    //         let result =func.apply(this,arguments)
+    //         map.set(x,result)
+    //         return result           
+            
+    //     }
+    // }
+//     console.log( worker.slow(2) )
+//     worker.slow = cache(worker.slow)
+//    console.log( worker.slow(2) )
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// class User{
+//     constructor(name){
+//         this.name=name
+//     }
+//     sayhi(){
+//         alert(this.name)
+//     }
+// }
+// let user = new User("rge")
+// user.sayhi()
+
+// let b = [1,2,3,4]
+
+// let arr = [1,2,3,4]
+// console.log(arr.find(item=>item===4))
+
+// function finder(arr,func){
+//    for(let i=0;i<arr.length;i++){
+//        if(func(i)==arr[i]){
+//            return arr[i]
+//        }
+//    }
+// }
+
+// function j(){
+//     return 2
+// }
+
+// console.log(finder(arr,j))
+// let arr = [1,2,3,4]
+
+// Array.prototype.myfind = function (fn){
+
+    
+//     for(let i = 0;i<this.length;i++){
+//         if(fn(this[i])) 
+//         return this[i]
+
+//     }
+// }
+// // console.log(hr(3))
+
+
+// const a = arr.find(function(item){return item==arr[2]})
+// console.log(a)
+// let arr = [1,2,3,4]
+
+// let draw =item=>{
+//     item*2
+// }
+// // draw(3)
+
+
+
+
+
+
+
+// /////////// findIndex
+
+// let arr2 = [1,2,3,4,500]
+// function findIndex(arr,func){
+//    for(let i = 0;i<arr.length;i++){
+//        if (func(i)==arr[i]){
+//            return i
+//        }
+//    }
+// }
+
+// let check2 = findIndex(arr2,()=>2)
+// console.log(check2)
+
+// /////////////////////some
+
+// let arr3 = [1,2,3,4,500]
+// function some(arr,func){
+//    for(let i = 0;i<arr.length;i++){
+//        if (func(i)==arr[i]){
+//            return true
+//        }
+//    }return false
+// }
+
+// let check3 = some(arr3,()=>3)
+// console.log(check3)
+
+
+// /////////////////////every
+
+// let arr4 = [3,3,3,3,3,5]
+// function every(arr,func){
+//    for(let i = 0;i<arr.length;i++){
+//        if (func(i)!=arr[i]){
+
+//         return false
+//        }
+     
+//    } return true 
+// }
+
+// let check4 = every(arr4,()=>3)
+// console.log(check4)
+
+// let User = class myname{
+//     say(){
+//         console.log(myname)
+//     }
+// }
+// let user = new User()
+// user.say()
+
+// function Make(phr){
+//     return class{
+//         say(){
+//             console.log(phr)
+//         }
+//     }
+// }
+// let User =  Make("hi")
+// new User().say()
+
+// class Animal{
+//     constructor(name){
+//         this.name=name
+//         this.speed=0
+//     }
+//     run(speed){
+//         this.speed=speed;
+//         console.log(`it runs ${this.speed}`)
+//     }
+//     stop(){
+//         this.speed=0
+//         console.log("it stopped")
+//     }
+// }
+// class Rabbit extends Animal{
+//     hide(){
+//         console.log(`${this.name} is hiding`)
+//     }
+//     stop(){
+//         super.stop()
+//         this.hide()
+//     }
+// }
+// let rabbit = new Rabbit("BOb")
+// // rabbit.run(5)
+// rabbit.stop()
+
+// class Animal {
+
+//     constructor(name) {
+//       this.name = name;
+//     }
+  
+//   }
+  
+//   class Rabbit extends Animal {
+//     constructor(name) {
+//       super(name);
+//       this.created = Date.now();
+//     }
+//   }
+  
+//   let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
+//   alert(rabbit.name);
+
+// class CoffeeMachine {
+//   _waterAmount = 0;
+
+//   set waterAmount(value) {
+//     this._waterAmount = value;
+//     if (value < 0) throw new Error("Отрицательное количество воды");
+    
+//   }
+
+//   get waterAmount() {
+//     return this._waterAmount;
+//   }
+
+//   constructor(power) {
+//     this._power = power;
+//   }
+
+// }
+
+// // создаём новую кофеварку
+// let coffeeMachine = new CoffeeMachine(100);
+
+// // устанавливаем количество воды
+// coffeeMachine.waterAmount = 10; // Error: Отрицательное количество воды
+
+///////////////////////////find
+// let arr1 = [1,2,3,4,500]
+// function find(arr,callback){
+//    for(let item of arr){
+//        if (callback(arr[item])){
+//            return arr[item]
+//        }
+//    }
+// }
+
+// let check1 = find(arr1,item=>item>3)
+// console.log(check1)
+
+
+/////////// findIndex
+
+// let arr2 = [1,2,3,4,500]
+// function findIndex(arr,callback){
+//    for(let i = 0;i<arr.length;i++){
+//        if (callback(arr[i])){
+//            return i
+//        }
+//    }return -1
+// }
+
+// let check2 = findIndex(arr2,item=>item==1)
+// console.log(check2)
+
+// /////////////////////some
+
+// let arr3 = [1,2,3,4,500]
+// function some(arr,callback){
+//    for(let i = 0;i<arr.length;i++){
+//        if (callback(arr[i])){
+//            return true
+//        }
+//    }return false
+// }
+
+// let check3 = some(arr3,item=>item%2===0)
+// console.log(check3)
+
+
+// /////////////////////every
+
+// let arr4 = [4,5,6,7,8]
+// function every(arr,callback){
+//    for(let i = 0;i<arr.length;i++){
+//        if (!callback(arr[i])){
+
+//         return false
+//        }
+     
+//    } return true 
+// }
+
+// let check4 = every(arr4,item=>item>3)
+// console.log(check4)
+
+
+// if(confirm("go to smwhere")){location.href = "https://wikipedia.org"}
+// if(cancel){location.href = "https://wikipedia.org"}
+
+// for(let i = 0;i)
+// console.log(document.body.previousElementSibling)
+
+// console.log(document.body.children[1].children[0].nextElementSibling)
+
+// document.body.firstElementChild.border="1px solid black"
+// let table = document.body.firstElementChild
+// // table.rows[1].cells[0].style.backgroundColor="red"
+// for(let i = 0;i<table.rows.length;i++){
+    
+//     table.rows[i].cells[i].style.backgroundColor="red"
+// }
+
+// let element = document.querySelectorAll("ul>li:last-child")
+// for(let elem of element){
+//     console.log(elem.innerHTML)
+// }
+
+
+// console.log(document.body.firstElementChild)
+// if(document.body.firstElementChild.matches(".ul")){
+//     alert(true)
+// }
+// else alert(false)
+
+// let chapter = document.querySelector(".chapter");
+// // console.log(chapter.closest(".contents"))
+
+// let chapter = document.querySelector("div");
+// console.log(chapter)
+
+// let find = document.getElementsByTagName("input")
+// console.log(find)
+// let find = document.getElementsByClassName("article")
+// console.log(find)
+// let find = document.getElementsByTagName("input")[0].name="not age";
+// // console.log(find)
+// console.log(document.getElementsByTagName("input")[0])
+
+
+// let elem1=document.querySelector('input')
+// let elem2 =document.querySelector('#table')
+// console.log(elem2.contains(elem1))
+// console.log(document.querySelectorAll('#age-table label'))
+// console.log(document.getElementsByTagName('label'))
+// console.log(document.getElementsByName("search")[0].getElementsByTagName('input')[0])
+// let d = document.getElementsByName("search")[0]
+// console.log(d[d.length-1])
+
+// console.log(document.body.constructor.name)
+// console.log(document.body.firsthild.nodeType)
+// console.log(document.body.children.nodeName)
+// let a = document.body.innerHTML+=('<div>cdf</div>')
+// console.log(document.body)
+
+// let b = document.body.querySelector("div")
+// b.outerHTML="<button>hello world</button>"
+// document.querySelector("button").style.fontWeight="bold"
+// console.log(document.querySelector("div"))
+// let text = document.body.firstChild
+// text.data="hayrumyan"
+// console.log(text)
+// document.body.firstElementChild.style.backgroundColor="red"
+// let b = document.body.firstElementChild
+// setInterval(function(){return b.hidden=!b.hidden},1000)
+// setInterval(function(){return b.hidden=false},500)
+
+// let b = document.querySelectorAll("li")
+// for(let key of b){
+//     let count = key.getElementsByTagName('li').length;
+//     console.log(count)
+// }
+// // let b=document.getElementsByTagName("li")
+// // console(b)
+// console.dir(document)
+
+// document.body.setAttribute("type","every")
+// // document.body.removeAttribute("type")
+// console.log(document.body.attributes)
+// let input = document.querySelector("input")
+// input.setAttribute("type","radio");
+// console.log(input.type)
+// input.type="checkbox"
+// console.log(input.type)
+
+
+// let user = {
+//     name: "Pete",
+//     age: 25
+//   };
+
+//   for(let key of document.querySelectorAll("[show-info]")){
+//       let field = key.getAttribute("show-info")
+//      key.innerHTML=user[field]
+    
+//   }
+
+// console.log(document.querySelector("div").dataset.widgetName)
+// let link = document.querySelector('a');
+// link.style.color = 'orange';
+// console.log(link)
+
+// let newlink = document.getElementsByTagName('a');
+// // let hl=newlink.innerHTML
+
+// for(let i=0;i<newlink.length;i++){
+//     let a =newlink[i];
+    
+//     if(!a.innerHTML.startsWith('http://internal.com') && a.innerHTML.includes('://'))
+  
+//     a.style.color = "orange"
+// }
+// console.log(newlink)
+
+// let selector = 'a[href*="://"]:not([href*="http://internal.com"])'
+// let links =document.querySelectorAll(selector)
+// links.forEach(link=>link.style.color="orange")
+
+
+// let div = document.createElement("div")
+// div.className="alert"
+// div.innerHTML = "Hello how are you"
+// document.body.append(div)
+// // setTimeout(()=>div.remove(),1000)
+// let div2 = div.cloneNode(true)
+// div2.innerHTML="second div"
+// div.after(div2)
+
+
+// ol.before("before")
+// ol.after("after")
+// let li=document.createElement("li")
+// li.innerHTML="hello"
+// ol.prepend(li)
+// let li2=document.createElement("li")
+// li2.innerHTML="append"
+// ol.append(li2)
+// console.log()
+// ol.replaceWith(ol.children[1],li2)
+
+
+// div.before("<p>Hello</p>", document.createElement("hr"))
+
+
+// ol.insertAdjacentHTML('beforebegin','<p>Hello</p>')
+// ol.insertAdjacentHTML("afterbegin","<span>cello</span>")
+// ol.insertAdjacentHTML('beforeend','<p>beforeend<p/>')
+// ol.insertAdjacentHTML('afterend','<p>afterend<p/>')
+// ol.insertAdjacentHTML('beforebegin', '<p>Привет</p>')
+
+// function create(){
+//     let fragment=new DocumentFragment()
+//     for(let i=0;i<4;i++){
+//         let li = document.createElement("li")
+//         li.append(i)
+//         fragment.append(li)
+//     }
+//     return fragment
+// }
+// ol.append(create()) 
+
+// function create(){
+//     let fragment=[]
+//     for(let i=0;i<4;i++){
+//         let li = document.createElement("li")
+//         li.append(i)
+//        fragment.push(li)
+//     }
+//     return fragment
+// }
+// ol.append(...create()) 
+
+// let element = elem.querySelectorAll("li")
+// for(let key of element){
+//     key.replaceWith("")
+// }
+
+// // console.log(element.length)
+// element.replaceWith("")
+
+// function clear(elem){
+//     let element = elem.querySelectorAll("li")
+//     for(let key of element){
+//         key.replaceWith("")
+//     }
+// }
+// clear(blah)
+
+// function clear(elem){
+//     elem.innerHTML=""
+// }
+// clear(elem)
+
+
+// body.remove();
+//  function wrapper(){
+//      let fragment=new DocumentFragment()
+//    let  i = prompt("enter value")
+//     while(i){
+//        i = prompt("enter value")
+//         let li = document.createElement("li")
+//          li.insertAdjacentText("afterbegin",i)
+//          fragment.append(li)
+         
+         
+//     }
+//     return fragment  
+      
+    
+//  }
+//  ul.append(wrapper()) 
+
+// let data = {
+//     "Рыбы": {
+//       "форель": 4,
+//       "лосось": 3
+//     },
+  
+//     "Деревья": {
+//       "Огромные": {
+//         "секвойя": 2,
+//         "дуб": 2
+//       },
+//       "Цветковые": {
+//         "яблоня": 2,
+//         "магнолия": 3
+//       }
+//     }
+//   };
+//   function createTree(container, obj) {
+//     container.append(create(obj));
+//   }
+
+// function create(obj){
+//     if(!Object.keys(obj).length) return;
+//     let ul = document.createElement("ul")
+//     for(let key in obj){
+//         let li = document.createElement("li")
+//         li.innerHTML=key
+//         if(create(obj[key])){
+//             li.append(create(obj[key]))
+//         }
+//         ul.append(li)
+//     }
+//     return ul
+// }
+
+// let container = document.getElementById('container');
+//     createTree(container, data);
+
+
+// let li2 = document.createElement("li")
+// li2.innerHTML=2
+// let li3 = document.createElement("li")
+// li3.innerHTML=3
+// console.log(li2)
+
+// one.after(li2)
+// li2.after(li3)
+
+
+//   function isObject(val){
+//       if(val===null){
+//           return false
+//       }
+//       return (typeof val === 'object')
+//   }
+
+//   function iter(obj){
+//       for(let prop in obj){
+//           if(isObject(obj[prop])){
+//               iter(obj[prop])
+//           }else{
+//           console.log(prop,obj[prop])
+//           }
+//       };
+//   };
+//   iter(data)
+
+// const isObject = function(val){
+//     if(val===null){
+//         return false
+//     }
+//     return (typeof val==='object')
+// };
+// const objProps= function (obj){
+    
+//     for(let val in obj){
+//         if(typeof obj[val]==='object'){
+//             objProps(obj[val])
+//         }else{
+//            let li=document.createElement("li")
+//            li.innerHTML=val
+//         }
+//     }
+// }
+// objProps(data)
+
+
+// let t;
+// function h(){
+// let today = new Date();
+// let hours = today.getHours();
+// if(hours<10)hours='0'+hours;
+// let hh =document.querySelector("p>.hh").innerHTML=hours+":";
+// let minutes= today.getMinutes();
+// if(minutes<10)minutes='0'+minutes;
+// let m=document.querySelector("p>.mm").innerHTML=minutes+":";
+// let seconds= today.getSeconds();
+// if(seconds<10)seconds='0'+seconds;
+// let s=document.querySelector("p>.ss").innerHTML=seconds;
+// t=setTimeout(h,1000);
+    
+// };
+// document.querySelector(".stop").onclick=function(){clearTimeout(t)};
+// document.querySelector(".start").onclick=function(){h()};
+
+
+
+
+//  function hrs(){
+// let today = new Date();
+// let hours = today.getHours()/12*360+90;;
+// let h=document.querySelector(".hours")
+// let minutes= today.getMinutes()/60*360+90;;
+// let m=document.querySelector(".minutes")
+// let seconds= today.getSeconds()/60*360+90;
+// let secs=document.querySelector(".seconds");
+// secs.style.transform=`rotate(${seconds}deg)`;
+// m.style.transform=`rotate(${minutes}deg)`;
+// h.style.transform=`rotate(${hours}deg)`;
+
+
+    
+// }
+// hrs()
+// setInterval(hrs,1000);
+
+// let t;
+// function h(){
+// let today = new Date();
+// let hours = today.getHours();
+// if(hours<10)hours='0'+hours;
+// let hh =document.querySelector("p>.hh").innerHTML=hours+":";
+// let minutes= today.getMinutes();
+// if(minutes<10)minutes='0'+minutes;
+// let m=document.querySelector("p>.mm").innerHTML=minutes+":";
+// let seconds= today.getSeconds();
+// if(seconds<10)seconds='0'+seconds;
+// let s=document.querySelector("p>.ss").innerHTML=seconds;
+// t=setTimeout(h,1000);
+    
+// };
+// h()
+
+
+// let div = document.querySelector(".hop")
+// div.className="bla"
+// div.classList.add("blaaaa")
+// div.classList.remove("blaaaa")
+
+
+// setTimeout(function f(count=1){
+    
+//     console.log(count++)
+//     setTimeout(f,1000,count++)
+// },1000)
+
+
+
+
+
+
+// setTimeout(function c(count=1){
+   
+//     console.log(count++)
+//     setTimeout( c,1000,count++)
+    
+    
+// },1000)
+// let a =c()
+// console.log(a())
+// console.log(a())
+
+// let div=document.createElement("div")
+// div.className="notify"
+
+
+
+
+
+
+// let div=document.createElement("div");
+// div.className="notify"
+// document.body.prepend(div)
+// // div.hidden=true
+// div.style.cssText=`
+// background-color:red;
+// width:100px;
+// height:50px;
+// font-size:15px;
+// box-sizing:border-box;
+// border:2px solid black;
+// color:orange;
+// padding:5px auto;
+
+
+// `
+// div.insertAdjacentHTML("afterbegin","<p></p>")
+
+
+// setTimeout(function a(count=1){
+// // div.innerHTML="Hello"+ " "+count++
+// document.querySelector("p").innerHTML="Hello"+ " "+count++
+//     setTimeout(a,2000,count++)
+    
+    
+// },1000)
+
+// setInterval(()=>div.hidden=!div.hidden,1000)
+
+/////forEach
+// let arr = [1,2,3,4]
+// let copy=[];
+// function myForEach(arr,callback){
+//     for(i=0;i<arr.length;i++){
+//         if(callback(arr[i],i,arr)){
+//         return  callback(arr[i],i,arr)
+       
+//         }
+//     }
+// }
+// myForEach(arr,item=>{copy.push(item)})
+// console.log(copy)
+
+
+
+////////////includes
+
+// let arr = [1,2,3,4]
+// function myIncludes(arr,callback){
+//     for(i=0;i<arr.length;i++){
+//        if(callback(arr[i],i,arr)){
+//         return  true
+//        }
+//     }
+//     return false
+// }
+// console.log(myIncludes(arr,item=>item>2))
+
+
+////////////// join
+
+// let arr = [1,2,3,4];
+// function myJoin(arr,str){
+//     let string=""
+//     for(i=0;i<arr.length;i++){
+//        string+=arr[i].toString()+str
+//     }
+//     if(string.substr(string.length-1)==arr[arr.length-1]){
+//         return string
+//     }
+//     return string.substr(0,string.length)
+// }
+// console.log(myJoin(arr,"-"))
+
+
+/// lastIndexof
+
+// let arr = [1,2,5,3,4,5]
+// function myLastIndexOf(arr,val,from){
+//     for(let i = from?from:arr.length;i!=0;i--){
+//         if(val==arr[i]){
+//             return i
+//         }
+//     }
+// }
+// console.log(myLastIndexOf(arr,5,4))
+
+
+/////// pop
+// let arr = [1,2,3,4,5]
+// function myPop(arr){
+//     if(!arr.length){
+//         return undefined
+//     }else {
+//         let a=arr[arr.length-1]
+//         arr.length=arr.length-1
+//         return a
+//     }
+    
+// }
+// myPop(arr)
+// console.log(arr)
+
+/////// push
+// let arr = [1,2,3,4,5]
+// function myPush(arr,...val){
+//     for(let i=0;i<val.length;i++){
+//      arr[arr.length]=val[i]
+//     }
+//       return arr.length
+  
+// }
+// myPush(arr,1,2,3)
+// console.log(arr)
+
+//////slice
+
+// let arr = [1,2,3,4,5]
+// function mySlice(arr,val1,val2){
+//     let newarr=[];
+//     for(let i=0;i<arr.length;i++){
+//         if(i>=val1 && i<val2){
+//             // newarr.push(arr[i])
+//             myPush(newarr,arr[i]) //used my function here
+//         }
+//     }
+//     return newarr
+// }
+// console.log(mySlice(arr,1,4))
+
+/////// shift
+// let arr = [1,2,3,4,5]
+// function myShift(arr){
+//     if(!arr.length){
+//         return undefined
+//     }else {
+//         let a=arr[0]
+//         arr.splice(arr[arr.length],1)
+//         return a
+//     }
+    
+// }
+// console.log(myShift(arr))
+// console.log(arr)
+
+// ///// unshift
+// let arr = [1,2,3,4,5]
+// function myUnshift(arr,...val){
+//     for(let i=0;i<val.length;i++){
+//         myReverse(arr)
+//         arr[arr.length]=val[i]
+//         myReverse(arr)////used my function here
+//     }
+     
+//       return arr.length
+// }
+// console.log(myUnshift(arr,6,7,8))
+// console.log(arr)
+
+/////reverse
+// let arr = [1,2,3,4,5]
+// function myReverse(arr){
+//     for(let i=0;i<arr.length/2;i++){
+//         let temp=arr[i];
+//         arr[i]=arr[arr.length-1-i]
+//         arr[arr.length-1-i]=temp
+        
+//     }
+//     return arr
+// }
+
+// myReverse(arr)
+// console.log(arr)
+
+
+
+
+
+///splice
+// let arr = [1,2,5,3,4,5,6,7,8]
+
+// function mySplice(arr,start,count,...item){
+//     let newarr=[...arr.slice(0, start),...item,...arr.slice(start+count)]
+//     while(arr.length){
+//         arr.pop()
+//     }
+//     arr.push(...newarr)
+//       return arr
+      
+//     }
+//     mySplice(arr,2,5,45,46)
+//     console.log(arr)
+
+
+
+// let arr = [1,2,5,3,4,5]
+// function myLastIndexOf(arr,val,from){
+//     for(let i = from?from:arr.length;i!=0;i--){
+//         if(val==arr[i]){
+//             return i
+//         }
+//     }
+// }
+// console.log(myLastIndexOf(arr,5,4))
+
+
+// function myReduce(arr,func,init){
+//     let result=init
+//     for(let i=0;i<arr.length;i++){
+       
+//             result=func(result,arr[i],i,arr)
+       
+//     }
+//     return result
+// }
+
+// console.log(myReduce(arr,(prev,next)=>prev+next,6))
+
+
+
+
+
+// console.log(arr)
+
+
+
+
+
+// const items = [1, 2, 3, 4, 5]
+
+// const insert = (arr, index, ...newItems) => [
+//   ...arr.slice(0, index),...newItems,...arr.slice(index)
+  
+  
+// ]
+
+// const result = insert(items, 1, 10, 20)
+
+// console.log(result)
+
+// function counter(){
+// //     // for(let i=0;i<3;i++){
+//         alert(this.value)
+// //     // }
+// }
+// elem.onclick=counter
+
+// function add1(){
+//     console.log("this 1")
+// }
+// function add2(){
+//     alert("this 2")
+// }
+
+// elem.addEventListener("click",add1)
+// elem.addEventListener("click",add2)
+
+// console.log(example.offsetParent)
+// console.log(example.offsetLeft)
+// console.log(example.offsetTop)
+
+
+// function isHIdden(elem){
+//     return !elem.clientTop && !elem.clientLeft
+// }
+// console.log(isHIdden(example))
+
+// console.log(example.scrollHeight)
+
+
+// function cl(){
+//     this.scrollTop+=0
+// }
+// example.onclick=cl
+
+
+// let arr =[1,2,3,4,5]
+// function map(arr, cb){
+//     let newar=[]
+//     for(let i=0;i<arr.length;i++){
+//         newar.push(cb(arr[i]))
+//     }
+//     return newar
+// }
+// console.log(map(arr, item=>item*2))
+
+// setInterval(()=>{console.log(example.scrollTop)},1000)
+
+
+
+
+// setInterval(()=>{console.log(example.scrollTop)},3000)
+// // let scrollBottom=example.scrollHeight-example.scrollTop-example.clientHeight
+
+// function scrollBottom(elem){
+//     return elem.scrollHeight-elem.scrollTop-elem.clientHeight
+// }
+
+// setInterval(()=>{console.log(scrollBottom(example))},3000)
+
+
+// let width=example.clientWidth-parseInt(getComputedStyle(example).width)
+// let width=example.offsetWidth-example.clientWidth
+// console.log(width)
+
+// let a =(field.clientWidth/2-parseInt(getComputedStyle(ball).width)/2)+"px";
+// let b =(field.clientHeight/2-parseInt(getComputedStyle(ball).height)/2)+"px";
+// console.log(a)
+
+
+// ball.style.left=a
+// ball.style.top=b
+
+
+
+///////document height
+
+// console.log(Math.max(document.body.scrollHeight,document.body.offsetHeight,document.body.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight,document.documentElement.clientHeight,))
+
+
+// console.log(window.pageXOffset)
+// console.log(window.pageYOffset)
+
+
+
+// let user =['user', 'admin', 'admin', 'user', 'admin', 'user', 'user', 'user', 'user', 'admin', 'admin', 'user']
+// let filter=user.filter(item=>item==='admin')
+// console.log(filter)
+
+// let id=['jf83urjf74jf', 'uejf83jfut75', 'ir84itjgut75u', 'jfue73urhfd8']
+// let newid=id.map(item=>item+"-AM")
+// console.log(newid)
+
+// let num=[150, 400, 200, 50, 300, 320, 500]
+// let sum=num.reduce((prev,next)=>prev+next,0)
+// console.log(sum)
+
+
+
+
+// setInterval(()=>{console.log(document.querySelector("button").getBoundingClientRect())},1000)
+
+
+// let x=document.documentElement.clientHeight/2;
+// let y=document.documentElement.clientWidth/2
+
+// let elem=document.elementFromPoint(y,x)
+// elem.style.color="red"
+// console.log(elem)
+
+
+// let elem=document.querySelector("button").getBoundingClientRect()
+// function create(elem,html){
+//     let message = document.createElement("div");
+//     message.innerHTML=html;
+    
+    
+//     message.style.color=`red`;
+//     message.style.position=`absolute`
+//     message.style.top=elem.bottom+window.pageYOffset+"px";
+//     message.style.left=elem.left+window.pageXOffset+"px";
+    
+    
+// return message
+// }
+
+// let bl=create(elem,"hello")
+// document.body.append(bl)
+
+// setTimeout(() => bl.remove(), 5000);
+
+
+// let a =field.getBoundingClientRect()
+// let b=field.clientWidth
+// console.log(a)
+// console.log(b)
+
+// console.log(field.clientX)
+
+
+
+
+// function reverse(x){
+//     let count=""
+//     while(x>0){
+//         count+=x%10
+//         x=Math.floor(x/10)
+//     }
+//     return Number(count)
+// }
+// console.log(reverse(32243))
+
+
+// let x ="nurses run"
+
+// function check(x){
+//     let y=Array.from(x.split(" ").join("")).join("")
+//     let z=Array.from(x.split(" ").join("")).reverse().join("")
+//     return (y==z)
+// }
+// console.log(check(x))
+
+
+
+// let x="dog"
+// function comb(x){
+//     let y = Array.from(x)
+//     let newarr=[]
+//     for(let i=0 ;i<=y.length;i++){
+//         for(let j=1;j<=y.length;j++){
+//             newarr.push(y.slice(i,j))
+//         } 
+//     }
+//     return (newarr.filter(item=>item.length).join(", ").split(",").join(""))
+    
+// }
+// console.log(comb(x))
+
+// let x="1 2 3"
+// function comb(x){
+//     let y = Array.from(x)
+//     let newarr=[]
+//     for(let i=0 ;i<y.length-1;i++){
+//         for(let j=i+1;j<y.length;j++){
+//             newarr.push(`${y[i]}`,`${y[j]}`)
+//         } 
+//     }
+//     return (newarr)
+    
+// }
+// console.log(comb(x))
+
+
+// let cord1=field.getBoundingClientRect()
+// // let rect1
+//  let x=cord1.x ,y=cord1.y
+// // let rect2 
+// let r2x=cord1.x+field.offsetWidth, r2y=cord1.y+field.offsetHeight
+// // rect4 
+// let r4x =r2x-(field.offsetWidth-field.clientWidth)/2,   r4y=r2y-(field.offsetHeight-field.clientHeight)/2
+// //rect3 
+// let r3x=x+(field.offsetWidth-field.clientWidth)/2,r3y=y+(field.offsetHeight-field.clientHeight)/2
+
+
+// console.log(x,y)
+// console.log(r2x,r2y)
+// console.log(r3x,r3y)
+// console.log(r4x,r4y)
+
+
+// let coords = field.getBoundingClientRect();
+
+// let answer1 = [coords.left, coords.top];
+// let answer2 = [coords.right, coords.bottom];
+// let answer3 = [coords.left + field.clientLeft, coords.top + field.clientTop]
+// let answer4 = [
+//     coords.right - parseInt(getComputedStyle(field).borderRightWidth),
+//     coords.bottom - parseInt(getComputedStyle(field).borderBottomWidth)
+//   ]
+
+// console.log(answer1)
+// console.log(answer2)
+// console.log(answer4)
