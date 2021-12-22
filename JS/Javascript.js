@@ -38,17 +38,16 @@
 
 //  alert (message)
 
- 
 //  if (number>0) {
 //      alert('1')
-     
+
 //  }
 //  else if (number<0) {
 //      alert ('-1')
 //  }
 //  else if (number ==0) {
 //      alert ('o')
-     
+
 //  }
 
 // result = (a+b<4) ? 'good':'bad';
@@ -59,7 +58,7 @@
 
 // console.group('1');
 // console.log('1');
- 
+
 // console.group('2');
 // console.log('2');
 // console.groupEnd();
@@ -99,8 +98,6 @@
 
 // }
 
-
-
 // var x= prompt ('insert number', 100)
 // var y= prompt ('insert number', 100)
 // var z = prompt ('insert 1,2,3,4')
@@ -118,17 +115,13 @@
 //     case '4': result=x*y;
 //     break;
 //     default: result = 'no valid number'
-    
+
 // }
 // alert(result)
 
-
-    
 // var location1 = Math.floor(Math.random()*5);;
 // var location2 = location1+1;
 // var location3 = location2+1;
-
-
 
 // var guess;
 // var guesses = 0;
@@ -147,9 +140,9 @@
 //         hits=hits+1;
 //             if (hits == 3) {
 //             result=true,  alert ('you won');
-//             } 
+//             }
 //         }else alert ('try again')
-    
+
 //     }
 
 // }
@@ -158,7 +151,7 @@
 
 // let text = 'whoooa';
 // function checkList (text , form){
-   
+
 //     alert(text+form);
 // }
 // checkList (text, 'Ann')
@@ -172,7 +165,6 @@
 //         else {
 //             return confirm ('confirm your age ')
 //         }
-
 
 // }
 // if (checkAge(age)){
@@ -189,9 +181,7 @@
 //  let age = prompt ('enter age')
 //   function checkAge(age){
 //       let  message=(age> 18) ? true : confirm ('did parents allow');
-      
-      
-    
+
 //   }
 // checkAge(age)
 // alert (message)
@@ -212,10 +202,9 @@
 // function pow(x,n){
 //    if (n>0) {return x**n;}
 //     else return ('no walid number')
-   
+
 // }
 // alert(pow(x,n))
-
 
 // let name = prompt ('enter name')
 // let year = prompt ('enter age')
@@ -265,29 +254,27 @@
 
 // let x= +prompt ('enter number 1234')
 // function readNumber(x) {
-   
+
 //     if (Object.is(x,1234))
 
 //     return (x);
 //     else return ('null')
-    
+
 // }
 // alert(readNumber(x))let x= +prompt ('enter number',"")
 
 // let x = +prompt ('enter number')
 
 // function readNumber(x) {
-   
+
 //     if (isFinite(x)===true)
 //     return (x);
 //     else return ('null');
 
-    
-    
 // }
 // if (x===0 || x=== null) alert ('null') ;
 //  else alert(readNumber(x))
- 
+
 //  function random(x,y){
 //      let result = (Math.random()*(Math.max(x,y)));
 //      if (result > Math.max(x,y)){
@@ -297,17 +284,16 @@
 //              return Math.min(x,y)
 //          }
 // alert(result)
-// }  
-     
-// random(1,5);   
-     
+// }
+
+// random(1,5);
 
 //  function random(x,y){
 //      let result = Math.ceil(Math.random()*(Math.max(x,y)));
 //      return result
-     
-// }  
-// alert(random(1,5));  
+
+// }
+// alert(random(1,5));
 
 // let number =['1','2','3'];
 // // number.push('4','5')
@@ -337,9 +323,9 @@
 
 // let arr =  [sumInput = +prompt('enter number', 0)]
 // while (isFinite(sumInput)===true){
-    
+
 //    sumInput = +prompt('enter number', 0)
-    
+
 // }
 // function sumInput(){
 // let numbers=[]
@@ -375,9 +361,6 @@
 // var recent = products[last];
 // alert(recent)
 
-
-
-
 // let user ={
 //     name:'John',
 //     age: 30,
@@ -391,9 +374,6 @@
 // // // console.log(user)
 // // alert(user['car type'])
 
-
-
-
 // let fruit = prompt('enter fruit name',);
 // let bag ={
 //     [fruit]:5
@@ -405,9 +385,9 @@
 //     name: "John",
 //     age: 30
 //   };
-  
+
 //   let key = prompt("Что вы хотите узнать о пользователе?", "name");
-  
+
 //   // доступ к свойству через переменную
 //   alert( user[key] ); // John (если ввели "name")
 
@@ -423,12 +403,6 @@
 // delete user.name;
 // console.log(user);
 
-
-
-
-    
-
-
 // function isEmpty(){
 //     const object = {
 //         // name:'John',
@@ -436,7 +410,7 @@
 //         // admin:89
 //     }
 //     let empty=Object.keys(object).length;
-//    
+//
 //     if (empty>0){
 //         alert ('false')
 //     }
@@ -448,7 +422,6 @@
 //  return true;}
 //  return false
 
-
 // }
 // alert(isEmpty())
 
@@ -458,10 +431,8 @@
 //  return true;}
 //  return false
 
-
 // }
 // alert(isEmpty())
-
 
 //     let obj ={
 //             John: 100,
@@ -473,7 +444,7 @@
 //         }
 //         let sum=0
 //  for(let prop in obj){
-   
+
 //     sum+=obj[prop]
 // }
 // alert(sum)
@@ -485,16 +456,12 @@
 //     summed += sample[key];
 // };alert(summed)
 
-
-
-
-
 // let obj ={
 //     John: 100,
 //     Ann: 160,
 //     Pete: 130,
 //     Peteu: 'book',
-    
+
 // }
 
 // for(let prop in obj){
@@ -502,7 +469,6 @@
 //     if(typeof sum === 'number') {
 //     alert(sum*2)}
 //     else alert (sum)
-
 
 // }
 // let person={
@@ -512,7 +478,6 @@
 
 //  Object.setPrototypeOf(girl, null);
 //  alert(girl.wantsSex)
-
 
 // let person={
 //     wantsSex:'much'
@@ -527,16 +492,14 @@
 // let animal = {
 //     eats: true
 //   };
-  
+
 //   let rabbit = Object.create(animal, {
 //     jumps: {
 //       value: true
 //     }
 //   });
-  
+
 //   alert(rabbit.jumps); // true
-
-
 
 // let animal ={
 //     eats:'carrot'
@@ -567,7 +530,7 @@
 
 // let animal ={
 //     eats:'carrot',
-    
+
 // };
 // let rabbit ={
 //     jumps:'long',
@@ -577,7 +540,7 @@
 // let ff = rabbit.hasOwnProperty(prop);
 // if (ff){
 //     alert(`our: ${prop}`);
-    
+
 // }
 // else{
 //     alert(`inherited: ${prop}`)
@@ -591,18 +554,18 @@
 // let head = {
 //     glasses: 1
 //   };
-  
+
 //   let table = {
 //     pen: 3,
 //     __proto__:head
 //   };
-  
+
 //   let bed = {
 //     sheet: 1,
 //     pillow: 2,
 //     __proto__:table
 //   };
-  
+
 //   let pockets = {
 //     money: 2000,
 //     __proto__:bed
@@ -611,30 +574,26 @@
 
 // let hamster = {
 //     stomach: [],
-  
+
 //     eat(food) {
 //       this.stomach.push(food);
 //     }
 //   };
-  
+
 //   let speedy = {
 //     __proto__: hamster
 //   };
-  
+
 //   let lazy = {
 //     __proto__: hamster
 //   };
-  
 
-  
 //   // Этот хомяк нашёл еду
 //   speedy.eat("apple");
 //   alert( speedy.stomach ); // apple
-  
+
 //   // У этого хомяка тоже есть еда. Почему? Исправьте
 //   alert( lazy.stomach ); // apple
-
-
 
 // var makes = ["Chevy", "GM", "Fiat", "Webville Motors", "Tucker"];
 // var models = ["Cadillac", "500", "Bel-Air", "Taxi", "Torpedo"];
@@ -669,12 +628,12 @@
 //     start: function(){
 //         if (this.fuel==0){
 //             alert('trunk is empy')
-            
+
 //             }
 //             else{
 //                 this.started=true;
 //             }
-        
+
 //     },
 //     stop: function(){
 //         this.started=false;
@@ -695,15 +654,13 @@
 
 //             alert('you need to zavesti the car')
 //         }
-        
 
 //     },
 //     addfuel: function(amount){
 //         this.fuel=this.fuel+amount;
-        
+
 //     }
-    
-    
+
 // };
 
 // chevy.drive();
@@ -726,31 +683,26 @@
 //            age: 5,
 //            stomac: 0,
 //            sleep: function (){
-         
+
 //             if(this.stomac>0){
 //                 alert('the' + " " + this.name + " "+ 'is sleeping');
-//                    this.stomac=this.stomac-100; 
+//                    this.stomac=this.stomac-100;
 //                    console.log(this.stomac)
 //                }else{alert('the cat need to eat');
-               
-               
+
 //                 };
-           
+
 //            },
-        
+
 //            eat: function(amount){
 //                this.stomac=this.stomac+amount;
 //            }
-           
+
 // }
 // cat.sleep();
 // cat.eat(200);
 // cat.sleep();
 // cat.sleep();
-
-
-
-
 
 // var access = document.getElementById("code2");
 
@@ -796,7 +748,6 @@
 // later.toDateString()
 // later.toISOString()
 
-
 // )
 //                                    STRINGS
 // var x = 'π';
@@ -823,12 +774,6 @@
 // var x = s[2];
 // console.log(x)
 
-
-
-
-
-
-
 // function init(){
 
 // var x = document.getElementById('code2') ;
@@ -843,16 +788,13 @@
 // // x.setAttribute('name', 'fuck');
 // console.log(x);
 
-
 // var x = document.getElementById('cod');
 // var y = x.getAttribute('alt')
 // console.log(y)
 
-
 // var x = document.getElementById('cod');
 // var y = x.getAttribute('alt')
 // console.log(y)
- 
 
 // var x = document.body.children[3];
 // x.setAttribute('class', 'redTExt');
@@ -869,8 +811,7 @@
 // alert(now.toLocaleDateString())
 
 // x = now.toLocaleTimeString();
-// document.write( 'Current  is' + ' ' + (x)); 
-
+// document.write( 'Current  is' + ' ' + (x));
 
 // y = now.getDay()
 // let week =[
@@ -881,27 +822,25 @@
 // "Thursday",
 // "Friday",
 // "Saturday",]
-// document.write('today is' + ' ' + week[y]);  
-   
+// document.write('today is' + ' ' + week[y]);
 
 // var a = 5
 // var b = 6
-// var c = 7  
+// var c = 7
 // var d = (a+b+c)/2
 // var e = Math.sqrt(d*(d-a)*(d-b)*(d-c))
 // console.log(e)
-
 
 // var later = new Date(2050,0,1);
 // var now = 2014;
 // var later = 2050;
 
 // for(let i = now; i <=later; i++){
-    
+
 //     var d = new Date(i,0,1);
 //     if(d.getDay()===0)
 //     console.log('it was monday' + i)
-    
+
 // }
 
 // var now = new Date (1995,7,23);
@@ -909,15 +848,10 @@
 // var gap =  later - now;
 // console.log(gap/86400000)
 
-
-
 // function divide(){
 // x = document.getElementById("1").value;
 // y = document.getElementById("2").value;
 // document.getElementById('result').innerHTML = x/y;
-
-   
-
 
 // };
 
@@ -925,28 +859,19 @@
 //     x = document.getElementById("1").value;
 //     y = document.getElementById("2").value;
 //     document.getElementById('result').innerHTML = x*y;
-    
-       
-    
-    
+
 // };
 // function plus(){
 //     x = document.getElementById("1").value;
 //     y = document.getElementById("2").value;
 //     document.getElementById('result').innerHTML = Number(x) + Number(y);
-    
-        
-    
-    
+
 // };
 
 // function minus(){
 // x = document.getElementById("1").value;
 // y = document.getElementById("2").value;
 // document.getElementById('result').innerHTML = x-y;
-
-
-
 
 // };
 
@@ -955,23 +880,17 @@
 // y = document.getElementById("2").value;
 // document.getElementById('result').innerHTML = x*y/100;
 
-    
-
-
 // };
 
-
-
-                                // calculator
+// calculator
 
 // function display1(){
 
-//     document.getElementById('inp').value = document.getElementById("1").value 
-   
+//     document.getElementById('inp').value = document.getElementById("1").value
+
 // }
 // function display2(){
 
-    
 //     document.getElementById('inp').value = document.getElementById("2").value
 // }
 
@@ -985,14 +904,12 @@
 //     document.getElementById('1').value = (f-32)/9;
 // };
 
-
-
 // function difference (){
 // let x = document.getElementById('1').value;
 // const y = 13;
 //     if(x>13){
 //         document.getElementById('result').innerHTML = (x-y)*2
-    
+
 //     }
 //     else{
 //         document.getElementById('result').innerHTML =Math.abs(x-y)*2
@@ -1002,10 +919,10 @@
 // function compute(x,y){
 //     if(x==y)
 //         return (x+ y)*3
-    
+
 //     else
 //         return (x+y)
-    
+
 // };
 
 // console.log(compute(77,5))
@@ -1022,40 +939,34 @@
 // }
 // console.log(checkNumber(50,25))
 
-
 // function checkInteger(){
 //     x = document.getElementById('1').value;
-    
-    
+
 //     if(x>20 && x<100){
 //         document.getElementById('result').innerHTML= true
 //     }
 //     else if(x==400){
 //         document.getElementById('result').innerHTML = true
 //     }
-//     else document.getElementById('result').innerHTML= false; 
+//     else document.getElementById('result').innerHTML= false;
 // }
 
 // function checkPositivity(x,y){
 //     if ((x>0 && y<0) || (x<0 && y>0)){
 //         return true
 //     }
-//     else return false 
+//     else return false
 // }
 // console.log(checkPositivity(-12,3))
 
 // let x = 'guests:\n John ,\nMary. Nerd';
 // let x = `guests:
 //  John ,
-//  Mary. 
+//  Mary.
 //  Nerd`;
 // alert (x)
 
-
-
-
 // let str = "what the fuck";
-
 
 // function ucFirst(){
 //   return str[0].toUpperCase()
@@ -1090,10 +1001,6 @@
 
 // checkSpam(str)
 
-
-
-
-
 // function checkPositivity(x,y){
 //         if ((x>0 && y<0) || (x<0 && y>0)){
 //             return true
@@ -1113,12 +1020,10 @@
 // }
 // checkString();
 
-
 // function removeCharacter(a){
 
-    
 //  a= a.replace(/a/g,' ')
-//     return a 
+//     return a
 // }
 // console.log(removeCharacter("blablaaaa"));
 
@@ -1127,9 +1032,6 @@
 //      let a = str[str.length-1].toUpperCase()+str.substr(1,str.length-2) + str[0];
 //      alert(a)
 
-    
-    
-    
 // }
 // changeLetters()
 // function checkNum(a){
@@ -1150,14 +1052,11 @@
 // let b = a.toString(2);
 // console.log(b)
 
-
-
-  
 //   let person = {
 //       eat:true,
 //       sleep:false,
 //       work:false
-    
+
 //   };
 
 //   let User = {
@@ -1168,29 +1067,26 @@
 //   }
 //   console.log(User.eat)
 
-
-
 // function changeStr(a){
 //     return a = (a.slice(a.length-2, a.length-1)) + a + (a.slice(a.length-2, a.length-1));
 // }
 
 // console.log(changeStr('what'));
 
-
 // function truncate(str,maxlength){
-    
+
 //     if(str.length>maxlength){
-        
+
 //         return str = str.slice(0,maxlength) + " ..."
 //     } else return str
-    
+
 // }
 // console.log(truncate('1234567890',7))
 
 // function checkStart(str) {
 //     if(str.startsWith('java')){
 //         return true
-//     } else return false 
+//     } else return false
 // }
 // console.log(checkStart('script s the good lang'))
 
@@ -1206,11 +1102,9 @@
 //     return str.slice(0,pos) + str.slice(11)
 //     }
 //     else return str
-    
-    
+
 // }
 // console.log(checkStr("0,1, Script, 5, 6, 7,",4))
-
 
 // function findLargestInt (a,b,c) {
 //     if (a>b && a>c){
@@ -1222,7 +1116,6 @@
 //     else if (c>a && c>b){
 //         return c
 //     }
-
 
 // }
 // console.log(findLargestInt(23,13,14))
@@ -1248,8 +1141,6 @@
 //     if (confirm(question)) yes()
 //     else no();
 //   }
-  
-  
 
 //    ask  (
 //    "Вы согласны?",
@@ -1257,17 +1148,13 @@
 //   () => alert("Вы отменили выполнение.")
 //   );
 
-
-
 // function checkDigit(a,b){
 //     if (Object.is(a%100,b%100)){
 //         return 'yes'
 //     }else return 'no'
-    
 
 // }
 // console.log(checkDigit(144442345,563455))
-
 
 // let a = prompt('enter string')
 // function changeCharacter(){
@@ -1304,26 +1191,21 @@
 //     {id: 2, name: "Петя"},
 //     {id: 3, name: "Маша"}
 //   ];
-  
+
 //   // возвращает массив, состоящий из двух первых пользователей
 //   let someUsers = users.filter(item => item.id < 3);
-  
+
 //   alert(someUsers.length)
 
 // console.log(parseInt(3).toString(2))
 
-
-
 //  let str = "list - style - image";
- 
+
 //     let x = str.split(' ');
 //      let y = x.filter(item=> item!=='-');
-    
-
 
 //     let z = y.join('');
 //     alert(z);
-
 
 // let arr = [5, 3, 8, 1];
 // arr.sort()
@@ -1333,7 +1215,6 @@
 // let filtered = filterRange(arr,1,4);
 // console.log(filtered)
 
-    
 // let arr = [5, 2, 1, -10, 8];
 // let y = arr.sort((a,b)=>b-a);
 // console.log(y)
@@ -1345,8 +1226,6 @@
 // }
 // copySorted()
 
-
-
 // function x(){
 //     alert('x')
 // }
@@ -1357,14 +1236,10 @@
 //  let bob = user ('bob', 23 );
 //  console.log(tom.name, tom.age)
 
-
-
 // let str = "2+2";
 // const y = str.split('');
 // let z = parseInt(y[0])  + parseInt(y[2]);
 // console.log(z)
-
-
 
 // let vasya = { name: "Вася", age: 25 };
 // let petya = { name: "Петя", age: 30 };
@@ -1374,7 +1249,6 @@
 // let names = users.map(item=>item.name);
 // alert(names)
 
-
 // let i = 1234567809;
 // let j = i.toString();
 // let  h = j.split("");
@@ -1382,13 +1256,11 @@
 
 // for (let i = 0;i<=h.length-1;i++){
 //     sum+=h[i]++;
-    
-   
+
 // } if(sum%2==0)(
 //     console.log('evenish')
 // );
 // else console.log('oddish');
-
 
 // let arr = ["I", "go", "home", "I", "go", "home"];
 // // delete arr[2];
@@ -1433,8 +1305,6 @@
 //   let x = users.find(item=>item.id==1 )
 //   console.log(x.name)
 
-
-
 // let arr = ["1", "3", "4", "5", "6"];
 // let x = arr.find(item=>item%2==0);
 //     console.log(x)
@@ -1472,45 +1342,38 @@
 //     if(index>2){
 //         return true
 //     }else return false
-    
+
 // })
 // console.log(x)
 
-
 // let newArr = arr.map(item=>item*2)
 // console.log(newArr)
-
 
 // let newArr = arr.map((item,index)=>{
 //     return item*index;
 // })
 // console.log(newArr)
 
-
-
 // let arr = [2,23,43,55,5,6];              //task 1
 // let max = arr[0];
 // let min = arr[0]
-
 
 // for (let i=1; i<arr.length; i++){
 //    if(arr[i]>max){
 //       max = arr[i]
 //    };
-     
+
 // }
 
 // for (let i=1; i<arr.length; i++){
 //    if(arr[i]<min){
 //       min = arr[i]
 //    }
-     
+
 // }console.log(max*min)
 
-
-                                           //hometask 2
+//hometask 2
 // let arr =[];
-
 
 // for (let i = -100; i<=100; i++){     //hometask 2a
 //   arr[i]=i
@@ -1520,52 +1383,40 @@
 //    }
 //    if(i>0){
 //       arr [i]=i;
-      
-      
+
 //    }
-   
+
 // }
 
-
-
 // let arr =[];
-
 
 // for (let i = -100; i<=100; i++){     //hometask 2b
 //   arr[i]=i
 //    console.log(arr[i])
 // }
 
-
 // let arr =[];
 // let count = 0;
-
 
 // for (let i = -100; i<=100; i++){     //hometask 2c
 //    if(i<0){
 //       count+=1;
-      
-      
+
 //    }
 // }console.log(count)
-
-
 
 // let arr =[];
 // let count1 = 0;
 // let count2 = 0;
 
-
 // for (let i = -100; i<=100; i++){     //hometask 2d
 //    if(i>0){
 //     a= count1+=i;
 //     b = count2+=1;
-//    };   
+//    };
 // }
 
-// console.log(a/b) 
-     
-
+// console.log(a/b)
 
 // let arr =[];
 // let count = 0;
@@ -1574,7 +1425,7 @@
 //      arr[i]=i;
 //      if(arr.indexOf(i)%2!==0){
 //         count+=i
-     
+
 //         console.log(arr.length)
 //      }
 // }
@@ -1585,12 +1436,11 @@
 // for (let i = 0; i<=100; i++){     //hometask 2f
 //      arr[i]=i;
 //      if(arr[i]%7==0){
-      
+
 //       count+=arr.indexOf(i)
-   
+
 //      }
 // }console.log(count)
-
 
 // let str = "abbe";
 // let arr = str.split("");              //hometask 3
@@ -1600,17 +1450,16 @@
 //    alert (true)
 // }
 // else alert(false)
-   
 
 // let str = "The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain.”";
 // let arr = str.split(" ");
 // let  newArr =[];
 // for (let i = 1; i<arr.length;i=i+2){
-   
+
 //    a=arr[i].toUpperCase()
-   
+
 //    newArr[i]=arr[i-1] + " " +a;
-  
+
 // }
 // newStr = newArr.join(" ")
 // console.log(newStr)
@@ -1618,15 +1467,14 @@
 // let array = [1,2,3,4,5];
 // let max = array[0]*array[1];
 // for(let i = 0; i<array.length;i++){
- 
+
 //  if(array[i]*array[i+1]>max){
 //      max=array[i]*array[i+1];
-     
+
 //  }
- 
+
 // }
 // console.log(max);
-
 
 // let arr = [
 //     { id: 15 },
@@ -1649,7 +1497,7 @@
 
 // let Arr = arr.filter(checkId);
 // console.log(number);
-  
+
 // let arr = {1, -2, 15, 2, 0, 8};
 // console.log(Array.isArray(arr))
 
@@ -1657,12 +1505,11 @@
 // console.log(arr.sort((a,b)=>{return b-a}))
 
 // let value = arr.reduce((i,j)=>{
-    
+
 //     return i+j;
 
 // },10)
 // console.log(value)
-
 
 // let str = "-webkit-transition";
 // let arr = str.split("-");
@@ -1670,7 +1517,7 @@
 // for(let i = 1;i<arr.length; i++){
 //     newarr.push(arr[0]);
 //     newarr[i] = arr[i].substring(0,1).toUpperCase().concat(arr[i].substring(1));
-  
+
 // };
 // let newstr = newarr.join('');
 // console.log(newstr)
@@ -1697,17 +1544,12 @@
 
 // let arr = [5, 2, 1, -10, 8];
 
-
-
-    
 // function sort2 (a,b){
 //     return b-a
 
-    
 // }
 // arr.sort(sort2)
 // console.log(arr)
-
 
 // function change(arr,a,b){
 //     for(let i =0;i<arr.length;i++){
@@ -1715,7 +1557,6 @@
 //             arr.splice(i,1);
 //             // i--;
 //         }
-        
 
 //     }
 // }
@@ -1723,28 +1564,25 @@
 // change(arr,1,4);
 // console.log(arr)
 
-
-
 // function filterRangeInPlace(arr, a, b) {
 
 //     for (let i = 0; i < arr.length; i++) {
 //       let val = arr[i];
-  
+
 //       // удалить, если за пределами интервала
 //       if (val < a || val > b) {
 //         arr.splice(i, 1);
 //         i--;
 //       }
 //     }
-  
-//   }
-  
-//   let arr = [5, 3,4,6, 8, 1];
-  
-//   filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
-  
-//   alert( arr )
 
+//   }
+
+//   let arr = [5, 3,4,6, 8, 1];
+
+//   filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+//   alert( arr )
 
 // let arr = ["HTML", "JavaScript", "CSS"];
 // let newArr = arr.slice();
@@ -1758,7 +1596,6 @@
 // let names = users.map(elem=>elem.name);
 // console.log(names)
 
-
 // let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
 // let petya = { name: "Петя", surname: "Иванов", id: 2 };
 // let masha = { name: "Маша", surname: "Петрова", id: 3 };
@@ -1768,7 +1605,6 @@
 // id:elem.id
 // }))
 // console.log(mapped)
-
 
 // let vasya = { name: "Вася", age: 25 };
 // let petya = { name: "Петя", age: 30 };
@@ -1795,7 +1631,7 @@
 // let mid = 0;
 // for(let i = 0;i<mapped.length;i++){
 //  mid+=mapped[i];
- 
+
 // }
 // console.log(Math.ceil(mid/mapped.length))
 
@@ -1813,7 +1649,6 @@
 // }
 // console.log(nope(strings))
 
-
 // let numbers = [0, 1 , 2, 3, 10, 20, 30 ];
 
 // function func(a,b){
@@ -1823,12 +1658,11 @@
 
 // // }
 
-
 // let func = (a,b) => {
 //     if(a>b) return 1;
 //     if(b>a) return -1;
 //     return 0;
-  
+
 // }
 // numbers.sort((a,b) => {
 //     if(a>b) return 1;
@@ -1836,9 +1670,8 @@
 //     return 0;
 // });
 
-
 // numbers.sort((a,b) => (a>b)?1:-1);
-    
+
 // console.log(numbers)
 
 // let animals = [
@@ -1853,7 +1686,7 @@
 //     {name: 'David', salary: 75000, hireDate: "August 15, 2009"},
 //     {name: 'Ana', salary: 80000, hireDate: "December 12, 2011"}
 // ];
-// employees.sort((x,y)=> { 
+// employees.sort((x,y)=> {
 //     let a=new Date(x.hireDate) ;
 //     let b=new Date(y.hireDate);
 
@@ -1879,7 +1712,7 @@
 //   let getfull = persons.map(element=>({
 //        fullname:`${element.firstname} ${element.lastname}`
 //   }))
-    
+
 //     console.log(getfull)
 
 // let vasya = { name: "Вася", age: 25 };
@@ -1915,24 +1748,22 @@
 // let filtered = indexOn.filter(elem=>elem.id==10)
 // console.log(filtered.map(elem=>elem.name))
 
-
 // let arr = [];
 // function range(a,b){
 //     for(let i = a,j=0;i<=b;i++,j++){
 //         arr[j]= i;
-        
-//     } 
+
+//     }
 //     return arr
 // }
 // console.log(range(4,7))
-
 
 // function range(a,b){
 //     let arr = new Array(b);
 //     for(let i = a,j=0;i<=arr.length;i++,j++){
 //         arr[j]= i;
-        
-//     } 
+
+//     }
 //     return arr
 // }
 // console.log(range(2,5))
@@ -1940,20 +1771,18 @@
 // let array= [58, '', 'abcd', true, null, false, 0];
 // let newArr = array.filter(element=>element!=(null,0,'',false))
 
-
 // console.log(newArr.slice(0,newArr.length-1))
-
 
 // (3, 'default value')
 
-// 
+//
 
 // function cheange (a,b){
 //     let arr = new Array(a);
 //     for(let i =0;i<arr.length;i++){
 //         arr[i]= b;
-        
-//     }  
+
+//     }
 //     console.log(arr)
 // }
 // cheange(4,10)
@@ -1961,13 +1790,12 @@
 // let numbers = [0, 1 , 2, 3, 10, 20, 30 ];
 // let newar = [];
 // for(let i =0;i<numbers.length;i++){
-   
+
 //         newar[0]=numbers[Math.floor((i+1)*Math.random())]
-    
+
 // }
 
 // console.log(newar.toString())
-
 
 // var array1 = [1, 2, 3];
 // var array2 = [2, 30, 1];
@@ -1996,12 +1824,11 @@
 //     console.log(arr[i])
 // }
 
-
 // let arr = [NaN, 0, 15, false, -22, '',undefined, 47, null];
 // let newarr = arr.filter(element=>{
 //     if( Number.isFinite(element)==true);
 //     return element
-// }) 
+// })
 // console.log(newarr)
 
 // let arr= [10,20,10,40,50,60,70];
@@ -2011,10 +1838,9 @@
 //     let check1 = arr[i];
 //     let check2 = arr[i+1]
 //  if(check2+check1==num){
-     
-//      console.log(arr.indexOf(check1),arr.indexOf(check2)) 
+
+//      console.log(arr.indexOf(check1),arr.indexOf(check2))
 //  }
- 
 
 // }
 // var arr = ["Есть", "жизнь", "на", "Марсе"];
@@ -2042,7 +1868,6 @@
 //    return a+b.price;
 // },0)
 // console.log(newarr)
-
 
 // let arr= [10,20,10,40,50,60,70];
 // let newarr = arr.reduce((a,b)=>{
@@ -2079,17 +1904,12 @@
 //         HermioneGranger: 1270
 //       };
 
-
 // wizards.reduce((arr,wizard)=>{
 // var key = wizard.name.replace( ' ', ' ');
 // wizard.points=points[key];
 // arr.push(wizard);
 // return arr;
 // },[])
-
-
-
-
 
 //  let view=wizards=>console.log(wizards);
 //  console.time('r')
@@ -2100,20 +1920,18 @@
 
 // console.End('timer')
 
-    // let newarr = wizards.filter(elem=>elem.house=='Hufflepuff'
-        
-    // )
-    // console.log(newarr.map(elem=>elem.name))
-    // let newarr =[];
-    //  wizards.reduce((a,b)=>{
-    //      if ( b.house == 'Hufflepuff'){
-    //         newarr.push(b.name)
-    //      }
+// let newarr = wizards.filter(elem=>elem.house=='Hufflepuff'
 
-    //  },0)
-    //  console.log(newarr)
+// )
+// console.log(newarr.map(elem=>elem.name))
+// let newarr =[];
+//  wizards.reduce((a,b)=>{
+//      if ( b.house == 'Hufflepuff'){
+//         newarr.push(b.name)
+//      }
 
-
+//  },0)
+//  console.log(newarr)
 
 //     let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
 //     let petya = { name: "Петя", surname: "Иванов", id: 2 };
@@ -2125,9 +1943,8 @@
 //     id:elem.id
 
 // }))
-    
-// console.log(newarr)
 
+// console.log(newarr)
 
 // let arr = [1,2,3,4,5];
 // function newresult(arr){
@@ -2155,7 +1972,6 @@
 
 // }console.log(str.split(", "))
 
-
 // let user ={};
 //  user.name="John";
 //  user.surname="Smith";
@@ -2171,7 +1987,6 @@
 // }
 // console.log(check(user))
 
-
 // let salaries = {
 //     John: 100,
 //     Ann: 160,
@@ -2181,12 +1996,11 @@
 //       var sum =0;
 //       for(let prop in salaries){
 //         sum+=salaries[prop]
-        
+
 //       }console.log(sum)
-      
+
 //   }
 // getsum(salaries)
-
 
 // let menu = {
 //     width: 200,
@@ -2197,13 +2011,12 @@
 //   for(let prop in menu){
 //      if(isFinite(menu[prop])){
 //       menu[prop]*=2
-//     } 
+//     }
 //   }console.log(menu)
-  
-  
+
 //   }
 //   newm();
-  
+
 // let fruit = "apple";
 // let obj = {
 //     [fruit]:5,
@@ -2219,10 +2032,6 @@
 
 // let myCar1 = new Car("BMW","E60",1996);
 
-
-
-
-
 // function Person (name,surname){
 //     this.name=name;
 //     this.surname=surname;
@@ -2231,7 +2040,6 @@
 //  let myCar2 = new Car("mersedes","CLK" ,2001,Pet)
 // //  console.log(Pet)
 // console.log(myCar2)
-
 
 // let a = {name:1};
 // let b = {};
@@ -2262,18 +2070,15 @@
 // obj.sizes.width++;
 // console.log(copy.sizes.width)
 
-
 //   function clone(user){
-  
+
 //   for(let prop in user){
 //    copy[prop]=(typeof(user[prop]==`object`))?user[prop]:clone(user[prop])
-    
-      
+
 //   }
 //   return copy
 // }
 //   console.log(copy)
-
 
 // let animal = {
 //     walks:true,
@@ -2303,24 +2108,24 @@
 // let head = {
 //     glasses: 1
 //   };
-  
+
 //   let table = {
 //     pen: 3,
 //     __proto__:head,
 //   };
-  
+
 //   let bed = {
 //     sheet: 1,
 //     pillow: 2,
-    
+
 //     __proto__:table
 //   };
-  
+
 //   let pockets = {
 //     money: 2000,
-    
+
 //     __proto__:bed
-   
+
 //   };
 //   console.time(`timer`)
 //  console.log(head.glasses)
@@ -2328,17 +2133,17 @@
 
 // let hamster = {
 //     stomach: [],
-  
+
 //     eat(food) {
 //       this.stomach.push(food);
 //     }
 //   };
-  
+
 //   let speedy = {
 //     __proto__: hamster,
 //     stomach:[]
 //   };
-  
+
 //   let lazy = {
 //     __proto__: hamster,
 //     stomach:[]
@@ -2351,7 +2156,7 @@
 //     name : "David Rayy",
 //     sclass : "VI",
 //     rollno : 12 };
-    
+
 // let sum=0;
 // for(let prop in student){
 //     if(prop){
@@ -2360,7 +2165,7 @@
 // }
 // console.log(sum)
 
-// var library = [ 
+// var library = [
 //     {
 //         author: 'Bill Gates',
 //         title: 'The Road Ahead',
@@ -2373,13 +2178,13 @@
 //     },
 //     {
 //         author: 'Suzanne Collins',
-//         title:  'Mockingjay: The Final Book of The Hunger Games', 
+//         title:  'Mockingjay: The Final Book of The Hunger Games',
 //         readingStatus: false
 //     }];
 // for(let i=0;i<library.length;i++){
 //     console.log(library[i].title +library[i].author)
 // }
-    
+
 //   let data = [6,4,0, 3,-2,1];
 //   let newdata = []
 //  for(let i = 0,j=1;i<data.length;){
@@ -2391,20 +2196,19 @@
 //  }
 // console.log(newdata)
 
-// var library = 
+// var library =
 //     {
 //         title:  'The Road Ahead',
 //         author: 'Bill Gates',
 //         libraryID: 1254
 //     };
-    
+
 // // // let name1 = {
 // // //     name:"tome",
 // // //     __proto__:library,
 // // // }
 // // // for(let prop in name1)
 // // // console.log(Object.values(name1))
-
 
 // let nano = Object.create(library,{
 //     name:{
@@ -2432,39 +2236,35 @@
 // user.fullname = "Alice Cooper";
 // console.log(user.name)
 
-
 // let user = {
 //     name: "John",
 //     surname: "Smith",
-  
+
 //     get fullName() {
 //       return `${this.name} ${this.surname}`;
 //     },
-  
+
 //     set fullName(value) {
 //       [this.name, this.surname] = value.split(" ");
 //     }
 //   };
-  
+
 //   // set fullName запустится с данным значением
 //   user.fullName = "Alice Cooper";
-  
+
 //   alert(user.name); // Alice
 //   alert(user.surname); // Cooper
 // "use strict";
 // let user = {};
 // // user.name="pete";
 // Object.defineProperty(user,"surname",{
-//     value:"Browns", 
+//     value:"Browns",
 //     // enumerable:true,
-//     writable:true, 
+//     writable:true,
 //     configurable:true
 // });
 // user.surname="bla";
 // console.log(user.surname)
-
-
-
 
 // "use strict";
 
@@ -2482,11 +2282,9 @@
 // user.name = "Петя";
 // console.log(user.name)
 
-
 // let user = {
 //     name:"pete",
 //     surname:"brown",
-
 
 //     get fullname(){
 // return this.name + this.surname
@@ -2494,7 +2292,7 @@
 //     set fullname(value){
 //        [this.name,this.surname] = value.split(" ")
 //     }
-    // }
+// }
 //     user.fullname="jorj sympson"
 //     console.log(user.fullname)
 //     Object.defineProperty(user,"fullname",{
@@ -2510,9 +2308,6 @@
 //     console.log(prop)
 // }
 // console.log(Object.getOwnPropertyNames(user))
-
-
- 
 
 // let domb = new User("pasha volya")
 // console.log(domb)
@@ -2555,8 +2350,6 @@
 //             enumerable:true,
 //         },
 
-   
-
 //     age:{
 //         get (){
 //                return  new Date().getFullYear()-this.birthYear
@@ -2572,14 +2365,10 @@
 //     console.log(obj[prop])
 // }
 
-
-
-
 // // for(let prop in obj){
-// //     console.log(prop,obj[prop]) 
-    
-// // }
+// //     console.log(prop,obj[prop])
 
+// // }
 
 // const obj = {
 //     birthYear: 1995,
@@ -2592,7 +2381,6 @@
 // }
 // obj.age = "1997"
 // console.log(obj.age)
-
 
 // let obj={
 //     birthYear:{
@@ -2612,30 +2400,28 @@
 // }
 // console.log(obj.age)
 
-
 // let obj = {
 //     names:"Jon",
 //     Surname:"smith",
 //     birth:1990,
-    // get fullname(){
-    //     return  `${this.names} ${this.Surname}`
-    // },
-    // set fullname(value){
-    //     [this.names,this.Surname] = value.split(" ")
-    // },
+// get fullname(){
+//     return  `${this.names} ${this.Surname}`
+// },
+// set fullname(value){
+//     [this.names,this.Surname] = value.split(" ")
+// },
 
-    // get age(){
-    //     return new Date().getFullYear()-this.birth
-    // },
-    // set age(value){
-    //     this.birth=value
-    // }
+// get age(){
+//     return new Date().getFullYear()-this.birth
+// },
+// set age(value){
+//     this.birth=value
+// }
 // }
 // obj.fullname = "LEvon Brown"
 // console.log(obj.fullname)
 // obj.age = 2001
 // console.log(obj.age)
-
 
 // let obj2 = Object.create({},
 //     {
@@ -2648,7 +2434,7 @@
 //     },
 // age:{
 //     get(){
-//         return new Date().getFullYear()-this.birth 
+//         return new Date().getFullYear()-this.birth
 //     },
 //     set(value){
 //         this.birth=value
@@ -2667,7 +2453,6 @@
 // // for(let prop in obj2){
 // //     console.log(prop)
 // // }
-
 
 // let obj = Object.create({},
 // {
@@ -2709,20 +2494,19 @@
 //     })
 // Object.preventExtensions(obj);
 // Object.isExtensible(obj);
-// delete obj.name   
+// delete obj.name
 // for(let prop in obj){
 //     console.log(prop)
 // }
 // console.log(obj)
 
-
 // let obj = {
 // birth:1990,
 // };
-           
+
 // let obj2={
 //     name:"Ann",
-    
+
 // }
 // // Object.setPrototypeOf(obj2,obj)
 // // Object.preventExtensions(obj2)
@@ -2738,7 +2522,7 @@
 // console.log(obj)
 
 // let obj = {
-  
+
 //   b:1,
 //   a:undefined
 // }
@@ -2761,7 +2545,6 @@
 // // // console.log(Object.keys(data).length == Object.keys(data2).length);
 // // console.log(Object.values(data) === s(data2));
 
-
 //  function check(obj1,obj2){
 //      if(Object.keys(obj1).length !== Object.keys(obj2).length){
 //          return false
@@ -2774,7 +2557,7 @@
 //          }
 //      }
 //      return true
-//  } 
+//  }
 
 //  console.log(check(data,data2))
 
@@ -2805,12 +2588,11 @@
 //         if(a[key] !==b[key]){
 //             return false
 //         }
-        
+
 //     }
 //     // return true
 // }
 // // console.log(check(data,data2))
-
 
 // function isEquivalent(a, b) {
 //     // Create arrays of property names
@@ -2865,8 +2647,8 @@
 // delete myObject.regex;
 // console.log(myObject)
 
-// const data1 = { 
-//     a: 1, 
+// const data1 = {
+//     a: 1,
 //     b:2,
 //     c:3
 // };
@@ -2877,7 +2659,7 @@
 // // console.log(data2)
 // // for(let prop in data1){
 // // // if(Object.hasOwnProperty(prop)=="a"){
-    
+
 // // // }
 // // }
 // for(let prop in data1){
@@ -2908,7 +2690,6 @@
 // function Calc(read1,read2,sum,mult){
 //     this.read1 = prompt("enter number")
 //     this.read2 = prompt("enter number")
-    
 
 //     this.sum = function (){
 //        return parseInt(this.read1)+parseInt(this.read2)
@@ -2916,18 +2697,16 @@
 //     this.mult = function (num1,num2){
 //        return this.read1*this.read2
 //     }
-    
+
 // }
 // let calc = new Calc;
 // console.log(calc.mult())
-
 
 // function Calc(read,sum,mult){
 //     this.read = function(){
 //         this.a=prompt("a")
 //         this.b=prompt("b")
 //     };
-    
 
 //     this.sum = function (){
 //        return this.a+this.b
@@ -2935,7 +2714,7 @@
 //     this.mult = function (num1,num2){
 //        return this.a*this.b
 //     };
-    
+
 // }
 
 // let calc = new Calc;
@@ -2979,7 +2758,7 @@
 
 // let user  = {
 //     name:"john",
-    
+
 // }
 // let surname = Symbol.for('id')
 // let age = Symbol.for('id')
@@ -2991,7 +2770,6 @@
 // // user[secondname]=2;
 // user[surname]=3;
 
-
 // // console.log(Symbol.keyFor(1))
 
 // let clone = Object.assign({},user)
@@ -3000,7 +2778,7 @@
 //     console.log(prop)
 // }
 // let citizenID = Symbol.for('ssn');
-// console.log(Symbol.keyFor(citizenID)); 
+// console.log(Symbol.keyFor(citizenID));
 
 // let obj = {
 //     a:1,
@@ -3024,8 +2802,6 @@
 // }
 // console.log(invoke()
 
-
-
 // let obj = {
 //     name:"John",
 //     birth:1995,
@@ -3048,12 +2824,10 @@
 // obj.join=Array.prototype.join;
 // console.log(obj.join(`,`))
 
-
-
 //   Function.prototype.defer = function(ms){
 //       setTimeout(this,ms)
 //   };
- 
+
 //   function f() {
 //     alert("Hello!");
 //   };
@@ -3063,17 +2837,16 @@
 //     width: 200,
 //     height: 300,
 //     title: "My menu"
-  
+
 //   }
 //   let sum=0;
 //   for(let prop in obj){
 //       if(Number.isFinite(obj[prop])===true){
 //          obj[prop]*=2
 //       }
-         
+
 //       else  obj[prop]
-      
-      
+
 //   }
 //   console.log(obj)
 
@@ -3086,7 +2859,7 @@
 //   };
 
 // //   let clone = Object.assign({},user)
-  
+
 // //   console.log(clone.sizes.width)
 
 // let clone = JSON.parse(JSON.stringify(user));
@@ -3097,7 +2870,7 @@
 //     name: "Джон",
 //     hi() { alert(this.name); }
 //   };
-  
+
 //   // разделим получение метода объекта и его вызов в разных строках
 //   let hi = user.hi();
 //   hi();
@@ -3107,7 +2880,7 @@
 
 // function Rabbit(name){
 //     this.name=name;
-    
+
 // }
 // Rabbit.prototype=rabbit;
 // let carrot = new Rabbit("cheepy");
@@ -3120,7 +2893,6 @@
 // // console.log(Object.getOwnPropertyNames(Rabbit.prototype))
 // let rabbit2=new Rabbit("smth");
 
-
 // let rabbit = {
 //     eats:true,
 // }
@@ -3130,7 +2902,7 @@
 //     F.prototype=proto;
 //     let object = new F();
 //     return object;
-    
+
 // }
 // inherit(rabbit)
 // console.log(F.eats)
@@ -3152,9 +2924,8 @@
 //   console.log(rabbit.jumps)
 //   let user = new User.constructor('John');
 // //   let user2 = new user.constructor('Pete');
-  
-//   alert( user.name ); // Pete (сработало!)
 
+//   alert( user.name ); // Pete (сработало!)
 
 // function inherit (proto){
 //     function F(){};
@@ -3175,9 +2946,7 @@
 // }
 //     delete obj.name1
 
-
 // console.log(obj["name 2"])
-
 
 // let fruit = prompt("enter")
 // let user ={
@@ -3185,7 +2954,6 @@
 // }
 
 // alert(user.apple)
-
 
 // let user = {
 //     name:"john"
@@ -3225,7 +2993,7 @@
 // }
 
 // let user1 = new User("ojjn",27);
-// console.log(user1.age) 
+// console.log(user1.age)
 
 // let id = Symbol("id")
 
@@ -3261,10 +3029,6 @@
 //     set age (value){
 //         this.birth=value
 
-
-
-
-
 //     },
 //     get fullname(){
 //         return `${this.name} ${this.Surname} `
@@ -3276,7 +3040,6 @@
 //     // user.age=2001
 //     // user.fullname = "levon Smith"
 //     alert(user.fullname)
-
 
 //     let obj = {
 //     names:"Jon",
@@ -3418,7 +3181,7 @@
 //         super.stop();
 //         this.hide()
 //     }
-    
+
 // }
 // let rabbit = new Rabbit("petya",30);
 // console.log(rabbit.ear)
@@ -3434,7 +3197,7 @@
 
 // };
 // let rabbit ={
-  
+
 //     __proto__:animal,
 //    eat:function(){
 //        super.eat()
@@ -3454,12 +3217,11 @@
 
 // };
 // let rabbit ={
-  
+
 //     __proto__:animal,
 //    eat(){
 //        super.eat()
 //    }
-   
 
 // };
 // console.log(rabbit.eat())
@@ -3472,8 +3234,6 @@
 
 // }
 
-
-
 // rabbit.sayHi()
 
 // class Animal {
@@ -3481,18 +3241,18 @@
 //     constructor(name) {
 //       this.name = name;
 //     }
-  
+
 //   }
-  
+
 //   class Rabbit extends Animal {
 //     constructor(name) {
 //     //   this.name = name;
 //     super(name);
 //       this.created = Date.now();
-      
+
 //     }
 //   }
-  
+
 //   let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
 //   alert(rabbit.name);
 
@@ -3500,38 +3260,36 @@
 //     constructor({ template }) {
 //       this.template = template;
 //     }
-  
+
 //     render() {
 //       let date = new Date();
-  
+
 //       let hours = date.getHours();
 //       if (hours < 10) hours = '0' + hours;
-  
+
 //       let mins = date.getMinutes();
 //       if (mins < 10) mins = '0' + mins;
-  
+
 //       let secs = date.getSeconds();
 //       if (secs < 10) secs = '0' + secs;
-  
+
 //       let output = this.template
 //         .replace('h', hours)
 //         .replace('m', mins)
 //         .replace('s', secs);
-  
+
 //       console.log(output);
 //     }
-  
+
 //     stop() {
 //       clearInterval(this.timer);
 //     }
-  
+
 //     start() {
 //       this.render();
 //       this.timer = setInterval(() => this.render(), 1000);
 //     }
 // }
-
- 
 
 // class Animal {
 //     constructor(name,speed){
@@ -3566,16 +3324,15 @@
 //         super(name)
 //         this.ear=ear
 //     }
-    
+
 // hide(){
-    
+
 //     alert(`${this.name}` + " " + " is hiding")
 //     super.stop()
 // }
 // }
 // let rabbit = new Rabbit("pushok",10);
 // console.log(rabbit.ear)
-
 
 // let  animal ={
 //     name: "Животное",
@@ -3602,7 +3359,7 @@
 //     constructor(name,date){
 //         this.name=name;
 //         this.date=date;
-        
+
 //     }
 
 //     static compare (articleA,articleB){
@@ -3620,16 +3377,11 @@
 // articles.sort(Newa.compare);
 // console.log(articles[0].name)
 
-
-
-
-
-
 // class Article{
 //     constructor(name,date){
 //         this.name=name;
 //         this.date=date;
-        
+
 //     }
 //     static articlemkr(){
 //         return new this("fgerwgwg" , new Date())
@@ -3638,10 +3390,9 @@
 // let art = Article.articlemkr();
 // console.log(art.name)
 
-
 // class CoffeeMachine{
 //     _waterAmount=0;
-//     // 
+//     //
 //     set waterAmount(value){
 //         if(value<0){
 //             throw new Error("not enough water");
@@ -3653,7 +3404,7 @@
 //     //    alert("coffeeMachine power is" + `${this.power}`)
 //    }
 //    get power(){
-//     return this._power 
+//     return this._power
 // }
 // }
 // let coffeMachine = new CoffeeMachine(10);
@@ -3695,7 +3446,7 @@
 //         return x
 //     }
 //     else{return x*pow(x,n-1)}
-    
+
 // }
 // alert(pow(3,3))
 
@@ -3719,20 +3470,15 @@
 // let a3 ;
 // let count=77;
 
-
 // console.log(a1,a2)
-
 
 // for(let i = 2;i<count;i++){
 // a3=a1+a2
 //     console.log(a3)
 //     a1=a2;
 //     a2=a3;
-  
-   
 
 // }
-
 
 // function fib(n){
 
@@ -3760,7 +3506,6 @@
 //       list = list.next
 //   }
 
-
 // function print(list){
 //     console.log(list.value);
 //     if(list.next){
@@ -3776,7 +3521,6 @@
 // }
 // console.log(find(2154,458,458))
 
-
 // console.log(Number.MAX_VALUE)
 // let x =4,y=5;
 
@@ -3788,7 +3532,7 @@
 // }
 // let arr = []
 // function fib(a){
-    
+
 // if(a<=1){
 //     return [0,1]
 // }arr = fib(a-1)
@@ -3809,7 +3553,7 @@
 //     let sum=0;
 //     for(let prop of args){
 //         sum+=prop;
-        
+
 //     }return sum
 // }
 // console.log(sum(1,2,3,4,5,6,7,8,9))
@@ -3840,17 +3584,15 @@
 //     alert(str)
 // })();
 
-
 // function f() {
 //     let value = Math.random();
-  
+
 //     return function() { alert(value); };
 //   }
-  
+
 //  f()
 //   let arr = [f(), f(), f()];
 //   console.log(arr)
-
 
 // function g (value){
 //     let v=value
@@ -3895,7 +3637,7 @@
 // let a = 'global';
 // function outer() {
 //     let b = 'outer';
-//      console.log(b); 
+//      console.log(b);
 // function inner() {
 //       let c = 'inner'
 //     //   console.log(c);   // выдаст 'inner'
@@ -3908,10 +3650,9 @@
 //   }
 // outer();
 
-// // console.log(a); 
+// // console.log(a);
 // // console.log(b);
 //     // выдаст 'outer'
-   
 
 // var ­scope­=­ "global­scope";­­­­­­­­­
 // function­ checkscope()­{
@@ -3928,11 +3669,11 @@
 //         let scope ="nestedscope"
 //         return scope
 //     }
-    
+
 // }console.log(check())
 // let scope = "global";
 // function f(){
-    
+
 //     let scope="local"
 //     function f1(){
 //     return scope
@@ -3945,10 +3686,10 @@
 //     return {
 //      plus:function (){
 //          return count++
-//      }, 
+//      },
 //      reset:function (){
 //          return count =0
-//      } 
+//      }
 //     }
 // }
 // let c=counter(),d=counter();
@@ -3974,7 +3715,6 @@
 //     }
 // }
 // let d = count(150)
-
 
 // console.log(d.c)
 // console.log(d.c)
@@ -4007,9 +3747,7 @@
 // let arr = [1,2,3,4,5];
 // console.log(arr.filter(check([1,2])))
 
-
 //   console.log(users.sort((item1,item2)=>item1.age>item2.age?1:-1))
-
 
 // let users = [
 //     { name: "John", age: 20, surname: "Johnson" },
@@ -4018,9 +3756,9 @@
 //   ];
 
 // function change(item){
-   
+
 //         return (item1,item2)=>item1[item]>item2[item]?1:-1
-    
+
 // }
 
 // users.sort(change('age'));
@@ -4035,10 +3773,9 @@
 // for(let i = 0;i<10;i++) fu[i]=consta(i);
 // console.log(fu[5]())
 
-
 // function makeArmy() {
 //     let shooters = [];
-  
+
 //     let i = 0;
 //     while (i < 10) {
 //       let shooter = function() { // функция shooter
@@ -4047,31 +3784,30 @@
 //       shooters.push(shooter);
 //       i++;
 //     }
-  
+
 //     return shooters;
 //   }
-  
+
 //   let army = makeArmy();
 
-  // function makeArmy(v){
-  //     return function (){
-  //         return v
-  //       }
+// function makeArmy(v){
+//     return function (){
+//         return v
+//       }
 
-  //   }    
-  
-  // let shooters = [];
-  // let i = 0;
-  // while (i < 10) {
-   
-  //   shooters.push(i);
-  //   i++;
-  //   shooters[i]=makeArmy(i)
-  // }
+//   }
 
-  // console.log(shooters[3]())
+// let shooters = [];
+// let i = 0;
+// while (i < 10) {
 
- 
+//   shooters.push(i);
+//   i++;
+//   shooters[i]=makeArmy(i)
+// }
+
+// console.log(shooters[3]())
+
 // let x=7;
 // function a(y){
 //   return x+y
@@ -4093,7 +3829,7 @@
 // for(let i = 0;i<arr.length;i++){
 //   // if(newstr[i]=="a" || newstr[i]=="e" || newstr[i]=="i" || newstr[i]=="o" || newstr[i]=="u"){
 //     // newstr.replaceAll("i"," ")
-//   // } 
+//   // }
 //   if(arr[i]==="i" || arr[i]=="e" || arr[i]=="i" || arr[i]=="o" || arr[i]=="u"){
 //   delete arr[i]
 //   }
@@ -4135,19 +3871,18 @@
 
 // function gets(){
 //   let count =1;
-  
+
 //   return function (a,b){
 //     if(count%2==0 && count>3){
-  
-//       console.log("hmm, I don't know!") 
+
+//       console.log("hmm, I don't know!")
 //     }else console.log(a+b)
-     
+
 //      return count++
-    
+
 //   }
 
 // }
-
 
 // let  cnt=gets()
 // cnt(5,6)
@@ -4156,7 +3891,6 @@
 // cnt(2,3)
 // cnt(5,6)
 // cnt(5,8)
-
 
 // console.log(arr.map(item=>item*2));
 
@@ -4173,7 +3907,6 @@
 // let str = "3 * 2";
 // let arr = str.split("");
 
-
 // for(let i = 0;i<arr.length;i++){
 //   if( isFinite(arr[i])){
 //   arr[i]=parseInt(arr[i])
@@ -4181,16 +3914,16 @@
 //   }
 //   // else if(arr[i]=="*"){
 //   //    arr[i]='*'
-    
+
 //   // }
-  
+
 // }
 
 // function changeStr(){
-  
+
 //   return function(arr){
 //       for(let i = 0;i<arr.length;i++){
- 
+
 //           if(arr[i]== "*" && isFinite(arr[i]==true)){
 //             console.log(arr[i-1]*arr[i+1])
 //           }
@@ -4210,7 +3943,6 @@
 // let changed=changeStr(str);
 // changed(str.split(" "))
 
-
 // let str = "3*5";
 // let arr = str.split("")
 // for(let i = 0;i<arr.length;i++){
@@ -4222,14 +3954,13 @@
 
 // let arr = [2,3 ];
 
-
 // function checkArr(arr){
 //   return function (){
 // for(let i=0;i<arr.length;i++){
 //   if((Math.sqrt(arr[i])-Math.floor(Math.sqrt(arr[i]))!=0)){
-    
+
 //     return false
-    
+
 //   }
 //   return true
 // }
@@ -4248,7 +3979,6 @@
 //   }
 // }
 // let y = avg()
-
 
 // console.log(y(5))
 // console.log(y(10))
@@ -4288,24 +4018,20 @@
 
 // function pers(x){
 //   let count =0
-  
+
 //   if(x<10){
 //     return x
 //   }return count+pers(x%10,x/10)
-  
-  
+
 // }
 // console.log(pers(29))
 
 // let x = 12345 ;
 // let count =0;
 //  while(x>0){
-   
+
 //   count+=x%10;
 //   x=Math.floor(x/10)
-  
-   
-   
 
 //  }
 //  console.log(count)
@@ -4324,7 +4050,6 @@
 // }
 // console.log(getnum(8))
 
-
 // function repeatt(x,y){
 //     return y.repeatt(x)
 // }
@@ -4337,13 +4062,10 @@
 //     let temp = arr[i];
 //     arr[i]=arr[arr.length-i-1];
 //     arr[arr.length-i-1]=temp;
-    
 
 // }
 // let newstr=arr.join("")
 // console.log(newstr==str)
-
-
 
 // function check(str){
 //     if(([...str].reverse().join("")).toLowerCase()===str.toLowerCase()){
@@ -4361,14 +4083,14 @@
 // console.log(fac(3))
 // console.log(fac.length)
 
-// 
+//
 
 // let x = 5;
 // let arr =[];
 // for(let i=0;i<6;i++){
-    
+
 //     arr.push(x)
-    
+
 // }
 // console.log(arr)
 
@@ -4437,7 +4159,7 @@
 // function cc(){
 //     function counter(){
 //         return counter.count++
-        
+
 //     }
 //     counter.count=0
 //     counter.set=function (value){
@@ -4448,8 +4170,6 @@
 //     }
 //     return counter
 
-
-    
 // }
 // let counter=cc();
 // // counter.count=10;
@@ -4482,7 +4202,6 @@
 //     // [Symbol.toPrimitive](hint){
 //     //     alert(`${hint}`);
 //     //    return hint=="string"?`${this.name}`:this.age
-       
 
 //     // }
 //     toString(){
@@ -4501,7 +4220,6 @@
 // let b =a<18?"hm, come back with dad":a>18 && a<21?"Nearly but not yet":"welkome";
 // alert(b)
 
-
 // let a = prompt("insert number");
 // let count = 0;
 // while(a){
@@ -4515,7 +4233,7 @@
 //      function f(b){
 //        c+=b;
 //        return f
-       
+
 //    }
 //    f.toString=function(){
 //     return c
@@ -4562,7 +4280,6 @@
 //     setTimeout(func,2000)
 // },2000)
 
-
 // setTimeout(()=>alert("hello"))
 
 // alert("hi")
@@ -4577,7 +4294,7 @@
 // })
 
 // setTimeout(function f(count=1){
-    
+
 //     alert(count)
 //     setTimeout(f,1000,count++)
 // },1000)
@@ -4603,7 +4320,7 @@
 
 // setInterval(f(),1000)
 
-// 
+//
 
 // let timer = setTimeout(function tick(){
 //     alert("tick")
@@ -4615,27 +4332,23 @@
 // setTimeout(function tick(){
 //     arr.push(i++)
 //     // for(let i = 0;i<=5;i++){
-        
+
 //     // }console.log(i)
-    
+
 //     if(i<2)i++
-    
+
 //    else setTimeout(tick,1000)
 // },1000)
-
 
 // function f(from,to){
 //     console.log(from)
 //     let time=setTimeout(f,1000,++from)
 //     if(from>4){
-//         clearTimeout(time) 
+//         clearTimeout(time)
 //     }
-    
-   
-    
+
 // }
 // setTimeout(f,1000,1)
-
 
 // function count(from,to){
 //     let timer = setInterval(function(){
@@ -4644,7 +4357,6 @@
 // count(1,4)
 
 // let a =setTimeout(function count(sum){
-
 
 //     if(sum<4){
 //         console.log(++sum)
@@ -4677,33 +4389,31 @@
 // }
 // count(1,4)
 
-
 // function fact(num){
-    
+
 //     if(num===1){
 //         return num
 //     }return num*fact(num-1)
 // }
 // console.log(fact(15))
 
-
 // function fact(num){
 //     let i=num-1
 //     let a= setTimeout(function b(){
-       
+
 //        if (i>1){
-           
+
 //            console.log(num*=i);
 //            i--
-           
+
 //            setTimeout(b,1000)
-//         }clearTimeout(a)  
+//         }clearTimeout(a)
 //     },1000)
 // }
 // fact(15)
 
 // function start(){
-   
+
 //     let a = setTimeout(function b(){
 //         console.log(new Date())
 //     },1000)
@@ -4712,18 +4422,15 @@
 // start()
 // function start(){
 //     console.log(new Date())
-    
+
 // }
 // setInterval(start,60000)
 
+// let a = setTimeout(function b(){
+//     console.log(new Date)
+//     setTimeout(b,1000)
+// },1000)
 
-
-   
-    // let a = setTimeout(function b(){
-    //     console.log(new Date)
-    //     setTimeout(b,1000)
-    // },1000)
-  
 // let map =new Map()
 // map.set(12,45)
 //     .set(11,46)
@@ -4736,7 +4443,7 @@
 //         return n
 //     } return (slow(n-1)+slow(n-2))
 // }
-//  console.log(slow(30))  
+//  console.log(slow(30))
 //  console.timeEnd()
 
 // console.time()
@@ -4753,24 +4460,21 @@
 
 //  slow=cache(slow)
 
-
-
 // function cachingDecorator(func) {
 //     let cache = new Map();
-  
+
 //     return function(x) {
 //       if (cache.has(x)) {    // если кеш содержит такой x,
 //         return cache.get(x); // читаем из него результат
 //       }
-  
+
 //       let result = func(x); // иначе, вызываем функцию
-  
+
 //       cache.set(x, result); // и кешируем (запоминаем) результат
 //       return result;
 //     };
 //   }
 //   slow=cachingDecorator(slow)
-
 
 // function cache(func){
 //     let map=new Map()
@@ -4784,10 +4488,7 @@
 //         // return result
 //     };
 
-
-
 // }
-
 
 // function cache(func){
 //     let arr =[]
@@ -4796,7 +4497,7 @@
 //         if(arr[i]==undefined){
 //             arr[i]=func(x)
 //         }
-        
+
 //         return arr[i]
 //     }
 // }
@@ -4812,10 +4513,8 @@
 //         return n
 //     } return (slow(n-1)+slow(n-2))
 // }
-//  console.log(slow(30))  
+//  console.log(slow(30))
 //  console.timeEnd()
-
-
 
 // console.time()
 // function cache(func){
@@ -4833,7 +4532,6 @@
 // slow=cache(slow)
 // console.log(slow(30))
 // console.timeEnd()
-
 
 // function sayHi(){
 //     return ("hi" +this.name)
@@ -4854,7 +4552,7 @@
 //     method2(x,y){
 //        return Math.pow(x,this.method1())
 //     }
-   
+
 // }
 // console.log(obj.method2(65))
 // console.timeEnd()
@@ -4874,15 +4572,13 @@
 // console.log(obj.method2(65))
 // console.timeEnd()
 
-
-
 // console.time()
 // let obj = {
-    
+
 //     method2(x,y){
 //        return Math.pow(x,y)
 //     }
-   
+
 // }
 // console.log(obj.method2(65,2))
 // console.timeEnd()
@@ -4903,15 +4599,14 @@
 // console.timeEnd()
 // console.time()
 // let obj = {
-    
+
 //     method2(x,y){
 //        return Math.pow(x,y)
 //     }
-   
+
 // }
 // console.log(obj.method2(65,65))
 // console.timeEnd()
-
 
 // function decor(func,hash){
 //     let map =new Map()
@@ -4932,8 +4627,6 @@
 // obj.method2=decor(obj.method2,hash)
 // console.log(obj.method2(65,65))
 
-
-
 // console.time()
 // function cache(func,hash){
 //     let map=new Map()
@@ -4946,7 +4639,7 @@
 //         map.set(key,result)
 //         return result
 //     };
-    
+
 // }
 // function hash(arguments){
 //     return arguments[0] +','+ arguments[1]
@@ -4955,18 +4648,17 @@
 // console.log(obj.method2(65,65))
 // console.timeEnd()
 
-
 // function fib(n){
 //     let i=n-1
 //     let a = setTimeout(function b(){
 //         if(i>1){
-            
+
 //             console.log(n*=i)
 //             i--
 //             setTimeout(b,1000)
 //         }clearTimeout(a)
 //     },1000)
-    
+
 // }
 // fib(15)
 
@@ -4977,7 +4669,6 @@
 // function n(z){
 //     return z+1
 // }
-
 
 // function check(o,arr){
 //     return o(arr)
@@ -4998,7 +4689,7 @@
 // function x(arr){
 //     let z = arr.sort((a,b)=>a-b)
 //     let y=[]
-    
+
 //     for(let i=0;i<z.length;i++ ){
 //         if(z[i]==z[i+1])
 //         y.push(z[i])
@@ -5007,18 +4698,15 @@
 // }
 // function x(arr){
 //     let y=[]
- 
+
 //     for(let i=0;i<arr.length;i++){
 //        if(!y.includes(arr[i])){
 //            y.push(arr[i])
-           
-          
+
 //        }
-    
 
 //     }
-        
-    
+
 //     return y
 // }
 // console.log(x([1,2,3,4,1]))
@@ -5029,100 +4717,88 @@
 // console.log(dna(x,["A","T"]))
 
 // function x(arr){
-   
+
 //     for(let i=0;i<arr.length;i++){
-       
+
 //       arr[i]=arr[i].replace("A","T").replace("T","A")
-      
 
 //     }
 // return arr
-    
+
 // }
 // function change (x,num,str){
 //     return x(num,str)
 // }
 // console.log(change(x,[1,2,3],"asdhi"))
 
-
 // function x(num,str){
 //       let arr =str.split("")
 //     for(let i=0;i<num.length;i++){
 //         if(arr[num[i]]){
 //             arr[num[i]]=arr[num[i]].toUpperCase()
-            
-//         }  
+
+//         }
 //         }
 //         console.log(arr)
 //     }
 //    x([1,2,3],"asdhi")
 
-
 // let arr = [4,5,6,3,7];
 // let newar = [0,2];
 // for(let i=0;i<arr.length;i++){
 //     if(i=newar[i]){
-        
+
 //     }
 // }
 
-    // let str = "abcdef"
-    // let num = [1,2,5],j
-    // let arr =str.split("")
-    // for(let i=0;i<num.length;i++){
-    //     // if(arr[num[i]]){
-    //     //     arr[num[i]]=arr[num[i]].toUpperCase()
-    //     //     // console.log(arr[i])
-            
-    //     // }
-        
-       
-        
-       
-       
-    // }
+// let str = "abcdef"
+// let num = [1,2,5],j
+// let arr =str.split("")
+// for(let i=0;i<num.length;i++){
+//     // if(arr[num[i]]){
+//     //     arr[num[i]]=arr[num[i]].toUpperCase()
+//     //     // console.log(arr[i])
 
-    // function capitalize(s,arr){
+//     // }
 
-    //     var capS = s.split("");
-        
-    //     for(var i = 0; i < arr.length; i++) {
-    //       if(capS[arr[i]]) {
-    //         capS[arr[i]] = capS[arr[i]].toUpperCase();
-    //       }
-    //     }
-        
-    //     capS = capS.join("");
-    //     return capS
-    //     };
+// }
 
-    //     console.log(capitalize("absdef",[2,4]))
+// function capitalize(s,arr){
 
+//     var capS = s.split("");
 
+//     for(var i = 0; i < arr.length; i++) {
+//       if(capS[arr[i]]) {
+//         capS[arr[i]] = capS[arr[i]].toUpperCase();
+//       }
+//     }
 
+//     capS = capS.join("");
+//     return capS
+//     };
+
+//     console.log(capitalize("absdef",[2,4]))
 
 //     let count=1;
 //  for(let i=1;i<=20;i++){
-     
+
 //      count=count*i
-     
+
 //      console.log(count)
-     
+
 //  }
-
-
 
 // function fact(count){
 // let arr = []
 // for(let i=2;i<=Number.MAX_VALUE;){
-    
+
 //    if(count%i==0){
 //     count=count/i
 //     arr.push(count)
-    
+
 //    i++
 //    }else break
-   
+
 // }
 // return(arr[arr.length-2].toString()+"!")
 // }
@@ -5130,7 +4806,6 @@
 //      return fact(num)
 //  }
 // console.log(factOf(fact,720))
-
 
 // console.time()
 
@@ -5218,13 +4893,13 @@
 // let a1=0,a2=1,a3
 // let arr=[0,1]
 // for(let i =2;i<n;i++){
-    
+
 //     a3=a1+a2;
 //     // console.log(a3)
 //     a1=a2
 //     a2=a3
 //     arr.push(a3)
-    
+
 // }
 // console.log(arr)
 // }
@@ -5238,7 +4913,7 @@
 //     if(arr[i]===arr[i+1]){
 //         count++
 //     }
-    
+
 // }
 // console.log(count)
 
@@ -5254,8 +4929,6 @@
 // }
 // console.log(arr)
 
-
-
 // console.time()
 
 // function fact(n){
@@ -5264,7 +4937,6 @@
 //     }return n*fact(n-1)
 // }
 // // console.log(fact(200))
-
 
 // console.time()
 
@@ -5317,14 +4989,11 @@
 // }
 // console.log(say.call(admin,"hello"))
 
-
-
 // let arr=[]
-
 
 // for(let i=500;i<510;i++){
 //    arr.push(i)
-  
+
 // }
 // let newarr = arr.sort((a,b)=>a>b?-1:1)
 // for(let i =0;i<newarr.length;i++){
@@ -5333,20 +5002,16 @@
 
 // let arr = []
 // for(let i=-130,j=0;i<-118;i++,j++){
-//     arr.push(i) 
+//     arr.push(i)
 // }
 
 // let newarr = arr.sort((a,b)=>a>b?-1:1)
 // console.log(newarr.indexOf(newarr[0]))
 // console.log(newarr.indexOf(newarr[newarr.length-1]))
 
-
 // let arr = [11233,2323236]
 
 // console.log(arr.map(n))
-
-
-
 
 // function n(item){
 //     let count2=0
@@ -5357,8 +5022,7 @@
 //         count1*=item%10
 //         item=Math.floor(item/10)
 //         count2++
-        
-        
+
 //     }
 //     // item=count1
 //     // item=count2
@@ -5366,11 +5030,11 @@
 //     // console.log(count2)
 //     console.log(item)
 //     // console.log(count1)
-    
+
 // }
 
 // function hash (arguments){
-    
+
 //      console.log(...arguments)
 
 // }
@@ -5383,7 +5047,6 @@
 //     }
 //   };
 
-
 //  function memoize(f){
 //      let cache = {}
 //      return function(){
@@ -5392,19 +5055,17 @@
 //         let key = arguments.toString()
 //          if(key in cache){
 //             return cache[key]
-            
-            
+
 //          }else return cache[key] = f.apply(this,arguments)
 //      }
 //  }
 
 //  worker.slow = memoize(worker.slow)
 //  console.log(worker.slow(2,5,6))
- 
+
 // function work(a, b) {
-//     return ( a + b ); 
+//     return ( a + b );
 //   }
-  
 
 //   function wrapper(func){
 //       let obj = {}
@@ -5414,21 +5075,16 @@
 //             //   console.log((obj[key]))
 //            console.log(obj[key])
 //           }else console.log(obj[key]=func.apply(this,arguments));
-       
-         
 
-          
 //       }
 //   }
 
-  
 //   work=wrapper(work)
 // //   work(3,4)
 //   setTimeout(work,5000,1,2)
 
-
 // function work(a, b) {
-//     return ( a + b ); 
+//     return ( a + b );
 //   }
 //   console.log(work(3,4))
 // // console.time()
@@ -5443,15 +5099,13 @@
 //           }else let b = ()=>{console.log(obj[key]=func.apply(this,arguments))}
 //         //   console.log(obj[key]=func.apply(this,arguments))
 
-          
 //       }
-     
+
 //   }
 // //   console.timeEnd()
-  
+
 //   work=wrapper(work)
 //   work(1,2)
-  
 
 // let obj = {
 //     firstname:"JOhn",
@@ -5479,7 +5133,6 @@
 // setTimeout(obj.say,2000,"hello ")
 // setTimeout(obj.bye,3000,"hi ")
 
-
 // // setTimeout( ()=>{obj.say()},2000)
 
 // function sum(a,b){
@@ -5492,11 +5145,11 @@
 //     alert( this.name );
 //   }
 //   sayHi.test = 5;
-  
+
 //   let bound = sayHi.bind({
 //     name: "Вася"
 //   });
-  
+
 //   alert( bound() )
 
 // function askPassword(ok, fail) {
@@ -5504,18 +5157,18 @@
 //     if (password == "rockstar") ok();
 //     else fail();
 //   }
-  
+
 //   let user = {
 //     name: 'Вася',
-  
+
 //     ok() {
 //       alert(`${this.name} logged in`);
 //     },
-  
+
 //     fail() {
 //       alert(`${this.name} failed to log in`);
 //     },
-  
+
 //   };
 // //   user.ok=user.ok.bind(user)
 
@@ -5531,15 +5184,15 @@
 //     if (password == "rockstar") ok();
 //     else fail();
 //   }
-  
+
 //   let user = {
 //     name: 'John',
-  
+
 //     login(result) {
 //       alert( this.name + (result ? ' logged in' : ' failed to log in') );
 //     }
 //   };
-  
+
 //   askPassword(user.login.bind(user,true),user.login.bind(user,false)); // ?
 
 // function pow(x,y){
@@ -5559,7 +5212,7 @@
 //       name: 'Alice',
 //       salary: 600
 //     }],
-  
+
 //     development: {
 //       sites: [{
 //         name: 'Peter',
@@ -5568,7 +5221,7 @@
 //         name: 'Alex',
 //         salary: 1800
 //       }],
-  
+
 //       internals: [{
 //         name: 'Jack',
 //         salary: 1300
@@ -5577,7 +5230,7 @@
 //   };
 
 //   function count(department){
-    
+
 //       if(Array.isArray(department)){
 //           return department.reduce((prev,next)=>prev+next.salary,0)
 //       } else{
@@ -5587,10 +5240,9 @@
 //           }
 //           return sum
 //         }
-        
+
 //       }
 //   console.log(count(company))
-
 
 // function sumto(n){
 //     if(n==1){
@@ -5598,7 +5250,6 @@
 //     }else return n+sumto(n-1)
 // }
 // console.log(sumto(10000))
-
 
 // function fac (n){
 //     if(n==1){
@@ -5609,7 +5260,7 @@
 
 // function fib(n){
 //     if(n<=1){
-//         return n 
+//         return n
 //     }else return(fib(n-2)+fib(n-1))
 // }
 // console.log(fib(7))
@@ -5631,7 +5282,7 @@
 //   function get(list){
 //     if(typeof Object.values(list)=='number'){
 //         return Object.keys(list)
-//     }else 
+//     }else
 //     for(let key in list){
 //         return get(key)
 //     }
@@ -5642,12 +5293,12 @@
 //     if(Math.max(a,b)%Math.min(a,b)==0){
 //         return Math.min(a,b)
 //     } else return find(Math.max(a,b),Math.min(a,b)--)
-   
+
 // }
 // find(10,20)
 
 // function find(a,b,c=b){
-    
+
 //     if(a%c==0 && b%c==0){
 //         return c
 //     }else  return find(a,b,c-1)
@@ -5658,16 +5309,16 @@
 // let b = 30;
 // for(let i=a;i>0;i--){
 //     if(b%i==0){
-//         console.log(i); break 
+//         console.log(i); break
 //     }
-   
+
 // }
 
 // function repeat(str,num){
 //     let newstr = " "
 //     if(num>1){
 //         return str+repeat(str,--num)
-        
+
 //     }else return str
 // }
 // console.log(repeat("h",5))
@@ -5676,9 +5327,9 @@
 //     let count=0
 //     if(n<1){
 //        return count+=n%10
-        
+
 //     }else  return sum(count)
-    
+
 // }
 // console.log(sum(12345))
 
@@ -5688,7 +5339,7 @@
 //   console.log(digital_root(123456))
 
 // function spam(count){
-   
+
 //    if(count>1){
 //        return "hue"+spam(count-1,"hue")
 //    }return "hue"
@@ -5701,7 +5352,7 @@
 // console.log(num(3212))
 
 // function x(num){
-    
+
 //     return function(num2){
 //         return num+num2
 //     }
@@ -5719,7 +5370,6 @@
 // }
 // check(arr,newarr)
 // console.log(check(arr,newarr))
-
 
 // function inbewteen(arr){
 //     let newarr = []
@@ -5748,14 +5398,13 @@
 
 // function cons(x){
 //     return ((a,b)=>a[x]>b[x]?1:-1)
-        
-    
+
 // }
 // console.log(users.sort(cons('age')))
 
 // function makeArmy() {
 //     let shooters = [];
-  
+
 //     let i = 0;
 //     while (i < 10) {
 //       let shooter = function() { // функция shooter
@@ -5763,15 +5412,14 @@
 //         shooters.push(shooter);
 //         i++;
 //       };
-      
-      
+
 //     }
-  
+
 //     return shooters;
 //   }
-  
+
 //   let army = makeArmy();
-  
+
 //   army[0](); // у 0-го стрелка будет номер 10
 //   army[5]();
 
@@ -5782,7 +5430,7 @@
 //           while (i<10){
 //             shooters.push(i);
 //             i++
-            
+
 //           }
 //           return shooters;
 //       }
@@ -5800,7 +5448,6 @@
 
 // let double = add.bind(null,2)
 // console.log(double(3))
-
 
 // var greet_abe = function() {
 //     let name = 'Abe';
@@ -5848,40 +5495,33 @@
 //             clearInterval(timer)
 //         }
 //     }, 1000);
-    
+
 // }
 // create(1,10)
 
 // function print(from,to){
 //     let current = from;
-    
+
 //     setTimeout(function go(){
 //         console.log(current)
 //         current++
 //         if(current<to){setTimeout(go,1000)
 //         }
-       
-        
-//     },1000)
 
-    
+//     },1000)
 
 // }
 // print(1,5)
-
 
 // function f(from,to){
 //     console.log(from)
 //     let time=setTimeout(f,1000,++from)
 //     if(from>4){
-//         clearTimeout(time) 
+//         clearTimeout(time)
 //     }
-    
-   
-    
+
 // }
 // setTimeout(f,1000,1)
-
 
 // function count(from,to){
 //     let timer = setInterval(function(){
@@ -5890,7 +5530,6 @@
 // count(1,4)
 
 // let a =setTimeout(function count(sum){
-
 
 //     if(sum<4){
 //         console.log(++sum)
@@ -5923,64 +5562,58 @@
 // }
 // count(1,4)
 
-
 // function fact(num){
-    
+
 //     if(num===1){
 //         return num
 //     }return num*fact(num-1)
 // }
 // console.log(fact(15))
 
-
 // function fact(num){
 //     let i=num-1
 //     let a= setTimeout(function b(){
-       
+
 //        if (i>1){
-           
+
 //            console.log(num*=i);
 //            i--
-           
+
 //            setTimeout(b,1000)
-//         }clearTimeout(a)  
+//         }clearTimeout(a)
 //     },1000)
 // }
 // fact(15)
 
 // function start(){
-   
+
 //     let a = setTimeout(function b(){
 //         console.log(new Date())
 //         setTimeout(b,1000)
 //     },1000)
-   
+
 // }
 // start()
 // function start(){
 //     console.log(new Date())
-    
+
 // }
 // setInterval(start,1000)
 
+// let a = setTimeout(function b(){
+//     console.log(new Date)
+//     setTimeout(b,1000)
+// },1000)
 
-
-   
-    // let a = setTimeout(function b(){
-    //     console.log(new Date)
-    //     setTimeout(b,1000)
-    // },1000)
-
-    // function fact(n){
-    //     if(n==1){
-    //         return n
-    //     }else return n*fact(n-1)
-    // }
-    // console.log(fact(15))
+// function fact(n){
+//     if(n==1){
+//         return n
+//     }else return n*fact(n-1)
+// }
+// console.log(fact(15))
 //
 
-
-    // console.log(fact(15))
+// console.log(fact(15))
 
 //      function memoize(f){
 //      let cache = {}
@@ -5990,8 +5623,7 @@
 //         // let key = arguments.toString()
 //          if(key in cache){
 //             return cache[key]
-            
-            
+
 //          }else return cache[key] = f.apply(this,arguments)
 //      }
 //  }
@@ -6000,11 +5632,11 @@
 //  worker.slow = cache(worker.slow)
 //  console.log(worker.slow(2,7,6))
 
-    // function fact(n){
-    //     if(n<=1){
-    //         return n
-    //     }return (fact(n-1)+fact(n-2))
-    // }
+// function fact(n){
+//     if(n<=1){
+//         return n
+//     }return (fact(n-1)+fact(n-2))
+// }
 // console.log(fact(15))
 // let worker = {
 //     slow(min, max) {
@@ -6015,27 +5647,27 @@
 //     someMethod() {
 //       return 1;
 //     },
-  
+
 //     slow(x) {
 //       // здесь может быть страшно тяжёлая задача для процессора
 //       alert("Called with " + x);
 //       return x * this.someMethod(); // (*)
 //     }
 //   };
-  /////////////////////////////////////CACHING FUNCTION//////////////////////////////////////////////////////////
-    // function cache(func){
-    //     let map = new Map()
-    //     return function(){
-    //         let x=arguments
-    //         if(map.has(x)){
-    //             return map.get(x)
-    //         }
-    //         let result =func.apply(this,arguments)
-    //         map.set(x,result)
-    //         return result           
-            
-    //     }
-    // }
+/////////////////////////////////////CACHING FUNCTION//////////////////////////////////////////////////////////
+// function cache(func){
+//     let map = new Map()
+//     return function(){
+//         let x=arguments
+//         if(map.has(x)){
+//             return map.get(x)
+//         }
+//         let result =func.apply(this,arguments)
+//         map.set(x,result)
+//         return result
+
+//     }
+// }
 //     console.log( worker.slow(2) )
 //     worker.slow = cache(worker.slow)
 //    console.log( worker.slow(2) )
@@ -6075,15 +5707,13 @@
 
 // Array.prototype.myfind = function (fn){
 
-    
 //     for(let i = 0;i<this.length;i++){
-//         if(fn(this[i])) 
+//         if(fn(this[i]))
 //         return this[i]
 
 //     }
 // }
 // // console.log(hr(3))
-
 
 // const a = arr.find(function(item){return item==arr[2]})
 // console.log(a)
@@ -6093,12 +5723,6 @@
 //     item*2
 // }
 // // draw(3)
-
-
-
-
-
-
 
 // /////////// findIndex
 
@@ -6128,7 +5752,6 @@
 // let check3 = some(arr3,()=>3)
 // console.log(check3)
 
-
 // /////////////////////every
 
 // let arr4 = [3,3,3,3,3,5]
@@ -6138,8 +5761,8 @@
 
 //         return false
 //        }
-     
-//    } return true 
+
+//    } return true
 // }
 
 // let check4 = every(arr4,()=>3)
@@ -6195,16 +5818,16 @@
 //     constructor(name) {
 //       this.name = name;
 //     }
-  
+
 //   }
-  
+
 //   class Rabbit extends Animal {
 //     constructor(name) {
 //       super(name);
 //       this.created = Date.now();
 //     }
 //   }
-  
+
 //   let rabbit = new Rabbit("Белый кролик"); // Error: this is not defined
 //   alert(rabbit.name);
 
@@ -6214,7 +5837,7 @@
 //   set waterAmount(value) {
 //     this._waterAmount = value;
 //     if (value < 0) throw new Error("Отрицательное количество воды");
-    
+
 //   }
 
 //   get waterAmount() {
@@ -6246,7 +5869,6 @@
 // let check1 = find(arr1,item=>item>3)
 // console.log(check1)
 
-
 /////////// findIndex
 
 // let arr2 = [1,2,3,4,500]
@@ -6275,7 +5897,6 @@
 // let check3 = some(arr3,item=>item%2===0)
 // console.log(check3)
 
-
 // /////////////////////every
 
 // let arr4 = [4,5,6,7,8]
@@ -6285,13 +5906,12 @@
 
 //         return false
 //        }
-     
-//    } return true 
+
+//    } return true
 // }
 
 // let check4 = every(arr4,item=>item>3)
 // console.log(check4)
-
 
 // if(confirm("go to smwhere")){location.href = "https://wikipedia.org"}
 // if(cancel){location.href = "https://wikipedia.org"}
@@ -6305,7 +5925,7 @@
 // let table = document.body.firstElementChild
 // // table.rows[1].cells[0].style.backgroundColor="red"
 // for(let i = 0;i<table.rows.length;i++){
-    
+
 //     table.rows[i].cells[i].style.backgroundColor="red"
 // }
 
@@ -6313,7 +5933,6 @@
 // for(let elem of element){
 //     console.log(elem.innerHTML)
 // }
-
 
 // console.log(document.body.firstElementChild)
 // if(document.body.firstElementChild.matches(".ul")){
@@ -6334,7 +5953,6 @@
 // let find = document.getElementsByTagName("input")[0].name="not age";
 // // console.log(find)
 // console.log(document.getElementsByTagName("input")[0])
-
 
 // let elem1=document.querySelector('input')
 // let elem2 =document.querySelector('#table')
@@ -6381,7 +5999,6 @@
 // input.type="checkbox"
 // console.log(input.type)
 
-
 // let user = {
 //     name: "Pete",
 //     age: 25
@@ -6390,7 +6007,7 @@
 //   for(let key of document.querySelectorAll("[show-info]")){
 //       let field = key.getAttribute("show-info")
 //      key.innerHTML=user[field]
-    
+
 //   }
 
 // console.log(document.querySelector("div").dataset.widgetName)
@@ -6403,9 +6020,9 @@
 
 // for(let i=0;i<newlink.length;i++){
 //     let a =newlink[i];
-    
+
 //     if(!a.innerHTML.startsWith('http://internal.com') && a.innerHTML.includes('://'))
-  
+
 //     a.style.color = "orange"
 // }
 // console.log(newlink)
@@ -6413,7 +6030,6 @@
 // let selector = 'a[href*="://"]:not([href*="http://internal.com"])'
 // let links =document.querySelectorAll(selector)
 // links.forEach(link=>link.style.color="orange")
-
 
 // let div = document.createElement("div")
 // div.className="alert"
@@ -6423,7 +6039,6 @@
 // let div2 = div.cloneNode(true)
 // div2.innerHTML="second div"
 // div.after(div2)
-
 
 // ol.before("before")
 // ol.after("after")
@@ -6436,9 +6051,7 @@
 // console.log()
 // ol.replaceWith(ol.children[1],li2)
 
-
 // div.before("<p>Hello</p>", document.createElement("hr"))
-
 
 // ol.insertAdjacentHTML('beforebegin','<p>Hello</p>')
 // ol.insertAdjacentHTML("afterbegin","<span>cello</span>")
@@ -6455,7 +6068,7 @@
 //     }
 //     return fragment
 // }
-// ol.append(create()) 
+// ol.append(create())
 
 // function create(){
 //     let fragment=[]
@@ -6466,7 +6079,7 @@
 //     }
 //     return fragment
 // }
-// ol.append(...create()) 
+// ol.append(...create())
 
 // let element = elem.querySelectorAll("li")
 // for(let key of element){
@@ -6489,7 +6102,6 @@
 // }
 // clear(elem)
 
-
 // body.remove();
 //  function wrapper(){
 //      let fragment=new DocumentFragment()
@@ -6499,21 +6111,19 @@
 //         let li = document.createElement("li")
 //          li.insertAdjacentText("afterbegin",i)
 //          fragment.append(li)
-         
-         
+
 //     }
-//     return fragment  
-      
-    
+//     return fragment
+
 //  }
-//  ul.append(wrapper()) 
+//  ul.append(wrapper())
 
 // let data = {
 //     "Рыбы": {
 //       "форель": 4,
 //       "лосось": 3
 //     },
-  
+
 //     "Деревья": {
 //       "Огромные": {
 //         "секвойя": 2,
@@ -6546,7 +6156,6 @@
 // let container = document.getElementById('container');
 //     createTree(container, data);
 
-
 // let li2 = document.createElement("li")
 // li2.innerHTML=2
 // let li3 = document.createElement("li")
@@ -6555,7 +6164,6 @@
 
 // one.after(li2)
 // li2.after(li3)
-
 
 //   function isObject(val){
 //       if(val===null){
@@ -6582,7 +6190,7 @@
 //     return (typeof val==='object')
 // };
 // const objProps= function (obj){
-    
+
 //     for(let val in obj){
 //         if(typeof obj[val]==='object'){
 //             objProps(obj[val])
@@ -6593,7 +6201,6 @@
 //     }
 // }
 // objProps(data)
-
 
 // let t;
 // function h(){
@@ -6608,13 +6215,10 @@
 // if(seconds<10)seconds='0'+seconds;
 // let s=document.querySelector("p>.ss").innerHTML=seconds;
 // t=setTimeout(h,1000);
-    
+
 // };
 // document.querySelector(".stop").onclick=function(){clearTimeout(t)};
 // document.querySelector(".start").onclick=function(){h()};
-
-
-
 
 //  function hrs(){
 // let today = new Date();
@@ -6628,8 +6232,6 @@
 // m.style.transform=`rotate(${minutes}deg)`;
 // h.style.transform=`rotate(${hours}deg)`;
 
-
-    
 // }
 // hrs()
 // setInterval(hrs,1000);
@@ -6647,34 +6249,26 @@
 // if(seconds<10)seconds='0'+seconds;
 // let s=document.querySelector("p>.ss").innerHTML=seconds;
 // t=setTimeout(h,1000);
-    
+
 // };
 // h()
-
 
 // let div = document.querySelector(".hop")
 // div.className="bla"
 // div.classList.add("blaaaa")
 // div.classList.remove("blaaaa")
 
-
 // setTimeout(function f(count=1){
-    
+
 //     console.log(count++)
 //     setTimeout(f,1000,count++)
 // },1000)
 
-
-
-
-
-
 // setTimeout(function c(count=1){
-   
+
 //     console.log(count++)
 //     setTimeout( c,1000,count++)
-    
-    
+
 // },1000)
 // let a =c()
 // console.log(a())
@@ -6682,11 +6276,6 @@
 
 // let div=document.createElement("div")
 // div.className="notify"
-
-
-
-
-
 
 // let div=document.createElement("div");
 // div.className="notify"
@@ -6702,17 +6291,14 @@
 // color:orange;
 // padding:5px auto;
 
-
 // `
 // div.insertAdjacentHTML("afterbegin","<p></p>")
-
 
 // setTimeout(function a(count=1){
 // // div.innerHTML="Hello"+ " "+count++
 // document.querySelector("p").innerHTML="Hello"+ " "+count++
 //     setTimeout(a,2000,count++)
-    
-    
+
 // },1000)
 
 // setInterval(()=>div.hidden=!div.hidden,1000)
@@ -6724,14 +6310,12 @@
 //     for(i=0;i<arr.length;i++){
 //         if(callback(arr[i],i,arr)){
 //         return  callback(arr[i],i,arr)
-       
+
 //         }
 //     }
 // }
 // myForEach(arr,item=>{copy.push(item)})
 // console.log(copy)
-
-
 
 ////////////includes
 
@@ -6745,7 +6329,6 @@
 //     return false
 // }
 // console.log(myIncludes(arr,item=>item>2))
-
 
 ////////////// join
 
@@ -6762,7 +6345,6 @@
 // }
 // console.log(myJoin(arr,"-"))
 
-
 /// lastIndexof
 
 // let arr = [1,2,5,3,4,5]
@@ -6775,7 +6357,6 @@
 // }
 // console.log(myLastIndexOf(arr,5,4))
 
-
 /////// pop
 // let arr = [1,2,3,4,5]
 // function myPop(arr){
@@ -6786,7 +6367,7 @@
 //         arr.length=arr.length-1
 //         return a
 //     }
-    
+
 // }
 // myPop(arr)
 // console.log(arr)
@@ -6798,7 +6379,7 @@
 //      arr[arr.length]=val[i]
 //     }
 //       return arr.length
-  
+
 // }
 // myPush(arr,1,2,3)
 // console.log(arr)
@@ -6828,7 +6409,7 @@
 //         arr.splice(arr[arr.length],1)
 //         return a
 //     }
-    
+
 // }
 // console.log(myShift(arr))
 // console.log(arr)
@@ -6841,7 +6422,7 @@
 //         arr[arr.length]=val[i]
 //         myReverse(arr)////used my function here
 //     }
-     
+
 //       return arr.length
 // }
 // console.log(myUnshift(arr,6,7,8))
@@ -6854,17 +6435,13 @@
 //         let temp=arr[i];
 //         arr[i]=arr[arr.length-1-i]
 //         arr[arr.length-1-i]=temp
-        
+
 //     }
 //     return arr
 // }
 
 // myReverse(arr)
 // console.log(arr)
-
-
-
-
 
 ///splice
 // let arr = [1,2,5,3,4,5,6,7,8]
@@ -6876,12 +6453,10 @@
 //     }
 //     arr.push(...newarr)
 //       return arr
-      
+
 //     }
 //     mySplice(arr,2,5,45,46)
 //     console.log(arr)
-
-
 
 // let arr = [1,2,5,3,4,5]
 // function myLastIndexOf(arr,val,from){
@@ -6893,35 +6468,25 @@
 // }
 // console.log(myLastIndexOf(arr,5,4))
 
-
 // function myReduce(arr,func,init){
 //     let result=init
 //     for(let i=0;i<arr.length;i++){
-       
+
 //             result=func(result,arr[i],i,arr)
-       
+
 //     }
 //     return result
 // }
 
 // console.log(myReduce(arr,(prev,next)=>prev+next,6))
 
-
-
-
-
 // console.log(arr)
-
-
-
-
 
 // const items = [1, 2, 3, 4, 5]
 
 // const insert = (arr, index, ...newItems) => [
 //   ...arr.slice(0, index),...newItems,...arr.slice(index)
-  
-  
+
 // ]
 
 // const result = insert(items, 1, 10, 20)
@@ -6949,7 +6514,6 @@
 // console.log(example.offsetLeft)
 // console.log(example.offsetTop)
 
-
 // function isHIdden(elem){
 //     return !elem.clientTop && !elem.clientLeft
 // }
@@ -6957,12 +6521,10 @@
 
 // console.log(example.scrollHeight)
 
-
 // function cl(){
 //     this.scrollTop+=0
 // }
 // example.onclick=cl
-
 
 // let arr =[1,2,3,4,5]
 // function map(arr, cb){
@@ -6976,9 +6538,6 @@
 
 // setInterval(()=>{console.log(example.scrollTop)},1000)
 
-
-
-
 // setInterval(()=>{console.log(example.scrollTop)},3000)
 // // let scrollBottom=example.scrollHeight-example.scrollTop-example.clientHeight
 
@@ -6988,7 +6547,6 @@
 
 // setInterval(()=>{console.log(scrollBottom(example))},3000)
 
-
 // let width=example.clientWidth-parseInt(getComputedStyle(example).width)
 // let width=example.offsetWidth-example.clientWidth
 // console.log(width)
@@ -6997,21 +6555,15 @@
 // let b =(field.clientHeight/2-parseInt(getComputedStyle(ball).height)/2)+"px";
 // console.log(a)
 
-
 // ball.style.left=a
 // ball.style.top=b
-
-
 
 ///////document height
 
 // console.log(Math.max(document.body.scrollHeight,document.body.offsetHeight,document.body.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight,document.documentElement.clientHeight,))
 
-
 // console.log(window.pageXOffset)
 // console.log(window.pageYOffset)
-
-
 
 // let user =['user', 'admin', 'admin', 'user', 'admin', 'user', 'user', 'user', 'user', 'admin', 'admin', 'user']
 // let filter=user.filter(item=>item==='admin')
@@ -7025,11 +6577,7 @@
 // let sum=num.reduce((prev,next)=>prev+next,0)
 // console.log(sum)
 
-
-
-
 // setInterval(()=>{console.log(document.querySelector("button").getBoundingClientRect())},1000)
-
 
 // let x=document.documentElement.clientHeight/2;
 // let y=document.documentElement.clientWidth/2
@@ -7038,19 +6586,16 @@
 // elem.style.color="red"
 // console.log(elem)
 
-
 // let elem=document.querySelector("button").getBoundingClientRect()
 // function create(elem,html){
 //     let message = document.createElement("div");
 //     message.innerHTML=html;
-    
-    
+
 //     message.style.color=`red`;
 //     message.style.position=`absolute`
 //     message.style.top=elem.bottom+window.pageYOffset+"px";
 //     message.style.left=elem.left+window.pageXOffset+"px";
-    
-    
+
 // return message
 // }
 
@@ -7059,16 +6604,12 @@
 
 // setTimeout(() => bl.remove(), 5000);
 
-
 // let a =field.getBoundingClientRect()
 // let b=field.clientWidth
 // console.log(a)
 // console.log(b)
 
 // console.log(field.clientX)
-
-
-
 
 // function reverse(x){
 //     let count=""
@@ -7080,7 +6621,6 @@
 // }
 // console.log(reverse(32243))
 
-
 // let x ="nurses run"
 
 // function check(x){
@@ -7090,8 +6630,6 @@
 // }
 // console.log(check(x))
 
-
-
 // let x="dog"
 // function comb(x){
 //     let y = Array.from(x)
@@ -7099,10 +6637,10 @@
 //     for(let i=0 ;i<=y.length;i++){
 //         for(let j=1;j<=y.length;j++){
 //             newarr.push(y.slice(i,j))
-//         } 
+//         }
 //     }
 //     return (newarr.filter(item=>item.length).join(", ").split(",").join(""))
-    
+
 // }
 // console.log(comb(x))
 
@@ -7113,30 +6651,27 @@
 //     for(let i=0 ;i<y.length-1;i++){
 //         for(let j=i+1;j<y.length;j++){
 //             newarr.push(`${y[i]}`,`${y[j]}`)
-//         } 
+//         }
 //     }
 //     return (newarr)
-    
+
 // }
 // console.log(comb(x))
-
 
 // let cord1=field.getBoundingClientRect()
 // // let rect1
 //  let x=cord1.x ,y=cord1.y
-// // let rect2 
+// // let rect2
 // let r2x=cord1.x+field.offsetWidth, r2y=cord1.y+field.offsetHeight
-// // rect4 
+// // rect4
 // let r4x =r2x-(field.offsetWidth-field.clientWidth)/2,   r4y=r2y-(field.offsetHeight-field.clientHeight)/2
-// //rect3 
+// //rect3
 // let r3x=x+(field.offsetWidth-field.clientWidth)/2,r3y=y+(field.offsetHeight-field.clientHeight)/2
-
 
 // console.log(x,y)
 // console.log(r2x,r2y)
 // console.log(r3x,r3y)
 // console.log(r4x,r4y)
-
 
 // let coords = field.getBoundingClientRect();
 
@@ -7151,3 +6686,1270 @@
 // console.log(answer1)
 // console.log(answer2)
 // console.log(answer4)
+
+// let elem = document.querySelector("button")
+// function click(){
+//     console.log("clicked")
+// }
+// function click1(){
+//     console.log("clicked 1")
+// }
+// elem.onclick=click1
+// elem.addEventListener("click",click)
+// elem.addEventListener("click",click1)
+
+// elem.onclick=function(event){
+//     console.log(event.type + " " + event.target)
+//     console.log(event.clientX + " " + event.clientY)
+// }
+
+// elem.onclick=addEventListener("click",{
+//     handleEvent(event){
+//         console.log(event.type + " "+ event.currentTarget)
+//     }
+// })
+
+// let x = "webmaster"
+// function change(x){
+//     return x.split("").sort((a,b)=>a>b?1:-1).join("")
+// }
+// console.log(change(x))
+
+// let x= "the quick brown fox"
+// function upper(x){
+//     let y=x.split(" ")
+//     for(let i=0;i<y.length;i++){
+//       y[i]=y[i].substr(0,1).toUpperCase()+y[i].substr(1)
+//     }
+//     return y.join(" ")
+// }
+// console.log(upper(x))
+
+// let x = "Web Development Tutorial"
+// function sort(x){
+//     let y=x.split(" ")
+//     let z=y.sort((a,b)=>b.length-a.length)
+//     return z[0]
+// }
+// console.log(long(x))
+
+// let x = "Web Development Tutorial"
+// function reduce(x){
+// let y=x.split(" ")
+// let z = y.reduce((prev,next)=>{
+//     if(prev.length>next.length){
+//         return prev
+//     }else return next
+// })
+// return z
+// }
+// console.log(reduce(x))
+
+// let z = y.map(item=>item.length)
+// let j=z.filter(item=>Math.max(item))
+// console.log(j)
+
+// function long(x){
+
+//     let count=0;
+//     let str=""
+//     for(let i=0;i<y.length;i++){
+//         count=Math.max(y[i].length)
+//         // if(y[i].length>count){
+//         //     count=y[i].length
+//         // }
+//         // if(count){
+//         //     str=y[i]
+//         // }
+//     }
+//     return count
+// }
+// console.log(long(x))
+
+// let elem = document.querySelector("button")
+// class Menu{
+//     handleEvent(event){
+//         switch(event.type){
+//             case "mouseover":
+//             elem.innerHTML="button pushed";
+//             break;
+//             case "mouseup":
+//             elem.innerHTML+="button unpushed";
+//             break;
+//         }
+//     }
+
+//   }
+//   let menu = new Menu()
+
+//   elem.addEventListener("mouseover",menu)
+//   elem.addEventListener("mouseup",menu)
+
+// function hide(){
+//     this.hidden=true
+// }
+// hider.onclick=hide
+
+// field.onclick=function(event){
+//     c.innerHTML=event.clientX+ ":"+ event.clientY
+
+//     ball.style.top=(event.clientY-cl.top-field.clientTop-ball.offsetHeight/2)+"px"
+//     ball.style.left=(event.clientX-cl.left-field.clientLeft-ball.offsetWidth/2)+"px"
+
+// }
+
+// console.log(field.clientTop)
+// document.querySelector("ul").hidden=true
+// let x=document.querySelector("button")
+
+// function h1(){
+//     document.querySelector("ul").classList.toggle('open')
+
+// }
+// function h2(){
+//     document.querySelector("ul").hidden=true
+// }
+// x.addEventListener("click",h1)
+// // x.removeEventListener("click",h1)
+// // x.addEventListener("click",h2)
+
+////////////////////////////////////////////////dropdown menu
+
+// let button=document.querySelector("#title")
+// let ul=document.querySelector("#sweeties")
+// button.onclick=function(){
+//     ul.classList.toggle("open")
+// }
+
+////////////////////////////////closing window
+
+// let btn=document.querySelectorAll(".remove-button");
+// let div=document.querySelectorAll(".pane")
+// for(let i=0;i<btn.length;i++){
+// btn[i].onclick=function(){
+//     div[i].style.display="none"
+//     }
+// }
+// for(let key of div){
+// key.insertAdjacentHTML("afterbegin",'<button class="remove-button">[x]</button>')
+// key.firstChild.onclick=()=>key.remove()
+// }
+{
+  /* <button class="arrow">⇦</button>
+  <button class="arrow" style="position:absolute;right:5px;z-index:1">⇨</button> */
+}
+
+// let i = 1;
+// for(let li of document.querySelectorAll('li')) {
+//   li.style.position = 'relative';
+//   li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+//   i++;
+// }
+// let arrow=document.getElementsByClassName(".arrow")
+// let arrow=document.querySelector(".arrow")
+// let ul=document.querySelector("ul")
+// let a=ul.clientHeight/2
+// console.log(arrow)
+
+///////////////////////////////////////carouselle
+// let ul=document.querySelector("ul")
+// let div = document.querySelector(".carusel")
+// ul.insertAdjacentHTML("afterbegin",'<button class="arrow left" style="left:0;">⇦</button>')
+// ul.insertAdjacentHTML("beforeend",'<button class="arrow right" style="right:0">⇨</button>')
+// let arrow=document.querySelectorAll(".arrow")
+// let a=ul.clientHeight/2-arrow[0].clientHeight
+// for(let arr of arrow){
+//     arr.style.top=a+"px"
+// }
+// ul.children[0].onclick=function(){ul.scrollBy(-b*3,0)}
+// ul.lastChild.onclick=function(){ul.scrollBy(b*3,0)}
+
+// let img1=ul.children[2]
+// let b=img1.clientWidth
+// let check1=document.querySelector("#rb1")
+// rb1.onclick=(()=>{
+
+//     if(check1.checked==true){
+//         ul.scrollTo(0,0)
+//     }
+// }
+// )
+// let check2=document.querySelector("#rb2")
+// rb2.onclick=(()=>{
+
+//     if(check2.checked==true){
+//         ul.scrollTo(b*3,0)
+//     }
+// }
+// )
+// let check3=document.querySelector("#rb3")
+// rb3.onclick=(()=>{
+
+//     if(check3.checked==true){
+//         ul.scrollTo(b*6,0)
+//     }
+// }
+// )
+// let check4=document.querySelector("#rb4")
+// rb4.onclick=(()=>{
+//     if(check4.checked==true){
+//         ul.scrollTo(b*7,0)
+
+//     }
+
+// }
+// )
+
+// setInterval(function(){
+//     if (ul.scrollLeft<=916 && ul.scrollLeft>=790 ){
+//         check4.setAttribute("checked","checked")
+
+//     }else check4.removeAttribute("checked");
+
+//     if (ul.scrollLeft<787 && ul.scrollLeft>395 ){
+//         check3.setAttribute("checked","checked")
+//     }else check3.removeAttribute("checked");
+
+//     if (ul.scrollLeft<=390 && ul.scrollLeft>=16){
+//         check2.setAttribute("checked","checked")
+//     }else check2.removeAttribute("checked");
+
+//     if (ul.scrollLeft===0){
+//         check1.setAttribute("checked","checked")
+//     }else check1.removeAttribute("checked");
+// },1)
+
+// let form =document.querySelector("form")
+// form.onclick=function(event){
+//     console.log("this"+event.currentTarget,"target"+event.target)
+// }
+
+// for(let elem of document.querySelectorAll("*")){
+//     elem.addEventListener("click",e=>console.log("capturing"+`${elem.tagName}`),true)
+//     elem.addEventListener("click",e=>console.log("bubbling"+`${elem.tagName}`))
+// }
+
+// let a= document.querySelectorAll("tr>td");
+// for(let i=0;i<a.length;i++){
+//     a[i].addEventListener("click",()=>a[i].style.backgroundColor="red")
+
+// }
+
+// addEventListener .
+
+// let table =document.querySelector("table");
+// let selectedTD;
+
+// table.onclick=function(event){
+//     let td = event.target.closest('td'); // (1)
+
+//     if (!td) return; // (2)
+
+//     if (!table.contains(td)) return; // (3)
+
+//     highlight(td);
+// }
+
+// function highlight(td){
+//     if(selectedTD){
+//         selectedTD.classList.remove("highlight")
+//     }
+//     selectedTD=td;
+//     selectedTD.classList.add("highlight")
+
+// }
+
+// console.log(user2.name)
+// console.log(div.dataset.bgColor)
+
+// let table =document.querySelector("table");
+// function handler(target){return target.style.cssText="cursor:pointer;background-color:red"}
+// table.addEventListener("click",(event)=>{
+//     if(event.target.classList.contains("td")){
+//         let target =event.target
+//         handler(target)
+//     }else console.log("mimo")
+// })
+
+// class Menu{
+//     constructor(elem){
+//         this.elem=elem;
+//         elem.onclick=this.onClick.bind(this)
+//     }
+
+//     save() {
+//         alert('сохраняю');
+//       }
+
+//       load() {
+//         alert('загружаю');
+//       }
+
+//       search() {
+//         alert('ищу');
+//       }
+
+//       onClick(event){
+//           let action=event.target.dataset.action;
+//           if(action){
+//               this[action]()
+//           }
+//       }
+// }
+
+// new Menu(menu)
+
+// document.addEventListener("click",(event)=>{
+//     if(event.target.dataset.counter!=undefined){
+//         event.target.value++
+//     }
+// })
+
+// document.addEventListener("click",(event)=>{
+//    let id =event.target.dataset.toggleId
+//    if(!id) return;
+//    let elem=document.getElementById("id")
+//    elem.hidden=!elem.hidden
+// })
+
+// document.addEventListener('click', function(event) {
+//     // let id = event.target.dataset.toggleId;
+
+//     // console.log(id)
+//     // if (!id) return;
+
+//     let elem = document.getElementById("subscribe-mail");
+//     console.log(elem)
+
+//     elem.hidden = !elem.hidden;
+//     // if(elem.hidden===true){
+//     //     elem.hidden=false
+//     // }else elem.hidden=true
+//   });
+
+// container.addEventListener("click",(event)=>{
+//     if(event.target.className=="remove-button"){
+//         event.target.closest("div").style.display="none"
+//     }
+// })
+
+// tree.addEventListener("click",(event)=>{
+//     let x=event.target.tagName=="LI"
+//     if(x){
+//     let ul=event.target.children[0]
+//     ul.hidden = !ul.hidden
+//     }
+
+// })
+
+// let a = grid.querySelectorAll("tbody>tr>:nth-child(1)");
+// let b = grid.querySelectorAll("tbody>tr>:nth-child(2)");
+// for(let i=0;i<a.length;i++){
+//     a[i].setAttribute("class","number")
+//     b[i].setAttribute("class","string")
+
+// }
+
+// grid.addEventListener("click",(event)=>{
+//     let id=event.target.dataset.type;
+//     let newarr=[];
+//     let num;
+//     let str;
+
+//     let z=document.getElementsByClassName(id)
+//     for(let i=0;i<z.length;i++){
+//         newarr.push(z[i].innerHTML)
+//         console.log(newarr)
+//         num=newarr.filter((item)=>parseInt(item))
+//        num.sort((a,b)=>a-b)
+//        str=newarr.filter((item)=>!parseInt(item))
+//        str.sort((a,b)=>a>b?1:-1)
+
+//     }
+//     for(let i=0;i<num.length;i++){
+//         z[i].innerHTML=num[i]
+
+//     }
+//     for(let i=0;i<str.length;i++){
+//         z[i].innerHTML=str[i]
+//     }
+// })
+
+// let a = grid.querySelectorAll("tbody>tr>:nth-child(1)");
+// let b = grid.querySelectorAll("tbody>tr>:nth-child(2)");
+// for(let i=0;i<a.length;i++){
+//     a[i].setAttribute("class","number")
+//     b[i].setAttribute("class","string")
+
+// }
+
+// grid.addEventListener("click",(event)=>{
+//     let id=event.target.dataset.type;
+//     let z=grid.querySelectorAll("td")
+//     let newarr=[];
+//     for(let i=0;i<z.length;i++){
+//         let b=newarr.push(z[i].innerHTML)
+//     }
+//     console.log(newarr)
+// })
+
+// const table = document.querySelector('#grid');
+// let arr=[]
+// for(let i=1;i<table.rows.length;i++){
+//     arr.push([+table.rows[i].cells[0].innerHTML,table.rows[i].cells[1].innerHTML])
+// }
+// table.addEventListener("click",(event)=>{
+//     if(event.target.dataset.type=="number"){
+//     arr.sort((a,b)=>a[0]-b[0])
+//     for(let i=1;i<table.rows.length;i++){
+//         table.rows[i].cells[0].innerHTML=arr[i-1][0]
+//         table.rows[i].cells[1].innerHTML=arr[i-1][1]
+
+//     }
+//     }
+//     if(event.target.dataset.type=="string"){
+//         arr.sort((a,b)=>a[1]>b[1]?1:-1)
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=arr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=arr[i-1][1]
+//         }
+//         }
+// })
+
+// let arr =['5', 'Вася', '2', 'Петя', '12', 'Женя', '9', 'Маша', '1', 'Илья']
+// let newarr=[]
+// let b;
+// for(let i=0;i<arr.length;i=i+2){
+// newarr.push({"age":arr[i],"name":arr[i+1]})
+// b=newarr.sort((a,b)=>a.name>b.name?1:-1)
+
+// }
+// console.log(b)
+
+// let table=document.querySelector("#grid")
+// let newarr=[];
+// for(let i=1;i<table.rows.length;i++){
+//     newarr.push([table.rows[i].cells[0].innerHTML,table.rows[i].cells[1].innerHTML])
+//     console.log(newarr[i][1])
+// }
+// console.log(newarr)
+// table.addEventListener("click",(event)=>{
+//     if(event.target.dataset.type=="number"){
+//         newarr.sort((a,b)=>a[0]-b[0])
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=newarr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=newarr[i-1][1]
+
+//         }
+//     }
+//     if(event.target.dataset.type=="string"){
+//         newarr.sort((a,b)=>a[1]>b[1]?1:-1)
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=newarr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=newarr[i-1][1]
+//         }
+//     }
+// })
+
+// let element;
+// document.addEventListener("mouseover",(event)=>{
+//     let target= event.target;
+//     elemhtml=target.dataset.tooltip;
+//     if(!elemhtml) return;
+//     element=document.createElement("div");
+//     element.innerHTML=elemhtml;
+//     element.className="tooltip";
+//     document.body.append(element);
+//     let cords =target.getBoundingClientRect();
+//     let left = cords.left+(target.offsetWidth-element.offsetWidth)/2
+//     if (left < 0) left = 0;
+//     let top=(cords.top-element.offsetHeight-5)+"px"
+//     element.style.left=left+"px"
+//     element.style.top=top+"px"
+
+//     console.log(element.offsetHeight)
+//     console.log(cords.top)
+
+// })
+// document.addEventListener("mouseout",(event)=>{
+//     if(element){
+//     element.remove()
+//     element=null
+//     }
+// }
+// )
+// let menu=document.getElementById("menu")
+
+// class Menu {
+//     constructor(elem){
+//         this._elem=elem;
+//         elem.onclick=this.onClick.bind(this)
+//     }
+//     save() {
+//         alert('сохраняю');
+//       }
+
+//       load() {
+//         alert('загружаю');
+//       }
+
+//       search() {
+//         alert('ищу');
+//       }
+
+//     onClick(event){
+//         let action =event.target.dataset.action;
+//         if(action){
+//             this[action]()
+//         }
+//     }
+// }
+// new Menu(menu)
+// class Menu {
+//     constructor(elem) {
+//       this._elem = elem;
+//       elem.onclick = this.onClick.bind(this); // (*)
+//     }
+
+//     save() {
+//       alert('сохраняю');
+//     }
+
+//     load() {
+//       alert('загружаю');
+//     }
+
+//     search() {
+//       alert('ищу');
+//     }
+
+//     onClick(event) {
+//       let action = event.target.dataset.action;
+//       if (action) {
+//         this[action]();
+//       }
+//     }
+//   }
+
+//   new Menu(menu);
+// div2.addEventListener("click",(event)=>alert(1))
+// div.addEventListener("click",(event)=>alert(5),true)
+// div.addEventListener("click",(event)=>alert(5))
+
+// let ul =document.getElementById("menu")
+// ul.addEventListener("click",(event)=>{
+//     if(event.target.tagName!="A")return;
+//    let href = event.target.getAttribute("href")
+//    alert(href)
+//    event.preventDefault()
+// })
+
+// elem.oncontextmenu=(event)=>{
+//     event.preventDefault();
+//     alert("element menu");
+//     event.stopPropagation();
+
+// }
+// document.oncontextmenu=(event)=>{
+//     if(event.defaultPrevented)return;
+//     event.preventDefault()
+//     alert("document menu")
+
+// }
+// function handler(event) {
+//     alert( "..." );
+//     event.preventDefault()
+//   }
+
+// contents.addEventListener("click",(event)=>{
+//     if(event.target.closest("a")){
+//         let a=event.target.closest("a").getAttribute("href")
+//         confirm(`do you really want to visit ${a}`)?event.target:event.preventDefault()
+//         }
+// })
+
+// thumbs.addEventListener("click",(event)=>{
+//     event.preventDefault()
+//    largeImg.setAttribute("src",event.target.closest("a").getAttribute("href"))
+
+// })
+// btn.addEventListener("mousedown",(event)=>{
+//     alert(event.button)
+// })
+// let val=30
+// document.querySelector("progress").addEventListener("mouseover",(event)=>{
+//     val++
+//     document.querySelector("progress").value=val
+// })
+
+// let event= new Event("mouseover")
+// elem.dispatchEvent(event)
+
+// btn.addEventListener("click",(event)=>{
+//     if(event.shiftKey && (event.ctrlKey ||event.metaKey)){
+//         alert("yes")
+//     }
+// })
+
+// input.addEventListener("mousemove",(event)=>{
+//     input.value=event.pageX+ ":" +event.pageX
+// })
+
+// span.addEventListener("dblclick",(event)=>{
+
+//     alert("hello")
+//     event.preventDefault()
+// })
+// span.addEventListener("mousedown",(event)=>{
+
+//     event.preventDefault()
+// })
+
+// span.addEventListener("copy",(event)=>{
+
+//     event.preventDefault()
+//     alert("you cant copy this")
+// })
+
+///////////////////////////////////////////selected add/remove
+
+// ul.addEventListener("click",(event)=>{
+//     if(event.metaKey||event.ctrlKey){
+//         toggle(event.target)
+
+//     } else sel(event.target)
+
+// })
+
+// function toggle(li){
+//     li.classList.add("selected")
+
+// }
+// function sel(li){
+//     let selected =ul.querySelectorAll(".selected")
+//     for(let elem of selected){
+//         elem.classList.remove("selected")
+//     }
+//     li.classList.add("selected")
+
+// }
+
+// div.addEventListener("mouseover",(event)=>{
+//     console.log("mouseover","target "+event.target.tagName,"related "+event.relatedTarget.tagName)
+// })
+// div.addEventListener("mouseout",(event)=>{
+//     console.log("mouseout","target "+event.target.tagName,"related "+event.relatedTarget.tagName)
+// })
+// let current =null;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current)return;
+//     let target=event.target.closest("td")
+//     if(!target)return;
+//     current= target;
+// //   target.style.background = 'pink';
+//     console.log(target)
+// })
+
+// table.addEventListener("mouseout",(event)=>{
+//     if(!current)return;
+//     let relatedtarget=event.relatedTarget
+//     while(relatedtarget){
+//         if(relatedtarget==current)return;
+//         relatedtarget = relatedtarget.parentNode;
+//     }
+//     // current.style.background = '';
+//   current = null;
+// })
+
+// let current=null;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current)return;
+//     let target=event.target.closest("td");
+//     if(!target) return;
+//     current=target;
+//     current.style.backgroundColor="pink"
+
+// })
+
+// table.addEventListener("mouseout",(event)=>{
+//     if(!current)return;
+//     // let related =event.relatedTarget;
+//     // console.log(related)
+//     // while(related){
+//     // if(related==current)return;
+//     // related=related.parentNode;
+//     // }
+//     current.style.backgroundColor=""
+//     current=null
+// })
+
+// let current;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current) return;
+//     let target = event.target.closest("td")
+//     if(!target)return;
+//     current=target;
+//     current.style.background="pink"
+
+// })
+// table.addEventListener("mouseout",(event)=>{
+//    if(!current)return;
+//    current.style.background="";
+//    current=null;
+
+// })
+
+// let div;
+
+// document.addEventListener("mouseover",(event)=>{
+//     let target=event.target.dataset.tooltip;
+//     if(!target)return;
+//     div=document.createElement("div")
+//     // div.className="tooltip";
+//     document.body.append(div)
+//     div.innerHTML=target
+//     if(!div)return;
+//     let cords =event.target.getBoundingClientRect()
+//     let left =cords.left+(event.target.offsetWidth-div.offsetWidth)/2
+//     if(left<0){left=0}
+//     let top=cords.top-div.offsetHeight-5
+//     if(top<0){top=cords.top+div.clientHeight+5}
+//     div.style.left =left+ "px"
+//     div.style.top =top+ "px"
+
+// })
+
+// document.addEventListener("mouseout",(event)=>{
+//        div.remove()
+// })
+
+// let div;
+// document.addEventListener("mouseover",(event)=>{
+//     let target=event.target.dataset.tooltip;
+//     if(!target)return;
+//     div=document.createElement("div");
+//     div.className="tooltip";
+//     document.body.append(div)
+//     div.innerHTML=target
+//     let cords = event.target.getBoundingClientRect()
+//     let left =cords.left+(event.target.offsetWidth-div.offsetWidth)/2
+//     if(left<0){left=0};
+//     let top=cords.top-div.offsetHeight
+//     if(top<0){top=cords.top+div.clientHeight}
+//     console.log(div.offsetLeft)
+
+//     div.style.left =left+ "px"
+//     div.style.top =top+ "px"
+
+// })
+
+// document.addEventListener("mouseout",(event)=>{
+//     if(div){
+//     div.remove()
+//     }
+// })
+// let current;
+
+// table.addEventListener("mouseover",(event)=>{
+
+//     if (current)return;
+//     let target =event.target.closest("td")
+//     if(!target)return;
+//     current=target
+//     current.style.background="pink"
+// })
+
+// table.addEventListener("mouseout",(event)=>{
+
+//     if(!current) return;
+//     current.style.background="";
+//     current=null;
+//     console.log(event.relatedTarget)
+// })
+
+// document.ondragstart=(event)=>{return false}
+
+// ball.addEventListener("mousedown",(event)=>{
+//     ball.style.position="absolute";
+//     ball.style.zIndex=100;
+//     document.body.append(ball);
+
+//     function move(pageX,pageY){
+//         ball.style.left = pageX-ball.offsetWidth/2+"px";
+//         ball.style.top= pageY-ball.offsetHeight/2+"px";
+//     }
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+//     }
+//     document.addEventListener("mousemove",mouseMove)
+
+//     ball.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove);
+
+//     })
+
+// })
+
+///////////////////////////drag element and drop  with effect
+// let current=null;
+
+// ball.addEventListener("mousedown",(event)=>{
+//     ball.style.position="absolute";
+//     ball.style.zIndex=2;
+//     let shiftX=event.clientX-ball.getBoundingClientRect().left
+//     let shiftY=event.clientY-ball.getBoundingClientRect().top
+//     function move (pageX,pageY){
+//         // ball.style.top =pageY-ball.offsetHeight/2+"px";
+//         // ball.style.left=pageX-ball.offsetWidth/2+"px";
+//          ball.style.top =pageY-shiftY+"px";
+//         ball.style.left=pageX-shiftX+"px";
+
+//     };
+//     function mouse(event){
+//         move(event.pageX,event.pageY);
+//         ball.hidden=true;
+//         let elemunder=document.elementFromPoint(event.clientX,event.clientY);
+//         ball.hidden=false;
+//         if(!elemunder)return;
+//         let drag=elemunder.closest(".droppable");
+
+//         if(current!=drag){
+//             if(current){
+//                 leaveElem(current)
+//             }
+//             current=drag
+//             if(current){
+//                 enterElem(current)
+//             }
+//             // current=null
+//         }
+
+//         function leaveElem(elem){
+//             elem.style.background="";
+
+//         };
+
+//         function enterElem(elem){
+//             elem.style.background="pink";
+
+//         }
+
+//     };
+//     document.addEventListener("mousemove",mouse);
+//     ball.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouse)
+//     })
+
+// })
+
+// ball.ondragstart=(event)=>{return false}
+
+// let currentDroppable = null;
+
+// ball.onmousedown = function(event) {
+
+//   let shiftX = event.clientX - ball.getBoundingClientRect().left;
+//   let shiftY = event.clientY - ball.getBoundingClientRect().top;
+
+//   ball.style.position = 'absolute';
+//   ball.style.zIndex = 1000;
+//   document.body.append(ball);
+
+//   moveAt(event.pageX, event.pageY);
+
+//   function moveAt(pageX, pageY) {
+//     ball.style.left = pageX - shiftX + 'px';
+//     ball.style.top = pageY - shiftY + 'px';
+//   }
+
+//   function onMouseMove(event) {
+//     moveAt(event.pageX, event.pageY);
+
+//     ball.hidden = true;
+//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+//     ball.hidden = false;
+
+//     if (!elemBelow) return;
+
+//     let droppableBelow = elemBelow.closest('.droppable');
+//     if (currentDroppable != droppableBelow) {
+//       if (currentDroppable) { // null если мы были не над droppable до этого события
+//         // (например, над пустым пространством)
+//         leaveDroppable(currentDroppable);
+//       }
+//       currentDroppable = droppableBelow;
+//       if (currentDroppable) { // null если мы не над droppable сейчас, во время этого события
+//         // (например, только что покинули droppable)
+//         enterDroppable(currentDroppable);
+//       }
+//     }
+//   }
+
+//   document.addEventListener('mousemove', onMouseMove);
+
+//   ball.onmouseup = function() {
+//     document.removeEventListener('mousemove', onMouseMove);
+//     ball.onmouseup = null;
+//   };
+
+// };
+
+// let currentDroppable = null;
+
+// function onMouseMove(event) {
+//     moveAt(event.pageX, event.pageY);
+
+//     ball.hidden = true;
+//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY); //gates
+//     ball.hidden = false;
+
+//     if (!elemBelow) return;
+
+//     let droppableBelow = elemBelow.closest('.droppable');
+//     if (currentDroppable != droppableBelow) {
+//       if (currentDroppable) { // null если мы были не над droppable до этого события
+//         // (например, над пустым пространством)
+//         leaveDroppable(currentDroppable);
+//       }
+//       currentDroppable = droppableBelow;
+//       if (currentDroppable) { // null если мы не над droppable сейчас, во время этого события
+//         // (например, только что покинули droppable)
+//         enterDroppable(currentDroppable);
+//       }
+//     }
+//   }
+
+// function enterDroppable(elem) {
+//   elem.style.background = 'pink';
+// }
+
+// function leaveDroppable(elem) {
+//   elem.style.background = '';
+// }
+
+// ball.ondragstart = function() {
+//   return false;
+// };
+
+//////////////////////////////dragn drop by me
+//   let current =null;
+//     ball.addEventListener("mousedown",(event)=>{
+//         ball.style.position="absolute";
+//         ball.style.zIndex=2;
+//         let shiftX=event.clientX-ball.getBoundingClientRect().left;
+//         let shiftY=event.clientY-ball.getBoundingClientRect().top;
+
+//         function move(pageX,pageY){
+//             ball.style.left=pageX-shiftX+"px";
+//             ball.style.top=pageY-shiftY+"px";
+//         }
+
+//         function mouseMove(event){
+//             move(event.pageX,event.pageY);
+//             ball.hidden=true;
+//             let elem = document.elementFromPoint(event.clientX,event.clientY);
+//             ball.hidden=false;
+//             if(!elem)return;
+//             let drag=elem.closest(".droppable");
+//             if(current!=drag){
+//                 if(current){
+//                     leaveCurrent(current)
+//                 }
+//                 current=drag;
+//                 if(current){
+//                     enterCurrent(current)
+//                 }
+//             }
+//             function leaveCurrent(elem){
+//                 elem.style.background=""
+//             };
+//             function enterCurrent(elem){
+//                 elem.style.background="pink"
+//             }
+
+//         }
+//         document.addEventListener("mousemove",mouseMove);
+
+//         ball.addEventListener("mouseup",(event)=>{
+//             document.removeEventListener("mousemove",mouseMove)
+//         })
+
+//     })
+
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=100;
+//     document.body.append(thumb)
+
+//     // let shiftX=event.clientX-thumb.getBoundingClientRect().left;
+//     // let shiftY=event.clientY-thumb.getBoundingClientRect().top;
+// //    console.log(event.pageX)
+//     function move(pageX,pageY){
+//         thumb.style.left=pageX-thumb.offsetWidth/2+"px";
+//         thumb.style.top=pageY-thumb.offsetheight/2+"px"
+//         if(parseInt(thumb.style.left)>310){
+//             thumb.style.left=290+"px"
+//         }
+//     }
+
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+
+//     }
+
+//     document.addEventListener("mousemove",mouseMove);
+//     thumb.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove)
+//     })
+
+// })
+
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="relative";
+//     thumb.style.zIndex=2;
+
+// })
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=100;
+//     document.body.append(thumb);
+
+//     function move(pageX,pageY){
+//         thumb.style.left = pageX-thumb.offsetWidth/2+"px";
+//         thumb.style.top= pageY-thumb.offsetHeight/2+"px";
+//     }
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+//     }
+//     document.addEventListener("mousemove",mouseMove)
+
+//     thumb.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove);
+
+//     })
+
+// })
+
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=10;
+//     document.body.append(thumb)
+
+//    function move(pageX,pageY){
+//        thumb.style.top=pageY-thumb.offsetHeight/2+"px";
+//        thumb.style.left=pageX-thumb.offsetWidth/2+"px";
+//        if(parseInt(thumb.style.top)<slider.offsetTop){
+//         thumb.style.top=slider.offsetTop+"px"
+//        }
+
+//        if(parseInt(thumb.style.top)>slider.offsetTop-5){
+//         thumb.style.top=slider.offsetTop-5+"px"
+//        }
+//        if(parseInt(thumb.style.left)<slider.offsetLeft){
+//         thumb.style.left=slider.offsetLeft+"px"
+//        }
+//        console.log(slider.offsetLeft+slider.clientWidth)
+//        if(parseInt(thumb.style.left)>slider.offsetLeft+slider.clientWidth){
+//         thumb.style.left=slider.offsetLeft+slider.clientWidth-5+"px"
+//        }
+
+//    }
+//    function mouse(event){
+//        move(event.pageX,event.pageY)
+//    }
+//    document.addEventListener("mousemove",mouse)
+
+//    document.addEventListener("mouseup",()=>{
+//     document.removeEventListener("mousemove",mouse)
+// })
+//    thumb.ondragstart=()=>{return false};
+
+// })
+
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//     function move(pageX){
+//         thumb.style.left=event.clientX- thumb.offsetWidth/2+"px"
+//         if(parseInt(thumb.style.left)>310){thumb.style.left=310+"px"}
+//         console.log
+//     }
+
+//     function mouse(event){
+//         move(event.pageX)
+//     }
+
+//     document.addEventListener("mousemove",mouse)
+//     document.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouse)
+//     })
+//     thumb.ondrаgstart=()=>{return false}
+// })
+
+///////////////////////slider working type
+
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//    function move(pageX,pageY){
+//        thumb.style.left=pageX-thumb.offsetWidth-slider.getBoundingClientRect().left+"px";
+
+//        if(parseInt(thumb.style.left)<0){
+//         thumb.style.left=0+"px"
+//        }
+//        if(parseInt(thumb.style.left)>slider.clientWidth){
+//         thumb.style.left=slider.clientWidth+"px"
+//        }
+
+//    }
+//    function mouse(event){
+//        move(event.pageX)
+//    }
+//    document.addEventListener("mousemove",mouse)
+
+//    document.addEventListener("mouseup",()=>{
+//     document.removeEventListener("mousemove",mouse)
+// })
+//    thumb.ondragstart=()=>{return false};
+
+// })
+
+// let field = document.getElementById('field');
+
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   // let target=event.target.getAttribute("class")="draggable"
+//   if (target) {
+//     console.log(event.target);
+//     event.target.style.position = 'absolute';
+//     event.target.style.zIndex = 2;
+//     //    document.body.append(target)
+//   }
+//   //    if(!target)return;
+
+//   function move(pageX, pageY) {
+//     event.target.style.left = pageX - event.target.offsetWidth / 2 + 'px';
+//     event.target.style.top = pageY - event.arget.offsetHeight / 2 + 'px';
+//   }
+//   function mouse(event) {
+//     move(event.target.pageX, event.target.pageY);
+//   }
+//   document.addEventListener('mousemove', mouse);
+//   document.addEventListener('mouseup', (event) => {
+//     document.removeEventListener('mousemove', mouse);
+//   });
+
+//   document.ondragstart = () => {
+//     return false;
+//   };
+// });
+
+// let field = document.getElementById('field');
+// // let hero = document.querySelector('.draggable');
+// // console.log(hero);
+
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   // let target=event.target.getAttribute("class")="draggable"
+//   if (target) {
+//     console.log(target);
+//     event.target.style.position = 'absolute';
+//     //   event.target.style.zIndex = 2;
+//     document.body.append(target);
+//   }
+//   //    if(!target)return;
+
+//   //   function move(pageX, pageY) {
+//   //     hero.style.left = pageX - hero.offsetWidth / 2 + 'px';
+//   //     hero.style.top = pageY - hero.offsetHeight / 2 + 'px';
+//   //   }
+//   //   function mouse(event) {
+//   //     move(event.pageX, event.pageY);
+//   //   }
+//   //   document.addEventListener('mousemove', mouse);
+//   //   hero.addEventListener('mouseup', (event) => {
+//   //     document.removeEventListener('mousemove', mouse);
+//   //   });
+
+//   //   document.ondragstart = () => {
+//   //     return false;
+//   //   };
+// });
+
+//////////////////////////////////////////////////heroes with delegation
+
+// let field = document.getElementById('field');
+// let current = null;
+
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   let shiftX = event.clientX - event.target.getBoundingClientRect().left;
+//   let shiftY = event.clientY - event.target.getBoundingClientRect().top;
+
+//   if (target) {
+//     event.target.style.position = 'absolute';
+//     event.target.style.zIndex = 2;
+
+//     function move(pageX, pageY) {
+//       event.target.style.left = pageX - shiftX + 'px';
+//       event.target.style.top = pageY - shiftY + 'px';
+
+//       if (parseInt(event.target.style.top) < 0) {
+//         event.target.style.top = 0 + 'px';
+//       }
+//       if (parseInt(event.target.style.left) < 0) {
+//         event.target.style.left = 0 + 'px';
+//       }
+//       if (parseInt(event.target.style.left) > document.body.clientWidth - event.target.offsetWidth) {
+//         event.target.style.left = document.body.clientWidth - event.target.offsetWidth + 'px';
+//       }
+//         if (parseInt(event.target.style.top) > document.body.scrollHeight - event.target.offsetWidth) {
+//           event.target.style.top = document.body.scrollHeight - event.target.offsetWidth + 'px';
+//         }
+
+//     }
+
+//     function mouse(event) {
+//       move(event.pageX, event.pageY);
+
+//       event.target.hidden = true;
+//       let eldrop = document.elementFromPoint(event.clientX, event.clientY);
+//       event.target.hidden = false;
+//       if (!eldrop) return;
+//       let trg = eldrop.closest('.droppable');
+//       if (current != trg) {
+//         if (current) {
+//           leavecr(current);
+//         }
+//         current = trg;
+//         if (current) {
+//           entercr(current);
+//         }
+//       }
+//       function leavecr(elem) {
+//         elem.style.backgroundColor = '';
+//       }
+//       function entercr(elem) {
+//         elem.style.backgroundColor = 'green';
+//       }
+//     }
+//     document.addEventListener('mousemove', mouse);
+//     document.addEventListener('mouseup', (event) => {
+//       document.removeEventListener('mousemove', mouse);
+//     });
+//   }
+
+//   document.ondragstart = () => {
+//     return false;
+//   };
+// });

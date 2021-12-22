@@ -1,3 +1,5 @@
+"use strict";
+
 // var name = prompt('How old are you');
 // if (name>0 && name<12) {
 //     document.write('You are a child');
@@ -114,7 +116,7 @@
 //         hits=hits+1;
 //             if (hits == 3) {
 //             result=true,  alert ('you won');
-//             } 
+//             }
 //         }else alert ('try again')
 //     }
 // }
@@ -224,13 +226,13 @@
 //              return Math.min(x,y)
 //          }
 // alert(result)
-// }  
-// random(1,5);   
+// }
+// random(1,5);
 //  function random(x,y){
 //      let result = Math.ceil(Math.random()*(Math.max(x,y)));
 //      return result
-// }  
-// alert(random(1,5));  
+// }
+// alert(random(1,5));
 // let number =['1','2','3'];
 // // number.push('4','5')
 // // number.pop('2');
@@ -326,7 +328,7 @@
 //         // admin:89
 //     }
 //     let empty=Object.keys(object).length;
-//    
+//
 //     if (empty>0){
 //         alert ('false')
 //     }
@@ -556,7 +558,7 @@
 //            sleep: function (){
 //             if(this.stomac>0){
 //                 alert('the' + " " + this.name + " "+ 'is sleeping');
-//                    this.stomac=this.stomac-100; 
+//                    this.stomac=this.stomac-100;
 //                    console.log(this.stomac)
 //                }else{alert('the cat need to eat');
 //                 };
@@ -653,7 +655,7 @@
 // var now = new Date()
 // alert(now.toLocaleDateString())
 // x = now.toLocaleTimeString();
-// document.write( 'Current  is' + ' ' + (x)); 
+// document.write( 'Current  is' + ' ' + (x));
 // y = now.getDay()
 // let week =[
 //   "Sunday",
@@ -663,10 +665,10 @@
 // "Thursday",
 // "Friday",
 // "Saturday",]
-// document.write('today is' + ' ' + week[y]);  
+// document.write('today is' + ' ' + week[y]);
 // var a = 5
 // var b = 6
-// var c = 7  
+// var c = 7
 // var d = (a+b+c)/2
 // var e = Math.sqrt(d*(d-a)*(d-b)*(d-c))
 // console.log(e)
@@ -709,7 +711,7 @@
 // };
 // calculator
 // function display1(){
-//     document.getElementById('inp').value = document.getElementById("1").value 
+//     document.getElementById('inp').value = document.getElementById("1").value
 // }
 // function display2(){
 //     document.getElementById('inp').value = document.getElementById("2").value
@@ -757,19 +759,19 @@
 //     else if(x==400){
 //         document.getElementById('result').innerHTML = true
 //     }
-//     else document.getElementById('result').innerHTML= false; 
+//     else document.getElementById('result').innerHTML= false;
 // }
 // function checkPositivity(x,y){
 //     if ((x>0 && y<0) || (x<0 && y>0)){
 //         return true
 //     }
-//     else return false 
+//     else return false
 // }
 // console.log(checkPositivity(-12,3))
 // let x = 'guests:\n John ,\nMary. Nerd';
 // let x = `guests:
 //  John ,
-//  Mary. 
+//  Mary.
 //  Nerd`;
 // alert (x)
 // let str = "what the fuck";
@@ -817,7 +819,7 @@
 // checkString();
 // function removeCharacter(a){
 //  a= a.replace(/a/g,' ')
-//     return a 
+//     return a
 // }
 // console.log(removeCharacter("blablaaaa"));
 // function changeLetters(){
@@ -866,7 +868,7 @@
 // function checkStart(str) {
 //     if(str.startsWith('java')){
 //         return true
-//     } else return false 
+//     } else return false
 // }
 // console.log(checkStart('script s the good lang'))
 // function checkInt(x,y,z){
@@ -1129,9 +1131,9 @@
 //    if(i>0){
 //     a= count1+=i;
 //     b = count2+=1;
-//    };   
+//    };
 // }
-// console.log(a/b) 
+// console.log(a/b)
 // let arr =[];
 // let count = 0;
 // for (let i = -100; i<=100; i++){     //hometask 2e
@@ -1343,7 +1345,7 @@
 //     {name: 'David', salary: 75000, hireDate: "August 15, 2009"},
 //     {name: 'Ana', salary: 80000, hireDate: "December 12, 2011"}
 // ];
-// employees.sort((x,y)=> { 
+// employees.sort((x,y)=> {
 //     let a=new Date(x.hireDate) ;
 //     let b=new Date(y.hireDate);
 //     return a-b;
@@ -1396,7 +1398,7 @@
 // function range(a,b){
 //     for(let i = a,j=0;i<=b;i++,j++){
 //         arr[j]= i;
-//     } 
+//     }
 //     return arr
 // }
 // console.log(range(4,7))
@@ -1404,7 +1406,7 @@
 //     let arr = new Array(b);
 //     for(let i = a,j=0;i<=arr.length;i++,j++){
 //         arr[j]= i;
-//     } 
+//     }
 //     return arr
 // }
 // console.log(range(2,5))
@@ -1412,12 +1414,12 @@
 // let newArr = array.filter(element=>element!=(null,0,'',false))
 // console.log(newArr.slice(0,newArr.length-1))
 // (3, 'default value')
-// 
+//
 // function cheange (a,b){
 //     let arr = new Array(a);
 //     for(let i =0;i<arr.length;i++){
 //         arr[i]= b;
-//     }  
+//     }
 //     console.log(arr)
 // }
 // cheange(4,10)
@@ -1455,7 +1457,7 @@
 // let newarr = arr.filter(element=>{
 //     if( Number.isFinite(element)==true);
 //     return element
-// }) 
+// })
 // console.log(newarr)
 // let arr= [10,20,10,40,50,60,70];
 // let num = 40;
@@ -1463,7 +1465,7 @@
 //     let check1 = arr[i];
 //     let check2 = arr[i+1]
 //  if(check2+check1==num){
-//      console.log(arr.indexOf(check1),arr.indexOf(check2)) 
+//      console.log(arr.indexOf(check1),arr.indexOf(check2))
 //  }
 // }
 // var arr = ["Есть", "жизнь", "на", "Марсе"];
@@ -1608,7 +1610,7 @@
 //   for(let prop in menu){
 //      if(isFinite(menu[prop])){
 //       menu[prop]*=2
-//     } 
+//     }
 //   }console.log(menu)
 //   }
 //   newm();
@@ -1730,7 +1732,7 @@
 //     }
 // }
 // console.log(sum)
-// var library = [ 
+// var library = [
 //     {
 //         author: 'Bill Gates',
 //         title: 'The Road Ahead',
@@ -1743,7 +1745,7 @@
 //     },
 //     {
 //         author: 'Suzanne Collins',
-//         title:  'Mockingjay: The Final Book of The Hunger Games', 
+//         title:  'Mockingjay: The Final Book of The Hunger Games',
 //         readingStatus: false
 //     }];
 // for(let i=0;i<library.length;i++){
@@ -1759,7 +1761,7 @@
 //      j++;
 //  }
 // console.log(newdata)
-// var library = 
+// var library =
 //     {
 //         title:  'The Road Ahead',
 //         author: 'Bill Gates',
@@ -1812,9 +1814,9 @@
 // let user = {};
 // // user.name="pete";
 // Object.defineProperty(user,"surname",{
-//     value:"Browns", 
+//     value:"Browns",
 //     // enumerable:true,
-//     writable:true, 
+//     writable:true,
 //     configurable:true
 // });
 // user.surname="bla";
@@ -1905,7 +1907,7 @@
 //     console.log(obj[prop])
 // }
 // // for(let prop in obj){
-// //     console.log(prop,obj[prop]) 
+// //     console.log(prop,obj[prop])
 // // }
 // const obj = {
 //     birthYear: 1995,
@@ -1964,7 +1966,7 @@
 //     },
 // age:{
 //     get(){
-//         return new Date().getFullYear()-this.birth 
+//         return new Date().getFullYear()-this.birth
 //     },
 //     set(value){
 //         this.birth=value
@@ -2019,7 +2021,7 @@
 //     })
 // Object.preventExtensions(obj);
 // Object.isExtensible(obj);
-// delete obj.name   
+// delete obj.name
 // for(let prop in obj){
 //     console.log(prop)
 // }
@@ -2072,7 +2074,7 @@
 //          }
 //      }
 //      return true
-//  } 
+//  }
 //  console.log(check(data,data2))
 //  function shallowEqual(object1, object2) {
 //     const keys1 = Object.keys(object1);
@@ -2150,8 +2152,8 @@
 // };
 // delete myObject.regex;
 // console.log(myObject)
-// const data1 = { 
-//     a: 1, 
+// const data1 = {
+//     a: 1,
 //     b:2,
 //     c:3
 // };
@@ -2261,7 +2263,7 @@
 //     console.log(prop)
 // }
 // let citizenID = Symbol.for('ssn');
-// console.log(Symbol.keyFor(citizenID)); 
+// console.log(Symbol.keyFor(citizenID));
 // let obj = {
 //     a:1,
 //     b:2
@@ -2438,7 +2440,7 @@
 //     return;
 // }
 // let user1 = new User("ojjn",27);
-// console.log(user1.age) 
+// console.log(user1.age)
 // let id = Symbol("id")
 // let user = {
 //     name:"John",
@@ -2770,7 +2772,7 @@
 // console.log(art.name)
 // class CoffeeMachine{
 //     _waterAmount=0;
-//     // 
+//     //
 //     set waterAmount(value){
 //         if(value<0){
 //             throw new Error("not enough water");
@@ -2782,7 +2784,7 @@
 //     //    alert("coffeeMachine power is" + `${this.power}`)
 //    }
 //    get power(){
-//     return this._power 
+//     return this._power
 // }
 // }
 // let coffeMachine = new CoffeeMachine(10);
@@ -2977,7 +2979,7 @@
 // let a = 'global';
 // function outer() {
 //     let b = 'outer';
-//      console.log(b); 
+//      console.log(b);
 // function inner() {
 //       let c = 'inner'
 //     //   console.log(c);   // выдаст 'inner'
@@ -2989,7 +2991,7 @@
 //     inner();
 //   }
 // outer();
-// // console.log(a); 
+// // console.log(a);
 // // console.log(b);
 //     // выдаст 'outer'
 // var ­scope­=­ "global­scope";­­­­­­­­­
@@ -3020,10 +3022,10 @@
 //     return {
 //      plus:function (){
 //          return count++
-//      }, 
+//      },
 //      reset:function (){
 //          return count =0
-//      } 
+//      }
 //     }
 // }
 // let c=counter(),d=counter();
@@ -3110,7 +3112,7 @@
 //     return function (){
 //         return v
 //       }
-//   }    
+//   }
 // let shooters = [];
 // let i = 0;
 // while (i < 10) {
@@ -3138,7 +3140,7 @@
 // for(let i = 0;i<arr.length;i++){
 //   // if(newstr[i]=="a" || newstr[i]=="e" || newstr[i]=="i" || newstr[i]=="o" || newstr[i]=="u"){
 //     // newstr.replaceAll("i"," ")
-//   // } 
+//   // }
 //   if(arr[i]==="i" || arr[i]=="e" || arr[i]=="i" || arr[i]=="o" || arr[i]=="u"){
 //   delete arr[i]
 //   }
@@ -3175,7 +3177,7 @@
 //   let count =1;
 //   return function (a,b){
 //     if(count%2==0 && count>3){
-//       console.log("hmm, I don't know!") 
+//       console.log("hmm, I don't know!")
 //     }else console.log(a+b)
 //      return count++
 //   }
@@ -3343,7 +3345,7 @@
 // }
 // console.log(fac(3))
 // console.log(fac.length)
-// 
+//
 // let x = 5;
 // let arr =[];
 // for(let i=0;i<6;i++){
@@ -3538,7 +3540,7 @@
 //     setTimeout(f,1000,1)
 // },1000)
 // setInterval(f(),1000)
-// 
+//
 // let timer = setTimeout(function tick(){
 //     alert("tick")
 //     timer = setTimeout(tick,1000)
@@ -3556,7 +3558,7 @@
 //     console.log(from)
 //     let time=setTimeout(f,1000,++from)
 //     if(from>4){
-//         clearTimeout(time) 
+//         clearTimeout(time)
 //     }
 // }
 // setTimeout(f,1000,1)
@@ -3604,7 +3606,7 @@
 //            console.log(num*=i);
 //            i--
 //            setTimeout(b,1000)
-//         }clearTimeout(a)  
+//         }clearTimeout(a)
 //     },1000)
 // }
 // fact(15)
@@ -3633,7 +3635,7 @@
 //         return n
 //     } return (slow(n-1)+slow(n-2))
 // }
-//  console.log(slow(30))  
+//  console.log(slow(30))
 //  console.timeEnd()
 // console.time()
 //  function cache(func){
@@ -3690,7 +3692,7 @@
 //         return n
 //     } return (slow(n-1)+slow(n-2))
 // }
-//  console.log(slow(30))  
+//  console.log(slow(30))
 //  console.timeEnd()
 // console.time()
 // function cache(func){
@@ -3881,7 +3883,7 @@
 //     for(let i=0;i<num.length;i++){
 //         if(arr[num[i]]){
 //             arr[num[i]]=arr[num[i]].toUpperCase()
-//         }  
+//         }
 //         }
 //         console.log(arr)
 //     }
@@ -4096,7 +4098,7 @@
 // }
 // let arr = []
 // for(let i=-130,j=0;i<-118;i++,j++){
-//     arr.push(i) 
+//     arr.push(i)
 // }
 // let newarr = arr.sort((a,b)=>a>b?-1:1)
 // console.log(newarr.indexOf(newarr[0]))
@@ -4143,7 +4145,7 @@
 //  worker.slow = memoize(worker.slow)
 //  console.log(worker.slow(2,5,6))
 // function work(a, b) {
-//     return ( a + b ); 
+//     return ( a + b );
 //   }
 //   function wrapper(func){
 //       let obj = {}
@@ -4159,7 +4161,7 @@
 // //   work(3,4)
 //   setTimeout(work,5000,1,2)
 // function work(a, b) {
-//     return ( a + b ); 
+//     return ( a + b );
 //   }
 //   console.log(work(3,4))
 // // console.time()
@@ -4301,7 +4303,7 @@
 // console.log(fac(5))
 // function fib(n){
 //     if(n<=1){
-//         return n 
+//         return n
 //     }else return(fib(n-2)+fib(n-1))
 // }
 // console.log(fib(7))
@@ -4321,7 +4323,7 @@
 //   function get(list){
 //     if(typeof Object.values(list)=='number'){
 //         return Object.keys(list)
-//     }else 
+//     }else
 //     for(let key in list){
 //         return get(key)
 //     }
@@ -4343,7 +4345,7 @@
 // let b = 30;
 // for(let i=a;i>0;i--){
 //     if(b%i==0){
-//         console.log(i); break 
+//         console.log(i); break
 //     }
 // }
 // function repeat(str,num){
@@ -4510,7 +4512,7 @@
 //     console.log(from)
 //     let time=setTimeout(f,1000,++from)
 //     if(from>4){
-//         clearTimeout(time) 
+//         clearTimeout(time)
 //     }
 // }
 // setTimeout(f,1000,1)
@@ -4558,7 +4560,7 @@
 //            console.log(num*=i);
 //            i--
 //            setTimeout(b,1000)
-//         }clearTimeout(a)  
+//         }clearTimeout(a)
 //     },1000)
 // }
 // fact(15)
@@ -4631,7 +4633,7 @@
 //         }
 //         let result =func.apply(this,arguments)
 //         map.set(x,result)
-//         return result           
+//         return result
 //     }
 // }
 //     console.log( worker.slow(2) )
@@ -4665,7 +4667,7 @@
 // let arr = [1,2,3,4]
 // Array.prototype.myfind = function (fn){
 //     for(let i = 0;i<this.length;i++){
-//         if(fn(this[i])) 
+//         if(fn(this[i]))
 //         return this[i]
 //     }
 // }
@@ -4706,7 +4708,7 @@
 //        if (func(i)!=arr[i]){
 //         return false
 //        }
-//    } return true 
+//    } return true
 // }
 // let check4 = every(arr4,()=>3)
 // console.log(check4)
@@ -4822,7 +4824,7 @@
 //        if (!callback(arr[i])){
 //         return false
 //        }
-//    } return true 
+//    } return true
 // }
 // let check4 = every(arr4,item=>item>3)
 // console.log(check4)
@@ -4953,7 +4955,7 @@
 //     }
 //     return fragment
 // }
-// ol.append(create()) 
+// ol.append(create())
 // function create(){
 //     let fragment=[]
 //     for(let i=0;i<4;i++){
@@ -4963,7 +4965,7 @@
 //     }
 //     return fragment
 // }
-// ol.append(...create()) 
+// ol.append(...create())
 // let element = elem.querySelectorAll("li")
 // for(let key of element){
 //     key.replaceWith("")
@@ -4991,9 +4993,9 @@
 //          li.insertAdjacentText("afterbegin",i)
 //          fragment.append(li)
 //     }
-//     return fragment  
+//     return fragment
 //  }
-//  ul.append(wrapper()) 
+//  ul.append(wrapper())
 // let data = {
 //     "Рыбы": {
 //       "форель": 4,
@@ -5416,7 +5418,7 @@
 //     for(let i=0 ;i<=y.length;i++){
 //         for(let j=1;j<=y.length;j++){
 //             newarr.push(y.slice(i,j))
-//         } 
+//         }
 //     }
 //     return (newarr.filter(item=>item.length).join(", ").split(",").join(""))
 // }
@@ -5428,7 +5430,7 @@
 //     for(let i=0 ;i<y.length-1;i++){
 //         for(let j=i+1;j<y.length;j++){
 //             newarr.push(`${y[i]}`,`${y[j]}`)
-//         } 
+//         }
 //     }
 //     return (newarr)
 // }
@@ -5436,11 +5438,11 @@
 // let cord1=field.getBoundingClientRect()
 // // let rect1
 //  let x=cord1.x ,y=cord1.y
-// // let rect2 
+// // let rect2
 // let r2x=cord1.x+field.offsetWidth, r2y=cord1.y+field.offsetHeight
-// // rect4 
+// // rect4
 // let r4x =r2x-(field.offsetWidth-field.clientWidth)/2,   r4y=r2y-(field.offsetHeight-field.clientHeight)/2
-// //rect3 
+// //rect3
 // let r3x=x+(field.offsetWidth-field.clientWidth)/2,r3y=y+(field.offsetHeight-field.clientHeight)/2
 // console.log(x,y)
 // console.log(r2x,r2y)
@@ -5457,4 +5459,1043 @@
 // console.log(answer1)
 // console.log(answer2)
 // console.log(answer4)
-"use strict";
+// let elem = document.querySelector("button")
+// function click(){
+//     console.log("clicked")
+// }
+// function click1(){
+//     console.log("clicked 1")
+// }
+// elem.onclick=click1
+// elem.addEventListener("click",click)
+// elem.addEventListener("click",click1)
+// elem.onclick=function(event){
+//     console.log(event.type + " " + event.target)
+//     console.log(event.clientX + " " + event.clientY)
+// }
+// elem.onclick=addEventListener("click",{
+//     handleEvent(event){
+//         console.log(event.type + " "+ event.currentTarget)
+//     }
+// })
+// let x = "webmaster"
+// function change(x){
+//     return x.split("").sort((a,b)=>a>b?1:-1).join("")
+// }
+// console.log(change(x))
+// let x= "the quick brown fox"
+// function upper(x){
+//     let y=x.split(" ")
+//     for(let i=0;i<y.length;i++){
+//       y[i]=y[i].substr(0,1).toUpperCase()+y[i].substr(1)
+//     }
+//     return y.join(" ")
+// }
+// console.log(upper(x))
+// let x = "Web Development Tutorial"
+// function sort(x){
+//     let y=x.split(" ")
+//     let z=y.sort((a,b)=>b.length-a.length)
+//     return z[0]
+// }
+// console.log(long(x))
+// let x = "Web Development Tutorial"
+// function reduce(x){
+// let y=x.split(" ")
+// let z = y.reduce((prev,next)=>{
+//     if(prev.length>next.length){
+//         return prev
+//     }else return next
+// })
+// return z
+// }
+// console.log(reduce(x))
+// let z = y.map(item=>item.length)
+// let j=z.filter(item=>Math.max(item))
+// console.log(j)
+// function long(x){
+//     let count=0;
+//     let str=""
+//     for(let i=0;i<y.length;i++){
+//         count=Math.max(y[i].length)
+//         // if(y[i].length>count){
+//         //     count=y[i].length
+//         // }
+//         // if(count){
+//         //     str=y[i]
+//         // }
+//     }
+//     return count
+// }
+// console.log(long(x))
+// let elem = document.querySelector("button")
+// class Menu{
+//     handleEvent(event){
+//         switch(event.type){
+//             case "mouseover":
+//             elem.innerHTML="button pushed";
+//             break;
+//             case "mouseup":
+//             elem.innerHTML+="button unpushed";
+//             break;
+//         }
+//     }
+//   }
+//   let menu = new Menu()
+//   elem.addEventListener("mouseover",menu)
+//   elem.addEventListener("mouseup",menu)
+// function hide(){
+//     this.hidden=true
+// }
+// hider.onclick=hide
+// field.onclick=function(event){
+//     c.innerHTML=event.clientX+ ":"+ event.clientY
+//     ball.style.top=(event.clientY-cl.top-field.clientTop-ball.offsetHeight/2)+"px"
+//     ball.style.left=(event.clientX-cl.left-field.clientLeft-ball.offsetWidth/2)+"px"
+// }
+// console.log(field.clientTop)
+// document.querySelector("ul").hidden=true
+// let x=document.querySelector("button")
+// function h1(){
+//     document.querySelector("ul").classList.toggle('open')
+// }
+// function h2(){
+//     document.querySelector("ul").hidden=true
+// }
+// x.addEventListener("click",h1)
+// // x.removeEventListener("click",h1)
+// // x.addEventListener("click",h2)
+////////////////////////////////////////////////dropdown menu
+// let button=document.querySelector("#title")
+// let ul=document.querySelector("#sweeties")
+// button.onclick=function(){
+//     ul.classList.toggle("open")
+// }
+////////////////////////////////closing window
+// let btn=document.querySelectorAll(".remove-button");
+// let div=document.querySelectorAll(".pane")
+// for(let i=0;i<btn.length;i++){
+// btn[i].onclick=function(){
+//     div[i].style.display="none"
+//     }
+// }
+// for(let key of div){
+// key.insertAdjacentHTML("afterbegin",'<button class="remove-button">[x]</button>')
+// key.firstChild.onclick=()=>key.remove()
+// }
+{}
+/* <button class="arrow">⇦</button>
+<button class="arrow" style="position:absolute;right:5px;z-index:1">⇨</button> */
+// let i = 1;
+// for(let li of document.querySelectorAll('li')) {
+//   li.style.position = 'relative';
+//   li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+//   i++;
+// }
+// let arrow=document.getElementsByClassName(".arrow")
+// let arrow=document.querySelector(".arrow")
+// let ul=document.querySelector("ul")
+// let a=ul.clientHeight/2
+// console.log(arrow)
+///////////////////////////////////////carouselle
+// let ul=document.querySelector("ul")
+// let div = document.querySelector(".carusel")
+// ul.insertAdjacentHTML("afterbegin",'<button class="arrow left" style="left:0;">⇦</button>')
+// ul.insertAdjacentHTML("beforeend",'<button class="arrow right" style="right:0">⇨</button>')
+// let arrow=document.querySelectorAll(".arrow")
+// let a=ul.clientHeight/2-arrow[0].clientHeight
+// for(let arr of arrow){
+//     arr.style.top=a+"px"
+// }
+// ul.children[0].onclick=function(){ul.scrollBy(-b*3,0)}
+// ul.lastChild.onclick=function(){ul.scrollBy(b*3,0)}
+// let img1=ul.children[2]
+// let b=img1.clientWidth
+// let check1=document.querySelector("#rb1")
+// rb1.onclick=(()=>{
+//     if(check1.checked==true){
+//         ul.scrollTo(0,0)
+//     }
+// }
+// )
+// let check2=document.querySelector("#rb2")
+// rb2.onclick=(()=>{
+//     if(check2.checked==true){
+//         ul.scrollTo(b*3,0)
+//     }
+// }
+// )
+// let check3=document.querySelector("#rb3")
+// rb3.onclick=(()=>{
+//     if(check3.checked==true){
+//         ul.scrollTo(b*6,0)
+//     }
+// }
+// )
+// let check4=document.querySelector("#rb4")
+// rb4.onclick=(()=>{
+//     if(check4.checked==true){
+//         ul.scrollTo(b*7,0)
+//     }
+// }
+// )
+// setInterval(function(){
+//     if (ul.scrollLeft<=916 && ul.scrollLeft>=790 ){
+//         check4.setAttribute("checked","checked")
+//     }else check4.removeAttribute("checked");
+//     if (ul.scrollLeft<787 && ul.scrollLeft>395 ){
+//         check3.setAttribute("checked","checked")
+//     }else check3.removeAttribute("checked");
+//     if (ul.scrollLeft<=390 && ul.scrollLeft>=16){
+//         check2.setAttribute("checked","checked")
+//     }else check2.removeAttribute("checked");
+//     if (ul.scrollLeft===0){
+//         check1.setAttribute("checked","checked")
+//     }else check1.removeAttribute("checked");
+// },1)
+// let form =document.querySelector("form")
+// form.onclick=function(event){
+//     console.log("this"+event.currentTarget,"target"+event.target)
+// }
+// for(let elem of document.querySelectorAll("*")){
+//     elem.addEventListener("click",e=>console.log("capturing"+`${elem.tagName}`),true)
+//     elem.addEventListener("click",e=>console.log("bubbling"+`${elem.tagName}`))
+// }
+// let a= document.querySelectorAll("tr>td");
+// for(let i=0;i<a.length;i++){
+//     a[i].addEventListener("click",()=>a[i].style.backgroundColor="red")
+// }
+// addEventListener .
+// let table =document.querySelector("table");
+// let selectedTD;
+// table.onclick=function(event){
+//     let td = event.target.closest('td'); // (1)
+//     if (!td) return; // (2)
+//     if (!table.contains(td)) return; // (3)
+//     highlight(td);
+// }
+// function highlight(td){
+//     if(selectedTD){
+//         selectedTD.classList.remove("highlight")
+//     }
+//     selectedTD=td;
+//     selectedTD.classList.add("highlight")
+// }
+// console.log(user2.name)
+// console.log(div.dataset.bgColor)
+// let table =document.querySelector("table");
+// function handler(target){return target.style.cssText="cursor:pointer;background-color:red"}
+// table.addEventListener("click",(event)=>{
+//     if(event.target.classList.contains("td")){
+//         let target =event.target
+//         handler(target)
+//     }else console.log("mimo")
+// })
+// class Menu{
+//     constructor(elem){
+//         this.elem=elem;
+//         elem.onclick=this.onClick.bind(this)
+//     }
+//     save() {
+//         alert('сохраняю');
+//       }
+//       load() {
+//         alert('загружаю');
+//       }
+//       search() {
+//         alert('ищу');
+//       }
+//       onClick(event){
+//           let action=event.target.dataset.action;
+//           if(action){
+//               this[action]()
+//           }
+//       }
+// }
+// new Menu(menu)
+// document.addEventListener("click",(event)=>{
+//     if(event.target.dataset.counter!=undefined){
+//         event.target.value++
+//     }
+// })
+// document.addEventListener("click",(event)=>{
+//    let id =event.target.dataset.toggleId
+//    if(!id) return;
+//    let elem=document.getElementById("id")
+//    elem.hidden=!elem.hidden
+// })
+// document.addEventListener('click', function(event) {
+//     // let id = event.target.dataset.toggleId;
+//     // console.log(id)
+//     // if (!id) return;
+//     let elem = document.getElementById("subscribe-mail");
+//     console.log(elem)
+//     elem.hidden = !elem.hidden;
+//     // if(elem.hidden===true){
+//     //     elem.hidden=false
+//     // }else elem.hidden=true
+//   });
+// container.addEventListener("click",(event)=>{
+//     if(event.target.className=="remove-button"){
+//         event.target.closest("div").style.display="none"
+//     }
+// })
+// tree.addEventListener("click",(event)=>{
+//     let x=event.target.tagName=="LI"
+//     if(x){
+//     let ul=event.target.children[0]
+//     ul.hidden = !ul.hidden
+//     }
+// })
+// let a = grid.querySelectorAll("tbody>tr>:nth-child(1)");
+// let b = grid.querySelectorAll("tbody>tr>:nth-child(2)");
+// for(let i=0;i<a.length;i++){
+//     a[i].setAttribute("class","number")
+//     b[i].setAttribute("class","string")
+// }
+// grid.addEventListener("click",(event)=>{
+//     let id=event.target.dataset.type;
+//     let newarr=[];
+//     let num;
+//     let str;
+//     let z=document.getElementsByClassName(id)
+//     for(let i=0;i<z.length;i++){
+//         newarr.push(z[i].innerHTML)
+//         console.log(newarr)
+//         num=newarr.filter((item)=>parseInt(item))
+//        num.sort((a,b)=>a-b)
+//        str=newarr.filter((item)=>!parseInt(item))
+//        str.sort((a,b)=>a>b?1:-1)
+//     }
+//     for(let i=0;i<num.length;i++){
+//         z[i].innerHTML=num[i]
+//     }
+//     for(let i=0;i<str.length;i++){
+//         z[i].innerHTML=str[i]
+//     }
+// })
+// let a = grid.querySelectorAll("tbody>tr>:nth-child(1)");
+// let b = grid.querySelectorAll("tbody>tr>:nth-child(2)");
+// for(let i=0;i<a.length;i++){
+//     a[i].setAttribute("class","number")
+//     b[i].setAttribute("class","string")
+// }
+// grid.addEventListener("click",(event)=>{
+//     let id=event.target.dataset.type;
+//     let z=grid.querySelectorAll("td")
+//     let newarr=[];
+//     for(let i=0;i<z.length;i++){
+//         let b=newarr.push(z[i].innerHTML)
+//     }
+//     console.log(newarr)
+// })
+// const table = document.querySelector('#grid');
+// let arr=[]
+// for(let i=1;i<table.rows.length;i++){
+//     arr.push([+table.rows[i].cells[0].innerHTML,table.rows[i].cells[1].innerHTML])
+// }
+// table.addEventListener("click",(event)=>{
+//     if(event.target.dataset.type=="number"){
+//     arr.sort((a,b)=>a[0]-b[0])
+//     for(let i=1;i<table.rows.length;i++){
+//         table.rows[i].cells[0].innerHTML=arr[i-1][0]
+//         table.rows[i].cells[1].innerHTML=arr[i-1][1]
+//     }
+//     }
+//     if(event.target.dataset.type=="string"){
+//         arr.sort((a,b)=>a[1]>b[1]?1:-1)
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=arr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=arr[i-1][1]
+//         }
+//         }
+// })
+// let arr =['5', 'Вася', '2', 'Петя', '12', 'Женя', '9', 'Маша', '1', 'Илья']
+// let newarr=[]
+// let b;
+// for(let i=0;i<arr.length;i=i+2){
+// newarr.push({"age":arr[i],"name":arr[i+1]})
+// b=newarr.sort((a,b)=>a.name>b.name?1:-1)
+// }
+// console.log(b)
+// let table=document.querySelector("#grid")
+// let newarr=[];
+// for(let i=1;i<table.rows.length;i++){
+//     newarr.push([table.rows[i].cells[0].innerHTML,table.rows[i].cells[1].innerHTML])
+//     console.log(newarr[i][1])
+// }
+// console.log(newarr)
+// table.addEventListener("click",(event)=>{
+//     if(event.target.dataset.type=="number"){
+//         newarr.sort((a,b)=>a[0]-b[0])
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=newarr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=newarr[i-1][1]
+//         }
+//     }
+//     if(event.target.dataset.type=="string"){
+//         newarr.sort((a,b)=>a[1]>b[1]?1:-1)
+//         for(let i=1;i<table.rows.length;i++){
+//             table.rows[i].cells[0].innerHTML=newarr[i-1][0]
+//             table.rows[i].cells[1].innerHTML=newarr[i-1][1]
+//         }
+//     }
+// })
+// let element;
+// document.addEventListener("mouseover",(event)=>{
+//     let target= event.target;
+//     elemhtml=target.dataset.tooltip;
+//     if(!elemhtml) return;
+//     element=document.createElement("div");
+//     element.innerHTML=elemhtml;
+//     element.className="tooltip";
+//     document.body.append(element);
+//     let cords =target.getBoundingClientRect();
+//     let left = cords.left+(target.offsetWidth-element.offsetWidth)/2
+//     if (left < 0) left = 0;
+//     let top=(cords.top-element.offsetHeight-5)+"px"
+//     element.style.left=left+"px"
+//     element.style.top=top+"px"
+//     console.log(element.offsetHeight)
+//     console.log(cords.top)
+// })
+// document.addEventListener("mouseout",(event)=>{
+//     if(element){
+//     element.remove()
+//     element=null
+//     }
+// }
+// )
+// let menu=document.getElementById("menu")
+// class Menu {
+//     constructor(elem){
+//         this._elem=elem;
+//         elem.onclick=this.onClick.bind(this)
+//     }
+//     save() {
+//         alert('сохраняю');
+//       }
+//       load() {
+//         alert('загружаю');
+//       }
+//       search() {
+//         alert('ищу');
+//       }
+//     onClick(event){
+//         let action =event.target.dataset.action;
+//         if(action){
+//             this[action]()
+//         }
+//     }
+// }
+// new Menu(menu)
+// class Menu {
+//     constructor(elem) {
+//       this._elem = elem;
+//       elem.onclick = this.onClick.bind(this); // (*)
+//     }
+//     save() {
+//       alert('сохраняю');
+//     }
+//     load() {
+//       alert('загружаю');
+//     }
+//     search() {
+//       alert('ищу');
+//     }
+//     onClick(event) {
+//       let action = event.target.dataset.action;
+//       if (action) {
+//         this[action]();
+//       }
+//     }
+//   }
+//   new Menu(menu);
+// div2.addEventListener("click",(event)=>alert(1))
+// div.addEventListener("click",(event)=>alert(5),true)
+// div.addEventListener("click",(event)=>alert(5))
+// let ul =document.getElementById("menu")
+// ul.addEventListener("click",(event)=>{
+//     if(event.target.tagName!="A")return;
+//    let href = event.target.getAttribute("href")
+//    alert(href)
+//    event.preventDefault()
+// })
+// elem.oncontextmenu=(event)=>{
+//     event.preventDefault();
+//     alert("element menu");
+//     event.stopPropagation();
+// }
+// document.oncontextmenu=(event)=>{
+//     if(event.defaultPrevented)return;
+//     event.preventDefault()
+//     alert("document menu")
+// }
+// function handler(event) {
+//     alert( "..." );
+//     event.preventDefault()
+//   }
+// contents.addEventListener("click",(event)=>{
+//     if(event.target.closest("a")){
+//         let a=event.target.closest("a").getAttribute("href")
+//         confirm(`do you really want to visit ${a}`)?event.target:event.preventDefault()
+//         }
+// })
+// thumbs.addEventListener("click",(event)=>{
+//     event.preventDefault()
+//    largeImg.setAttribute("src",event.target.closest("a").getAttribute("href"))
+// })
+// btn.addEventListener("mousedown",(event)=>{
+//     alert(event.button)
+// })
+// let val=30
+// document.querySelector("progress").addEventListener("mouseover",(event)=>{
+//     val++
+//     document.querySelector("progress").value=val
+// })
+// let event= new Event("mouseover")
+// elem.dispatchEvent(event)
+// btn.addEventListener("click",(event)=>{
+//     if(event.shiftKey && (event.ctrlKey ||event.metaKey)){
+//         alert("yes")
+//     }
+// })
+// input.addEventListener("mousemove",(event)=>{
+//     input.value=event.pageX+ ":" +event.pageX
+// })
+// span.addEventListener("dblclick",(event)=>{
+//     alert("hello")
+//     event.preventDefault()
+// })
+// span.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+// })
+// span.addEventListener("copy",(event)=>{
+//     event.preventDefault()
+//     alert("you cant copy this")
+// })
+///////////////////////////////////////////selected add/remove
+// ul.addEventListener("click",(event)=>{
+//     if(event.metaKey||event.ctrlKey){
+//         toggle(event.target)
+//     } else sel(event.target)
+// })
+// function toggle(li){
+//     li.classList.add("selected")
+// }
+// function sel(li){
+//     let selected =ul.querySelectorAll(".selected")
+//     for(let elem of selected){
+//         elem.classList.remove("selected")
+//     }
+//     li.classList.add("selected")
+// }
+// div.addEventListener("mouseover",(event)=>{
+//     console.log("mouseover","target "+event.target.tagName,"related "+event.relatedTarget.tagName)
+// })
+// div.addEventListener("mouseout",(event)=>{
+//     console.log("mouseout","target "+event.target.tagName,"related "+event.relatedTarget.tagName)
+// })
+// let current =null;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current)return;
+//     let target=event.target.closest("td")
+//     if(!target)return;
+//     current= target;
+// //   target.style.background = 'pink';
+//     console.log(target)
+// })
+// table.addEventListener("mouseout",(event)=>{
+//     if(!current)return;
+//     let relatedtarget=event.relatedTarget
+//     while(relatedtarget){
+//         if(relatedtarget==current)return;
+//         relatedtarget = relatedtarget.parentNode;
+//     }
+//     // current.style.background = '';
+//   current = null;
+// })
+// let current=null;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current)return;
+//     let target=event.target.closest("td");
+//     if(!target) return;
+//     current=target;
+//     current.style.backgroundColor="pink"
+// })
+// table.addEventListener("mouseout",(event)=>{
+//     if(!current)return;
+//     // let related =event.relatedTarget;
+//     // console.log(related)
+//     // while(related){
+//     // if(related==current)return;
+//     // related=related.parentNode;
+//     // }
+//     current.style.backgroundColor=""
+//     current=null
+// })
+// let current;
+// table.addEventListener("mouseover",(event)=>{
+//     if(current) return;
+//     let target = event.target.closest("td")
+//     if(!target)return;
+//     current=target;
+//     current.style.background="pink"
+// })
+// table.addEventListener("mouseout",(event)=>{
+//    if(!current)return;
+//    current.style.background="";
+//    current=null;
+// })
+// let div;
+// document.addEventListener("mouseover",(event)=>{
+//     let target=event.target.dataset.tooltip;
+//     if(!target)return;
+//     div=document.createElement("div")
+//     // div.className="tooltip";
+//     document.body.append(div)
+//     div.innerHTML=target
+//     if(!div)return;
+//     let cords =event.target.getBoundingClientRect()
+//     let left =cords.left+(event.target.offsetWidth-div.offsetWidth)/2
+//     if(left<0){left=0}
+//     let top=cords.top-div.offsetHeight-5
+//     if(top<0){top=cords.top+div.clientHeight+5}
+//     div.style.left =left+ "px"
+//     div.style.top =top+ "px"
+// })
+// document.addEventListener("mouseout",(event)=>{
+//        div.remove()
+// })
+// let div;
+// document.addEventListener("mouseover",(event)=>{
+//     let target=event.target.dataset.tooltip;
+//     if(!target)return;
+//     div=document.createElement("div");
+//     div.className="tooltip";
+//     document.body.append(div)
+//     div.innerHTML=target
+//     let cords = event.target.getBoundingClientRect()
+//     let left =cords.left+(event.target.offsetWidth-div.offsetWidth)/2
+//     if(left<0){left=0};
+//     let top=cords.top-div.offsetHeight
+//     if(top<0){top=cords.top+div.clientHeight}
+//     console.log(div.offsetLeft)
+//     div.style.left =left+ "px"
+//     div.style.top =top+ "px"
+// })
+// document.addEventListener("mouseout",(event)=>{
+//     if(div){
+//     div.remove()
+//     }
+// })
+// let current;
+// table.addEventListener("mouseover",(event)=>{
+//     if (current)return;
+//     let target =event.target.closest("td")
+//     if(!target)return;
+//     current=target
+//     current.style.background="pink"
+// })
+// table.addEventListener("mouseout",(event)=>{
+//     if(!current) return;
+//     current.style.background="";
+//     current=null;
+//     console.log(event.relatedTarget)
+// })
+// document.ondragstart=(event)=>{return false}
+// ball.addEventListener("mousedown",(event)=>{
+//     ball.style.position="absolute";
+//     ball.style.zIndex=100;
+//     document.body.append(ball);
+//     function move(pageX,pageY){
+//         ball.style.left = pageX-ball.offsetWidth/2+"px";
+//         ball.style.top= pageY-ball.offsetHeight/2+"px";
+//     }
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+//     }
+//     document.addEventListener("mousemove",mouseMove)
+//     ball.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove);
+//     })
+// })
+///////////////////////////drag element and drop  with effect
+// let current=null;
+// ball.addEventListener("mousedown",(event)=>{
+//     ball.style.position="absolute";
+//     ball.style.zIndex=2;
+//     let shiftX=event.clientX-ball.getBoundingClientRect().left
+//     let shiftY=event.clientY-ball.getBoundingClientRect().top
+//     function move (pageX,pageY){
+//         // ball.style.top =pageY-ball.offsetHeight/2+"px";
+//         // ball.style.left=pageX-ball.offsetWidth/2+"px";
+//          ball.style.top =pageY-shiftY+"px";
+//         ball.style.left=pageX-shiftX+"px";
+//     };
+//     function mouse(event){
+//         move(event.pageX,event.pageY);
+//         ball.hidden=true;
+//         let elemunder=document.elementFromPoint(event.clientX,event.clientY);
+//         ball.hidden=false;
+//         if(!elemunder)return;
+//         let drag=elemunder.closest(".droppable");
+//         if(current!=drag){
+//             if(current){
+//                 leaveElem(current)
+//             }
+//             current=drag
+//             if(current){
+//                 enterElem(current)
+//             }
+//             // current=null
+//         }
+//         function leaveElem(elem){
+//             elem.style.background="";
+//         };
+//         function enterElem(elem){
+//             elem.style.background="pink";
+//         }
+//     };
+//     document.addEventListener("mousemove",mouse);
+//     ball.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouse)
+//     })
+// })
+// ball.ondragstart=(event)=>{return false}
+// let currentDroppable = null;
+// ball.onmousedown = function(event) {
+//   let shiftX = event.clientX - ball.getBoundingClientRect().left;
+//   let shiftY = event.clientY - ball.getBoundingClientRect().top;
+//   ball.style.position = 'absolute';
+//   ball.style.zIndex = 1000;
+//   document.body.append(ball);
+//   moveAt(event.pageX, event.pageY);
+//   function moveAt(pageX, pageY) {
+//     ball.style.left = pageX - shiftX + 'px';
+//     ball.style.top = pageY - shiftY + 'px';
+//   }
+//   function onMouseMove(event) {
+//     moveAt(event.pageX, event.pageY);
+//     ball.hidden = true;
+//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+//     ball.hidden = false;
+//     if (!elemBelow) return;
+//     let droppableBelow = elemBelow.closest('.droppable');
+//     if (currentDroppable != droppableBelow) {
+//       if (currentDroppable) { // null если мы были не над droppable до этого события
+//         // (например, над пустым пространством)
+//         leaveDroppable(currentDroppable);
+//       }
+//       currentDroppable = droppableBelow;
+//       if (currentDroppable) { // null если мы не над droppable сейчас, во время этого события
+//         // (например, только что покинули droppable)
+//         enterDroppable(currentDroppable);
+//       }
+//     }
+//   }
+//   document.addEventListener('mousemove', onMouseMove);
+//   ball.onmouseup = function() {
+//     document.removeEventListener('mousemove', onMouseMove);
+//     ball.onmouseup = null;
+//   };
+// };
+// let currentDroppable = null;
+// function onMouseMove(event) {
+//     moveAt(event.pageX, event.pageY);
+//     ball.hidden = true;
+//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY); //gates
+//     ball.hidden = false;
+//     if (!elemBelow) return;
+//     let droppableBelow = elemBelow.closest('.droppable');
+//     if (currentDroppable != droppableBelow) {
+//       if (currentDroppable) { // null если мы были не над droppable до этого события
+//         // (например, над пустым пространством)
+//         leaveDroppable(currentDroppable);
+//       }
+//       currentDroppable = droppableBelow;
+//       if (currentDroppable) { // null если мы не над droppable сейчас, во время этого события
+//         // (например, только что покинули droppable)
+//         enterDroppable(currentDroppable);
+//       }
+//     }
+//   }
+// function enterDroppable(elem) {
+//   elem.style.background = 'pink';
+// }
+// function leaveDroppable(elem) {
+//   elem.style.background = '';
+// }
+// ball.ondragstart = function() {
+//   return false;
+// };
+//////////////////////////////dragn drop by me
+//   let current =null;
+//     ball.addEventListener("mousedown",(event)=>{
+//         ball.style.position="absolute";
+//         ball.style.zIndex=2;
+//         let shiftX=event.clientX-ball.getBoundingClientRect().left;
+//         let shiftY=event.clientY-ball.getBoundingClientRect().top;
+//         function move(pageX,pageY){
+//             ball.style.left=pageX-shiftX+"px";
+//             ball.style.top=pageY-shiftY+"px";
+//         }
+//         function mouseMove(event){
+//             move(event.pageX,event.pageY);
+//             ball.hidden=true;
+//             let elem = document.elementFromPoint(event.clientX,event.clientY);
+//             ball.hidden=false;
+//             if(!elem)return;
+//             let drag=elem.closest(".droppable");
+//             if(current!=drag){
+//                 if(current){
+//                     leaveCurrent(current)
+//                 }
+//                 current=drag;
+//                 if(current){
+//                     enterCurrent(current)
+//                 }
+//             }
+//             function leaveCurrent(elem){
+//                 elem.style.background=""
+//             };
+//             function enterCurrent(elem){
+//                 elem.style.background="pink"
+//             }
+//         }
+//         document.addEventListener("mousemove",mouseMove);
+//         ball.addEventListener("mouseup",(event)=>{
+//             document.removeEventListener("mousemove",mouseMove)
+//         })
+//     })
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=100;
+//     document.body.append(thumb)
+//     // let shiftX=event.clientX-thumb.getBoundingClientRect().left;
+//     // let shiftY=event.clientY-thumb.getBoundingClientRect().top;
+// //    console.log(event.pageX)
+//     function move(pageX,pageY){
+//         thumb.style.left=pageX-thumb.offsetWidth/2+"px";
+//         thumb.style.top=pageY-thumb.offsetheight/2+"px"
+//         if(parseInt(thumb.style.left)>310){
+//             thumb.style.left=290+"px"
+//         }
+//     }
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+//     }
+//     document.addEventListener("mousemove",mouseMove);
+//     thumb.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove)
+//     })
+// })
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="relative";
+//     thumb.style.zIndex=2;
+// })
+// thumb.addEventListener("mousedown",(event)=>{
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=100;
+//     document.body.append(thumb);
+//     function move(pageX,pageY){
+//         thumb.style.left = pageX-thumb.offsetWidth/2+"px";
+//         thumb.style.top= pageY-thumb.offsetHeight/2+"px";
+//     }
+//     function mouseMove(event){
+//         move(event.pageX,event.pageY)
+//     }
+//     document.addEventListener("mousemove",mouseMove)
+//     thumb.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouseMove);
+//     })
+// })
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//     thumb.style.position="absolute";
+//     thumb.style.zIndex=10;
+//     document.body.append(thumb)
+//    function move(pageX,pageY){
+//        thumb.style.top=pageY-thumb.offsetHeight/2+"px";
+//        thumb.style.left=pageX-thumb.offsetWidth/2+"px";
+//        if(parseInt(thumb.style.top)<slider.offsetTop){
+//         thumb.style.top=slider.offsetTop+"px"
+//        }
+//        if(parseInt(thumb.style.top)>slider.offsetTop-5){
+//         thumb.style.top=slider.offsetTop-5+"px"
+//        }
+//        if(parseInt(thumb.style.left)<slider.offsetLeft){
+//         thumb.style.left=slider.offsetLeft+"px"
+//        }
+//        console.log(slider.offsetLeft+slider.clientWidth)
+//        if(parseInt(thumb.style.left)>slider.offsetLeft+slider.clientWidth){
+//         thumb.style.left=slider.offsetLeft+slider.clientWidth-5+"px"
+//        }
+//    }
+//    function mouse(event){
+//        move(event.pageX,event.pageY)
+//    }
+//    document.addEventListener("mousemove",mouse)
+//    document.addEventListener("mouseup",()=>{
+//     document.removeEventListener("mousemove",mouse)
+// })
+//    thumb.ondragstart=()=>{return false};
+// })
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//     function move(pageX){
+//         thumb.style.left=event.clientX- thumb.offsetWidth/2+"px"
+//         if(parseInt(thumb.style.left)>310){thumb.style.left=310+"px"}
+//         console.log
+//     }
+//     function mouse(event){
+//         move(event.pageX)
+//     }
+//     document.addEventListener("mousemove",mouse)
+//     document.addEventListener("mouseup",(event)=>{
+//         document.removeEventListener("mousemove",mouse)
+//     })
+//     thumb.ondrаgstart=()=>{return false}
+// })
+///////////////////////slider working type
+// let slider=document.getElementById("slider");
+// let thumb=slider.querySelector(".thumb");
+// thumb.addEventListener("mousedown",(event)=>{
+//     event.preventDefault()
+//    function move(pageX,pageY){
+//        thumb.style.left=pageX-thumb.offsetWidth-slider.getBoundingClientRect().left+"px";
+//        if(parseInt(thumb.style.left)<0){
+//         thumb.style.left=0+"px"
+//        }
+//        if(parseInt(thumb.style.left)>slider.clientWidth){
+//         thumb.style.left=slider.clientWidth+"px"
+//        }
+//    }
+//    function mouse(event){
+//        move(event.pageX)
+//    }
+//    document.addEventListener("mousemove",mouse)
+//    document.addEventListener("mouseup",()=>{
+//     document.removeEventListener("mousemove",mouse)
+// })
+//    thumb.ondragstart=()=>{return false};
+// })
+// let field = document.getElementById('field');
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   // let target=event.target.getAttribute("class")="draggable"
+//   if (target) {
+//     console.log(event.target);
+//     event.target.style.position = 'absolute';
+//     event.target.style.zIndex = 2;
+//     //    document.body.append(target)
+//   }
+//   //    if(!target)return;
+//   function move(pageX, pageY) {
+//     event.target.style.left = pageX - event.target.offsetWidth / 2 + 'px';
+//     event.target.style.top = pageY - event.arget.offsetHeight / 2 + 'px';
+//   }
+//   function mouse(event) {
+//     move(event.target.pageX, event.target.pageY);
+//   }
+//   document.addEventListener('mousemove', mouse);
+//   document.addEventListener('mouseup', (event) => {
+//     document.removeEventListener('mousemove', mouse);
+//   });
+//   document.ondragstart = () => {
+//     return false;
+//   };
+// });
+// let field = document.getElementById('field');
+// // let hero = document.querySelector('.draggable');
+// // console.log(hero);
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   // let target=event.target.getAttribute("class")="draggable"
+//   if (target) {
+//     console.log(target);
+//     event.target.style.position = 'absolute';
+//     //   event.target.style.zIndex = 2;
+//     document.body.append(target);
+//   }
+//   //    if(!target)return;
+//   //   function move(pageX, pageY) {
+//   //     hero.style.left = pageX - hero.offsetWidth / 2 + 'px';
+//   //     hero.style.top = pageY - hero.offsetHeight / 2 + 'px';
+//   //   }
+//   //   function mouse(event) {
+//   //     move(event.pageX, event.pageY);
+//   //   }
+//   //   document.addEventListener('mousemove', mouse);
+//   //   hero.addEventListener('mouseup', (event) => {
+//   //     document.removeEventListener('mousemove', mouse);
+//   //   });
+//   //   document.ondragstart = () => {
+//   //     return false;
+//   //   };
+// });
+//////////////////////////////////////////////////heroes with delegation
+// let field = document.getElementById('field');
+// let current = null;
+// document.addEventListener('mousedown', (event) => {
+//   event.preventDefault();
+//   let target = event.target.classList.contains('draggable');
+//   let shiftX = event.clientX - event.target.getBoundingClientRect().left;
+//   let shiftY = event.clientY - event.target.getBoundingClientRect().top;
+//   if (target) {
+//     event.target.style.position = 'absolute';
+//     event.target.style.zIndex = 2;
+//     function move(pageX, pageY) {
+//       event.target.style.left = pageX - shiftX + 'px';
+//       event.target.style.top = pageY - shiftY + 'px';
+//       if (parseInt(event.target.style.top) < 0) {
+//         event.target.style.top = 0 + 'px';
+//       }
+//       if (parseInt(event.target.style.left) < 0) {
+//         event.target.style.left = 0 + 'px';
+//       }
+//       if (parseInt(event.target.style.left) > document.body.clientWidth - event.target.offsetWidth) {
+//         event.target.style.left = document.body.clientWidth - event.target.offsetWidth + 'px';
+//       }
+//         if (parseInt(event.target.style.top) > document.body.scrollHeight - event.target.offsetWidth) {
+//           event.target.style.top = document.body.scrollHeight - event.target.offsetWidth + 'px';
+//         }
+//     }
+//     function mouse(event) {
+//       move(event.pageX, event.pageY);
+//       event.target.hidden = true;
+//       let eldrop = document.elementFromPoint(event.clientX, event.clientY);
+//       event.target.hidden = false;
+//       if (!eldrop) return;
+//       let trg = eldrop.closest('.droppable');
+//       if (current != trg) {
+//         if (current) {
+//           leavecr(current);
+//         }
+//         current = trg;
+//         if (current) {
+//           entercr(current);
+//         }
+//       }
+//       function leavecr(elem) {
+//         elem.style.backgroundColor = '';
+//       }
+//       function entercr(elem) {
+//         elem.style.backgroundColor = 'green';
+//       }
+//     }
+//     document.addEventListener('mousemove', mouse);
+//     document.addEventListener('mouseup', (event) => {
+//       document.removeEventListener('mousemove', mouse);
+//     });
+//   }
+//   document.ondragstart = () => {
+//     return false;
+//   };
+// });
