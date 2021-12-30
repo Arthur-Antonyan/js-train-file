@@ -7033,14 +7033,13 @@
 //     }
 // })
 
-// tree.addEventListener("click",(event)=>{
-//     let x=event.target.tagName=="LI"
-//     if(x){
-//     let ul=event.target.children[0]
-//     ul.hidden = !ul.hidden
-//     }
-
-// })
+// tree.addEventListener('click', (event) => {
+//   let x = event.target.tagName == 'LI';
+//   if (x) {
+//     let ul = event.target.children[0];
+//     ul.hidden = !ul.hidden;
+//   }
+// });
 
 // let a = grid.querySelectorAll("tbody>tr>:nth-child(1)");
 // let b = grid.querySelectorAll("tbody>tr>:nth-child(2)");
@@ -7953,3 +7952,1306 @@
 //     return false;
 //   };
 // });
+// document.addEventListener('keydown', (event) => {
+//   if (event.code == 'KeyZ' && event.metaKey) {
+//     alert('hello');
+//   }
+// });
+
+// input.addEventListener('keydown', (event) => {
+//   let key = event.key;
+//   if (
+//     (key >= '0' && key <= '9') ||
+//     key == '+' ||
+//     key == '(' ||
+//     key == ')' ||
+//     key == '-' ||
+//     key == 'ArrowLeft' ||
+//     key == 'ArrowRight' ||
+//     key == 'Delete' ||
+//     key == 'Backspace'
+//   ) {
+//     return;
+//   } else event.preventDefault();
+// });
+
+/////////////multiple keys
+
+// function runkeys(func, ...code) {
+//   let pressed = new Set();
+//   document.addEventListener('keydown', (event) => {
+//     pressed.add(event.code);
+//     for (let key of code) {
+//       if (!pressed.has(key)) {
+//         return;
+//       }
+//     }
+//     pressed.clear();
+//     func();
+//   });
+
+//     document.addEventListener('keyup', function (event) {
+//       pressed.delete(event.code);
+//     });
+// }
+// runkeys(() => alert('Привет!'), 'KeyQ', 'KeyZ');
+
+// function cr(func, ...codes) {
+//   let pressed = new Set();
+//   document.addEventListener('keydown', (event) => {
+//     pressed.add(event.code);
+//     for (let key of codes) {
+//       if (!pressed.has(key)) {
+//         return;
+//       }
+//     }
+//     pressed.clear();
+//     func();
+//   });
+
+//   document.addEventListener('keyup', (event) => {
+//     pressed.clear();
+//   });
+// }
+
+// cr(() => alert('Привет!'), 'KeyQ', 'KeyZ');
+
+// let button = document.querySelector('button');
+// button.onpointerover = () => alert(pointerType);
+
+//////////////////////////////////////////////slider with pointer
+// let thumb = document.querySelector('.thumb');
+// let shift2;
+
+// thumb.addEventListener('pointerdown', (event) => {
+//   event.preventDefault();
+//   thumb.setPointerCapture(event.pointerId);
+//   shift2 = event.clientX - thumb.getBoundingClientRect().left;
+//   console.log(shift2);
+// });
+// thumb.addEventListener('pointermove', (event) => {
+//   let shiftX = event.clientX - shift2 - slider.getBoundingClientRect().left;
+//   if (shiftX < 0) {
+//     shiftX = 0;
+//   }
+//   if (shiftX > slider.getBoundingClientRect().width) {
+//     shiftX = slider.getBoundingClientRect().width;
+//   }
+//   thumb.style.left = shiftX + 'px';
+// });
+
+// thumb.ondragstart = () => false;
+// thumb.addEventListener('pointerup', (event) => {   //////it happens automaticaly
+//   thumb.releasePointerCapture(event.pointerId);
+// });
+
+// let span = document.createElement('span');
+// span.classList.add('show');
+// document.body.append(span);
+// window.addEventListener('scroll', (event) => {
+//   span.innerHTML = pageYOffset + 'px';
+//   //   if (document.documentElement.clientHeight == document.documentElement.getBoundingClientRect().bottom) {
+//   //     document.body.style.height += 500 + 'px';
+//   //   }
+//   while (document.documentElement.getBoundingClientRect().bottom < document.documentElement.clientHeight + 100) {
+//     document.body.insertAdjacentHTML('beforeend', '<p>new Date()</p>');
+//   }
+// });
+// console.log(document.body.style.height);
+
+// function pop() {
+//   while (true) {
+//     if (document.documentElement.getBoundingClientRect().bottom > document.documentElement.clientHeight + 100) break;
+//     document.body.insertAdjacentHTML('beforeend', `<p>${new Date()}</p>`);
+//   }
+// }
+// window.addEventListener('scroll', pop);
+// pop();
+
+// function populate() {
+//   while (true) {
+//     let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+//     if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+//     document.body.insertAdjacentHTML('beforeend', `<p>Date: ${new Date()}</p>`);
+//   }
+// }
+
+// window.addEventListener('scroll', populate);
+
+// populate(); // инициализация документа
+
+// let hght2 = hght - 200;
+
+////////////////////////arrow scroll to top
+
+// const hght2 = document.documentElement.getBoundingClientRect().bottom - document.documentElement.clientHeight;
+// window.addEventListener('scroll', () => {
+//   let hght = document.documentElement.getBoundingClientRect().bottom;
+//   if (hght < hght2) {
+//     arrowTop.hidden = false;
+//   } else arrowTop.hidden = true;
+// });
+// arrowTop.onclick = () => {
+//   window.scrollTo(0, 0);
+// };
+
+// let a = document.querySelectorAll('img[data-src]');
+// for (let img of a) {
+//   img.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg');
+//   if (img.getBoundingClientRect().top < document.documentElement.clientHeight - 100) {
+//     img.setAttribute('src', img.dataset.src);
+//   }
+// }
+
+// window.addEventListener('scroll', () => {
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i].getBoundingClientRect().top < document.documentElement.clientHeight - 100) {
+//       a[i].setAttribute('src', a[i].dataset.src);
+//     }
+//   }
+// });
+
+// let b = document.querySelectorAll('img[data-src]');
+// console.log(b[1].getBoundingClientRect().top);
+// console.log(document.documentElement.clientHeight);
+
+// console.log(document.forms[1][0].name);
+// console.log(document.forms[2].elements.userFields);
+
+// let login = form.login;
+// login.value = 'hopla';
+// console.log(login);
+
+// select.value = 'banana';
+// select.options[2].selected = true;
+// select.selectedIndex = 1;
+// select.options[0].selected = true;
+
+// // for (let x of select.options) {
+// console.log(
+//   Array.from(select.options)
+//     .filter((option) => option.selected)
+//     .map((option) => option.value)
+// );
+// // }
+// let option = new Option('hello', 'value', true, true);
+// select.append(option);
+
+// let x = Array.from(genres.options)
+//   .filter((option) => option.selected)
+//   .map((option) => option.text);
+// console.log(x);
+
+// genres.append(new Option('Klassika', 'classic', true, true));
+
+// input.onblur = function () {
+//   if (!this.value.includes('@')) {
+//     this.classList.add('invalid');
+//     error.innerHTML = 'Wrong email';
+//   }
+// };
+// input.onfocus = function () {
+//   if (this.classList.contains('invalid')) {
+//     this.classList.remove('invalid');
+//     error.innerHTML = '';
+//   }
+// };
+
+// input.onblur = function () {
+//   if (!this.value.includes('@')) {
+//     this.classList.add('error');
+//   } else this.classList.remove('error');
+//   this.focus();
+// };
+
+// form.addEventListener('focusin', (event) => {
+//   event.target.classList.add('focused');
+// });
+// form.addEventListener('focusout', (event) => {
+//   event.target.classList.remove('focused');
+// });
+
+// form.addEventListener(
+//   'focus',
+//   (event) => {
+//     event.target.classList.add('focused');
+//   },
+//   true
+// );
+// form.addEventListener(
+//   'blur',
+//   (event) => {
+//     event.target.classList.remove('focused');
+//   },
+//   true
+// );
+
+// console.log(form.activeElement);
+
+// let a = document.querySelector('#div');
+
+// let b = document.createElement('textarea');
+// document.body.append(b);
+
+// b.hidden = true;
+
+// a.addEventListener('focus', () => {
+//   a.hidden = true;
+//   b.hidden = false;
+// });
+
+// b.addEventListener('blur', gh);
+// b.addEventListener('keydown', (event) => {
+//   if (event.keyCode === 13) {
+//     gh();
+//   }
+// });
+
+// function gh() {
+//   a.innerHTML = b.value;
+//   a.hidden = false;
+//   b.hidden = true;
+// }
+
+// let b = document.createElement('textarea');
+
+// document.body.append(b);
+// b.hidden = true;
+// b.insertAdjacentHTML('afterbegin', '<button>kuu</button>');
+
+// let cancel = document.createElement('button');
+// cancel.innerHTML = 'cancel';
+// document.body.append(cancel);
+// let submit = document.createElement('button');
+// submit.innerHTML = 'submit';
+// document.body.append(submit);
+
+// let table = document.querySelector('#bagua-table');
+// let td = document.querySelectorAll('td');
+// for (let i = 0; i < td.length; i++) {
+//   td[i].setAttribute('tabindex', i + 1);
+// }
+// let target;
+
+// table.addEventListener('focusin', (event) => {
+//   target = event.target.closest('td');
+//   let size = target.getBoundingClientRect();
+//   b.style.top = size.top + 'px';
+//   b.style.left = size.left + 'px';
+//   b.style.width = size.width + 'px';
+//   b.style.height = size.height + 'px';
+//   b.hidden = false;
+//   b.value = target.innerHTML;
+//   b.focus();
+
+//   table.style.pointerEvents = 'none';
+// });
+
+// submit.onclick = (event) => {
+//   target.innerHTML = b.value;
+//   b.hidden = true;
+//   table.style.pointerEvents = '';
+// };
+
+// cancel.onclick = (event) => {
+//   b.hidden = true;
+//   table.style.pointerEvents = '';
+// };
+
+// let form = document.getElementsByName('calculator');
+// let form = document.forms[0];
+// let sumbefore = form.elements[0];
+// let year = form.elements[1];
+// let percent = form.elements[2];
+// let green = document.getElementById('height-after');
+
+// let before = document.getElementById('money-before');
+// let after = document.getElementById('money-after');
+// green.style.height = 100 + 'px';
+// sumbefore.addEventListener('input', () => {
+//   before.innerHTML = sumbefore.value;
+// });
+// year.oninput =
+//   sumbefore.oninput =
+//   percent.oninput =
+//     () => {
+//       after.innerHTML = Math.floor(parseInt(sumbefore.value) + (sumbefore.value * (percent.value / 100) * year.value) / 12);
+//       green.style.height = (parseInt(after.innerHTML) - parseInt(sumbefore.value)) / 10 + 100 + 'px';
+//     };
+
+// console.log(sumbefore.value);
+
+// let btn = document.getElementById('clickbtn');
+// let container = document.getElementById('prompt-form-container');
+// let submit = document.querySelector('input[type=submit]');
+// let text = document.querySelector('input[type=text]');
+// let cancel = document.querySelector('input[type=button]');
+
+// btn.onclick = () => {
+//   container.hidden = false;
+//   cover.hidden = false;
+//   text.focus();
+// };
+
+// document.addEventListener('keydown', (event) => {
+//   if (event.key == 'Enter') {
+//     // event.preventDefault();
+//     alert(text.value);
+//     container.hidden = true;
+//     cover.hidden = true;
+//   } else text.focus();
+// });
+// submit.onclick = (event) => {
+//   event.preventDefault();
+//   alert(text.value);
+//   container.hidden = true;
+//   cover.hidden = true;
+// };
+// cancel.onclick = (event) => {
+//   alert(null);
+//   container.hidden = true;
+//   cover.hidden = true;
+// };
+
+// document.addEventListener('keydown', (event) => {
+//   if (event.keyCode == 27) {
+//     alert(null);
+//     container.hidden = true;
+//     cover.hidden = true;
+//   }
+// });
+
+// let lastElem = form.elements[form.elements.length - 1];
+// let firstElem = form.elements[0];
+
+// lastElem.onkeydown = function (e) {
+//   if (e.key == 'Tab' && !e.shiftKey) {
+//     firstElem.focus();
+//     return false;
+//   }
+// };
+
+// firstElem.onkeydown = function (e) {
+//   if (e.key == 'Tab' && e.shiftKey) {
+//     lastElem.focus();
+//     return false;
+//   }
+// };
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   alert(1);
+//   alert(`${img.offsetWidth}:${img.offsetHeight}`);
+// });
+
+// window.addEventListener('load', () => {
+//   alert(1);
+//   alert(`${img.offsetWidth}:${img.offsetHeight}`);
+// });
+
+// window.onbeforeunload = function () {
+//   return false;
+// };
+
+// window.onbeforeunload = function () {
+//   return 'Есть несохранённые изменения. Всё равно уходим?';
+// };
+
+// alert(document.readyState);
+
+// let script = document.createElement('script');
+// script.src = 'https://example.com/404.js';
+// document.head.append(script);
+
+// script.onerror = function () {
+//   alert('Error loading '); // Ошибка загрузки https://example.com/404.js
+// };
+
+// document.addEventListener('mousemove', (event) => {
+//   event.preventDefault();
+// });
+
+// function func(src, callback) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   script.onload = () => callback(script);
+//   document.head.append(script);
+// }
+// func('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', (scr) => {
+//   console.log(`${scr.src}`);
+// });
+
+// function newf(src, cb) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   script.onload = () => cb(null, script);
+//   script.onerror = () => cb(new Error(`cant load the script`));
+//   document.head.append(script);
+// }
+
+// // newf('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', (value) => {
+// //   console.log(value.src);
+// //   newf('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', () => {
+// //     console.log('again it hapend');
+// //   });
+// // });
+
+// newf('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lsh.js', (err, value) => {
+//   if (err) {
+//     alert(1);
+//   } else console.log('hello');
+// });
+
+// newf('1f', (err, scr) => {
+//   if (err) {
+//     alsert(1);
+//   } else
+//     newf('fd', (err, scr) => {
+//       if (err) {
+//         handle;
+//       } else newf();
+//     });
+// });
+
+// loadscr("1js",step1)
+// function step1(error,script){
+//     if(error){
+//         handle
+//     }
+//     else loadscr("2js",step2)
+// }
+// function step2(error,script){
+//     if(error){
+//         handle
+//     }
+//     else loadscr("3js",step3)
+// }
+
+// function showCircle(cx, cy, radius, cb) {
+//   let div = document.createElement('div');
+//   div.style.width = 0;
+//   div.style.height = 0;
+//   div.style.left = cx + 'px';
+//   div.style.top = cy + 'px';
+//   div.className = 'circle';
+//   div.onload = () => cb(div);
+//   document.body.append(div);
+
+//   setTimeout(() => {
+//     div.style.width = radius * 2 + 'px';
+//     div.style.height = radius * 2 + 'px';
+//   }, 0);
+// }
+// showCircle(150, 150, 100, (div) => {
+//   div.classList.add('message-ball');
+//   div.append('Hello, world!');
+// });
+
+// function add(num, cb) {
+//   console.log(cb(num));
+// }
+// add(3, (num) => {
+//   return num + 3;
+// });
+// let i = 0;
+// function count() {
+//   do {
+//     i++;
+//     div.innerHTML = i;
+//   } while (i % 10000 != 0);
+
+//   if (i < 1e5) {
+//     setTimeout(count);
+//   }
+// }
+// count();
+
+// let c = { gret: 'hey' };
+// let d = c;
+// c.gret = 'hfije';
+// console.log(d.gret);
+
+// let x = true;
+// let y = 45 <= 90;
+// let z = '0';
+// console.log(x && y && z);
+
+// for (let i = 1; i <= 5; i++) {
+//   for (let j = i; j < 5; j++) {
+//     console.log('*');
+//   }
+// }
+
+// function chek(date) {
+//   if (date === { age: 18 }) {
+//     console.log('1');
+//   } else if (date == { age: 18 }) {
+//     console.log('2');
+//   } else console.log(3);
+// }
+// chek({ age: 18 });
+
+// console.log(111 == true);
+// let num = 0;
+// console.log(num++);
+// console.log(++num);
+// console.log(num);
+
+// let obj = {
+//   foo: 'bar',
+//   func: function () {
+//     var self = this;
+//     console.log(this.foo);
+//     console.log(self.foo);
+//     (function () {
+//       console.log(this.foo);
+//       console.log(self.foo);
+//     })();
+//   },
+// };
+
+// obj.func();
+
+// let x = [1, 2, 3, 4, 2, 3, 4];
+// let y = {};
+// x.forEach((fr) => {
+//   y[fr] = y[fr] ? y[fr] + 1 : 1;
+// });
+// console.log(y);
+// console.log((1 && !2) || 3);
+// let a = 5;
+
+// // setTimeout(() => {
+// //   a = 97;
+// //   console.log(a);
+// // }, 2000);
+
+// console.log(a);
+// let b = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve((a = 97));
+//   }, 2000);
+// });
+// b.then(() => {
+//   console.log(a);
+// });
+
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => resolve('done'), 2000);
+// });
+// promise.then(
+//   (result) => console.log(result),
+//   (error) => console.log(error)
+// );
+
+// let primise = new Promise((resolve, reject) => {
+//   setTimeout(() => reject(new Error('Whoops')), 1000);
+// });
+// // primise.catch((error) => alert(error));
+// primise.then(null, (error) => alert(error));
+
+// let promise = new Promise((resolve, reject) => {
+//   //   setTimeout(() => resolve('done'), 1000);
+//   setTimeout(() => reject(new Error('whoop')), 1000);
+// });
+// promise.finally(() => console.log('ended'));
+// promise.then(null, (error) => alert(error));
+
+// function loadscript(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error());
+//     document.head.append(script);
+//   });
+// }
+// // loadscript.then((result = console.log(result)), (error = console.log(error)));
+// let promise = loadscript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js');
+// promise.then(
+//   (result) => console.log(result),
+//   (error) => console.log(error)
+// );
+
+// function delay(ms) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('done'), ms);
+//   });
+// }
+// delay(3000).then((result) => console.log(result));
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1), 1000);
+// })
+//   .then((result) => {
+//     console.log(result);
+//     return result * 2;
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return result * 2;
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return result * 2;
+//   });
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1), 1000);
+// })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(result * 2), 1000);
+//     });
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(result * 2), 1000);
+//     });
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(result * 2), 1000);
+//     });
+//   });
+
+// function load(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     document.head.append(script);
+//     script.onload = () => resolve(script);
+//   });
+// }
+// load('https://learn.javascript.ru/article/promise-chaining/one.js')
+//   .then((result) => load('https://learn.javascript.ru/article/promise-chaining/two.js'))
+//   .then((result) => load('https://learn.javascript.ru/article/promise-chaining/three.js'))
+//   .then(() => {
+//     one();
+//     two();
+//     three();
+//   });
+
+// fetch('https://jsonplaceholder.typicode.com/photos')
+//   .then((result) => {
+//     return result.json();
+//   })
+
+//   .then((result) => console.log(result));
+
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((response) => response.json())
+//   .then((response) => console.log(response.name));
+
+// Запрашиваем user.json
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((response) => response.json())
+//   .then((response) => fetch(`https://api.github.com/users/${response.name}`))
+//   .then((response) => response.json())
+//   .then(
+//     (response) =>
+//       new Promise((resolve, reject) => {
+//         let img = document.createElement('img');
+//         img.src = response.avatar_url;
+//         document.body.append(img);
+
+//         setTimeout(() => {
+//           img.remove();
+//           resolve(response);
+//         }, 3000);
+//       })
+//   )
+
+//   .then((response) => console.log(`${response.name}`));
+
+// function load(url) {
+//   return fetch(url).then((response) => response.json());
+// }
+
+// function loadname() {
+//   return fetch(`https://api.github.com/users/${response.name}`).then((response) => response.json());
+// }
+// function getimg(response) {
+//   return new Promise((resolve, reject) => {
+//     let img = document.createElement('img');
+//     img.src = response.avatar_url;
+//     document.body.append(img);
+
+//     setTimeout(() => {
+//       img.remove();
+//       resolve(response);
+//     }, 3000);
+//   });
+// }
+// load('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((response) => loadname(response.name))
+//   .then(getimg)
+//   .then((response) => console.log(response.name));
+
+// fetch('w;mgowmgowemg')
+//   .then((response) => response.json())
+//   .catch((error) => console.error('error here'));
+
+// new Promise((resolve, reject) => {
+//   resolve(1);
+// })
+//   .then((result) => {
+//     dw();
+//   })
+//   .catch(alert);
+
+// new Promise((resolve, reject) => {
+//   throw new Error('error here ');
+// })
+//   .catch((error) => {
+//     if (error instanceof URIError) {
+//       alert('done');
+//     } else console.log('icant');
+//     throw error;
+//   })
+//   .then(() => console.log('continuing'));
+
+// new Promise(() => {
+//   ghrfd();
+// }).then((result) => alert(result));
+
+// window.addEventListener('unhandledrejection', (event) => {
+//   //   console.log(event.promise);
+//   console.log(event.reason);
+// });
+// Promise.all([
+//   new Promise((resolve) => setTimeout(resolve(1), 1000)),
+//   new Promise((resolve) => setTimeout(resolve(2), 2000)),
+//   new Promise((resolve) => setTimeout(resolve(3), 3000)),
+// ]).then((result) => alert(result));
+
+// Promise.all([
+//   fetch('https://jsonplaceholder.typicode.com/photos').then((result) => result.json()),
+//   fetch('https://jsonplaceholder.typicode.com/users').then((result) => result.json()),
+//   fetch('https://jsonplaceholder.typicode.com/comments').then((result) => result.json()),
+// ]).then((res) => res.forEach((res) => console.log(res[0])));
+
+// let url = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://api.github.com/users/jeresig'];
+
+// let link = url.map((item) => fetch(item));
+// // Promise.all(link).then((res) => res.forEach((res) => console.log(res.url, res.status)));
+// Promise.all(link)
+//   .then((res) => Promise.all(res.map((r) => r.json())))
+//   //   .then((res) => res.forEach((res) => console.log(res.name)));
+//   .then(console.log);
+
+// Promise.all([
+//   new Promise((resolve) => setTimeout(resolve(1), 1000)),
+//   new Promise((resolve, reject) => setTimeout(reject(new Error('error here')), 2000)),
+//   new Promise((resolve) => setTimeout(resolve(3), 3000)),
+// ]).catch((result) => alert(result));
+
+// let urls = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://no-such-url'];
+
+// let fetched = urls.map((r) => fetch(r));
+// Promise.allSettled(fetched).then((res) => {
+//   res.forEach((result, num) => {
+//     if (result.status == 'fulfilled') console.log(`${urls[num]}: ${result.value.status}`);
+//     if (result.status == 'rejected') console.log(`${urls[num]}: ${result.reason}`);
+//   });
+// });
+
+// Promise.race([
+//   new Promise((resolve) => setTimeout(resolve(1), 1000)),
+//   new Promise((resolve, reject) => setTimeout(reject(new Error('error here')), 2000)),
+//   new Promise((resolve) => setTimeout(resolve(3), 3000)),
+// ]).then((result) => alert(result));
+
+// function loadScript(src, callback) {
+//   let script = document.createElement('script');
+//   script.src = src;
+
+//   script.onload = () => callback(null, script);
+//   script.onerror = () => callback(new Error(`Ошибка загрузки скрипта ${src}`));
+
+//   document.head.append(script);
+// }
+
+// function load(src) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   document.head.append(script);
+//   return new Promise((resolve, reject) => {
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+//   });
+// }
+// load('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js').then((result) => console.log(`${result.src}`));
+
+// function delay(ms) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('done'), ms);
+//   });
+// }
+// delay(2000).then(console.log);
+
+// new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1), 1000);
+// })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(2), 2000);
+//     });
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(3), 3000);
+//     });
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(4), 40(00);
+//     });
+//   })
+//   .then(console.log);
+
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   //   .then((response) => response.json())
+//   //   .then((response) => fetch(`https://api.github.com/users/${response.name}`))
+//   //   .then((response) => response.json())
+//   //   .then(
+//   //     (response) =>
+//   //       new Promise((resolve, reject) => {
+//   //         let img = document.createElement('img');
+//   //         img.src = response.avatar_url;
+//   //         document.body.append(img);
+//   //         setTimeout(() => {
+//   //           img.remove();
+//   //           resolve(response);
+//   //         }, 3000);
+//   //       })
+//   //   )
+
+//   .then((response) => console.log(response));
+
+// Promise.all([
+//   new Promise((resolve, reject) => setTimeout(resolve(1), 3000)),
+//   new Promise((resolve, reject) => setTimeout(resolve(2), 2000)),
+//   new Promise((resolve, reject) => setTimeout(resolve(3), 1000)),
+// ]).then((result) => result.forEach((r) => console.log(r)));
+
+// let urls = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://api.github.com/users/jeresig'];
+// let names = ['iliakan', 'remy', 'jeresig'];
+
+// let fetched = urls.map((item) => fetch(item));
+// // Promise.all(fetched).then((response) => response.forEach((r) => console.log(`${r.status}`)));
+
+// Promise.all(fetched)
+//   .then((responses) => {
+//     responses.forEach((resp) => console.log(resp.status, resp.url));
+//     return responses;
+//   })
+//   .then((responses) => responses.map((r) => r.json()))
+//   .then(console.log);
+
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((response) => response.json())
+//   .then(console.log);
+
+// let complete = true;
+
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (complete) {
+//       resolve('its ok');
+//     } else reject('its not ok');
+//   }, 3000);
+// });
+// console.log(promise);
+// promise.then((result) => console.log(result.value));
+
+// fetch('https://getpost.itgid.info/index2.php')
+//   .then((data) => data.text())
+//   .then((data) => console.log(data));
+
+// function prom(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     document.head.append(script);
+
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error(`${error.message}`));
+//   });
+// }
+// prom('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js').then(
+//   (result) => console.log(result),
+//   (err) => console.log(error)
+// );
+
+//   .then((result) => result.text())
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => resolve(2), 2000);
+//     });
+//   })
+
+// function prom(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     document.head.append(script);
+
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error(`${error.message}`));
+//   });
+// }
+// prom('https://learn.javascript.ru/article/promise-chaining/one.js')
+//   .then((result) => prom('https://learn.javascript.ru/article/promise-chaining/two.js'))
+//   .then((result) => prom('https://learn.javascript.ru//article/promise-chaining/three.js'))
+//   .then((reult) => {
+//     one();
+//     two();
+//     three();
+//   });
+
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((result) => result.json())
+//   .then((result) => fetch(`https://api.github.com/users/${result.name}`))
+//   .then((result) => result.json())
+//   .then(
+//     (result) =>
+//       new Promise((resolve, reject) => {
+//         let img = document.createElement('img');
+//         img.src = result.avatar_url;
+//         document.body.append(img);
+//         let btn = document.createElement('button');
+//         btn.innerHTML = 'click it';
+//         document.body.append(btn);
+//         btn.addEventListener('click', () => {
+//           window.location.href = result.subscriptions_url;
+//         });
+
+//         setTimeout(() => {
+//           img.remove();
+//           resolve(result.name);
+//         }, 2000);
+//       })
+//   )
+//   .then(console.log);
+// let urls = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://api.github.com/users/jeresig'];
+
+// let fetched = urls.map((item) => fetch(item));
+// Promise.all(fetched)
+//   .then((result) => {
+//     for (let res of result) {
+//       //   res.json();
+//       console.log(res.url);
+//     }
+//     return result;
+//   })
+//   .then(console.log);
+// //   .then((result) => Promise.all(result.map((res) => res.json())))
+// //   .then((responses) => {
+// //     responses.map((r) => r.json());
+// //     return responses;
+// //   })
+
+// //   .then((users) => users.forEach((user) => alert(user.name)));
+
+// let urls = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://no-such-url'];
+
+// let fetched = urls.map((item) => fetch(item));
+// Promise.allSettled(fetched).then((result) => {
+//   result.forEach((result, num) => {
+//     if (result.status == 'fulfilled') {
+//       console.log(`${urls[num]}: ${result.status}`);
+//     }
+//     if (result.status == 'rejected') {
+//       console.log(`${urls[num]}: ${result.reason}`);
+//     }
+//   });
+// });
+// Promise.race([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(1), 1000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => reject(new Error('its error')), 500);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(1), 1000);
+//   }),
+// ]).then(console.log);
+
+// function promisify(f) {
+//   return function (...args) {
+//     return new Promise((resolve, reject) => {
+//       function cb(err, result) {
+//         if (err) {
+//           reject(err);
+//         } else resolve(result);
+
+//         args.push(cb);
+//       }
+//       f.call(this, ...args);
+//     });
+//   };
+// }
+
+// function call(src, cb) {
+//   let script = document.createElement('script');
+//   script.src = src;
+//   script.onload = () => cb(null, script);
+//   script.onerror = () => cb(new Error('no such link'));
+//   document.head.append(script);
+// }
+// // call('https://learn.javascript.ru/promisify', (error, script) => {
+// //   if (error) {
+// //     console.log(error);
+// //   } else console.log(`here is the ${script.src}`);
+
+// // });
+
+// function loadScript(src, callback) {
+//   let script = document.createElement('script');
+//   script.src = src;
+
+//   script.onload = () => callback(null, script);
+//   script.onerror = () => callback(new Error(`Ошибка загрузки скрипта ${src}`));
+
+//   document.head.append(script);
+// }
+
+// loadScriptPromise('https://learn.javascipt.ru/promisify').then(console.log).catch(console.log);
+// let load = function (src) {
+//   return new Promise((resolve, reject) => {
+//     loadScript(src, (error, result) => {
+//       if (error) {
+//         reject(error);
+//       } else resolve(result);
+//     });
+//   });
+// };
+// load('https://www.youtube.com/watch?v=AAMwKmM0qG4&ab_channel=NickBisignano').then(console.log).catch(console.log);
+
+// function promisify(f) {
+//   return function (...args) {
+//     return new Promise((resolve, reject) => {
+//       function cb(error, result) {
+//         if (error) {
+//           reject(error);
+//         } else resolve(result);
+//       }
+//       args.push(cb);
+//       f.apply(this, args);
+//     });
+//   };
+// }
+// let load = promisify(loadScript);
+// load('https://www.youtube.com/wath?v=AAMwKmM0qG4&ab_channel=NickBisignano').then(console.log).catch(console.log);
+
+// async function f() {
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve(1), 2000);
+//   });
+//   let prom = await promise;
+//   console.log(prom);
+// }
+// f();
+
+// fetch('https://learn.javascript.ru//article/promise-chaining/user.json')
+//   .then((result) => result.json())
+//   .then((result) => fetch(`https://api.github.com/users/${result.name}`))
+//   .then((result) => result.json())
+//   .then(
+//     (result) =>
+//       new Promise((resolve, reject) => {
+//         let img = document.createElement('img');
+//         img.src = result.avatar_url;
+//         document.body.append(img);
+
+//         setTimeout(() => {
+//           img.remove();
+//           resolve(result.name);
+//         }, 2000);
+//       })
+//   )
+//   .then(console.log);
+
+// async function f() {
+//   let response = await fetch('https://learn.javascript.ru//article/promise-chaining/user.json');
+//   let user = await response.json();
+//   let username = await fetch(`https://api.github.com/users/${user.name}`);
+//   let git = await username.json();
+//   let img = document.createElement('img');
+//   img.src = git.avatar_url;
+//   document.body.append(img);
+//   setTimeout(() => {
+//     img.remove();
+//   }, 2000);
+// }
+// f();
+
+// class Thenable {
+//   constructor(num) {
+//     this.num = num;
+//   }
+
+//   then(resolve, reject) {
+//     setTimeout(() => resolve(1), 1000);
+//   }
+// }
+// async function f() {
+//   let res = await new Thenable(1);
+//   console.log(res);
+// }
+// f();
+
+// class Waiter {
+//   async wait() {
+//     return 1;
+//   }
+// }
+// new Waiter().wait().then(alert);
+
+// async function f() {
+//   try {
+//     let response = await fetch('https://learn.javascript.ru/async-await#obrabotka-oshibok');
+//     let user = await response.json();
+//   } catch (error) {
+//     alert(error);
+//   }
+// }
+// f();
+
+// async function f() {
+//   let response = await fetch('https://learn.javascript.ru/async-await#obrabotka-oshibok');
+//   let user = await response.json();
+// }
+// f().catch(alert);
+
+// function loadJson(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else {
+//       throw new Error(response.status);
+//     }
+//   });
+// }
+
+// loadJson('https://learn.javascript.ru//artlicle/promise-chaining/user.json')
+//   .then(console.log) // (3)
+//   .catch(alert);
+
+// function load(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else throw new Error(response.status);
+//   });
+// }
+// load('https://learn.javascript.ru//arsticle/promise-chaining/user.json').catch(alert);
+
+// async function load(url) {
+//   let response = await fetch(url);
+//   if (response.status == 200) {
+//     return response.json();
+//     // return json;
+//   } else throw new Error(response.status);
+// }
+// load('no-such-user.json').catch(alert);
+
+// async function wait() {
+//   //   await new Promise((resolve) => setTimeout(resolve, 1000));
+
+//   //   return 10;
+//   let x = await new Promise((resolve) => {
+//     setTimeout(() => resolve(1), 1000);
+//   });
+//   return x;
+// }
+
+// function f() {
+//   return wait().then(console.log);
+// }
+// f();
+
+// class HttpError extends Error {
+//   constructor(response) {
+//     super(`${response.status} for ${response.url}`);
+//     this.name = 'HttpError';
+//     this.response = response;
+//   }
+// }
+
+// function loadJson(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else {
+//       throw new HttpError(response);
+//     }
+//   });
+// }
+
+// Запрашивать логин, пока github не вернёт существующего пользователя.
+// function demoGithubUser() {
+//   let name = prompt('Введите логин?', 'iliakan');
+
+//   return loadJson(`https://api.github.com/users/${name}`)
+//     .then((user) => {
+//       alert(`Полное имя: ${user.name}.`);
+//       return user;
+//     })
+//     .catch((err) => {
+//       if (err instanceof HttpError && err.response.status == 404) {
+//         alert('Такого пользователя не существует, пожалуйста, повторите ввод.');
+//         return demoGithubUser();
+//       } else {
+//         throw err;
+//       }
+//     });
+// }
+
+// demoGithubUser();
+
+// class HttpError extends Error {
+//   constructor(response) {
+//     super(`${response.status} for ${response.url}`);
+//     this.name = 'HttpError';
+//     this.response = response;
+//   }
+// }
+
+// async function load(url) {
+//   let response = await fetch(url);
+//   if (response.status == 200) {
+//     return response.json();
+//   } else {
+//     throw new HttpError(response);
+//   }
+// }
+
+// async function demo() {
+//   let user;
+//   while (true) {
+//     let name = prompt('Введите логин?', 'iliakan');
+
+//     try {
+//       user = await load(`https://api.github.com/users/${name}`);
+//       alert(`Полное имя: ${user.name}.`);
+//       return user;
+//     } catch (error) {
+//       if (error instanceof HttpError && error.response.status == 404) {
+//         alert('Такого пользователя не существует, пожалуйста, повторите ввод.');
+//       } else {
+//         throw error;
+//       }
+//     }
+//   }
+// }
+// demo();

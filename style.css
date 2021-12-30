@@ -1,6 +1,17 @@
-* {
+/* * {
   scroll-behavior: smooth;
-}
+} */
+
+/*
+em - от текущего шоифта
+% - от родительской ширины
+rem - от стиля html
+vw – 1% ширины окна
+vh – 1% высоты окна
+vmin – наименьшее из (vw, vh), в IE9 обозначается vm
+vmax – наибольшее из (vw, vh)
+*/
+
 /* table{
 
     border:1px solid black;
@@ -370,30 +381,29 @@ tr {
     } */
 
 /* .slider {
-        border-radius: 5px;
-        background: #E0E0E0;
-        background: linear-gradient(left top, #E0E0E0, #EEEEEE);
-        width: 310px;
-        height: 15px;
-        position:relative;
-        margin-top:150px;
-        margin-left:450px;
-    }
+  border-radius: 5px;
+  background: #e0e0e0;
+  background: linear-gradient(left top, #e0e0e0, #eeeeee);
+  width: 310px;
+  height: 15px;
+  position: relative;
+  margin-top: 150px;
+  margin-left: 450px;
+}
 
-    .thumb {
-        width: 10px;
-        height: 25px;
-        border-radius: 3px;
-        position: relative;
-        left: 10px;
-        top: -5px;
-        background: blue;
-        cursor: pointer;
-    }
-    body {
-      height: 2000px;
-      
-    } */
+.thumb {
+  width: 10px;
+  height: 25px;
+  border-radius: 3px;
+  position: relative;
+  left: 10px;
+  top: -5px;
+  background: blue;
+  cursor: pointer;
+}
+body {
+  height: 2000px;
+} */
 
 /* #field {
   background-image: url(https://js.cx/drag-heroes/field.png);
@@ -429,4 +439,252 @@ body {
   margin-top: 274px;
   transform: rotate(90deg);
   margin-left: 641px;
+} */
+
+/* body {
+  height: 1000px;
+}
+.show {
+  position: fixed;
+  top: 1px;
+} */
+
+/* #matrix {
+  width: 400px;
+  margin: auto;
+  overflow: auto;
+  text-align: justify;
+}
+
+#arrowTop {
+  height: 9px;
+  width: 14px;
+  color: green;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+#arrowTop::before {
+  content: '▲';
+} */
+
+/* .error {
+  background-color: red;
+} */
+
+/* li {
+  cursor: pointer;
+}
+:focus {
+  outline: 1px dashed green;
+} */
+/* .focused {
+  outline: 1px solid red;
+} */
+
+/* #div {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(224, 222, 222);
+  margin-left: 500px;
+ 
+  margin-top: 200px;
+  position: absolute;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(224, 222, 222);
+  margin-left: 500px;
+
+  margin-top: 200px;
+  position: absolute;
+} */
+
+/* th {
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  width: 150px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.nw {
+  background-color: #999;
+}
+
+.n {
+  background-color: #03f;
+  color: #fff;
+}
+
+.ne {
+  background-color: #ff6;
+}
+
+.w {
+  background-color: #ff0;
+}
+
+.c {
+  background-color: #60c;
+  color: #fff;
+}
+
+.e {
+  background-color: #09f;
+  color: #fff;
+}
+
+.sw {
+  background-color: #963;
+  color: #fff;
+}
+
+.s {
+  background-color: #f60;
+  color: #fff;
+}
+
+.se {
+  background-color: #0c3;
+  color: #fff;
+}
+textarea {
+  resize: none;
+  position: absolute;
+  outline: none;
+
+  
+}
+button {
+  position: relative;
+}  */
+/* td select,
+td input {
+  width: 150px;
+}
+
+#diagram td {
+  vertical-align: bottom;
+  text-align: center;
+  padding: 10px;
+}
+
+#diagram div {
+  margin: auto;
+} */
+
+/* #prompt-form {
+  display: inline-block;
+  padding: 5px 5px 5px 70px;
+  width: 200px;
+  border: 1px solid black;
+  background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  vertical-align: middle;
+}
+
+#prompt-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#prompt-form-container:before {
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#prompt-form input[name='text'] {
+  display: block;
+  margin: 5px;
+  width: 180px;
+}
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  opacity: 0.3;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+} */
+
+/* .circle {
+  transition-property: width, height;
+  transition-duration: 2s;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: red;
+  border-radius: 50%;
+} */
+/* html {
+  font-size: 16px;
+}
+
+li {
+  font-size: 0.5rem;
+} */
+
+/* float */
+
+/* .frame {
+  float: left;
+  border: 1px solid black;
+  text-align: center;
+}
+h2 {
+  clear: left;
+  margin-top: 15px;
+}
+
+.hero {
+  float: left;
+  background-color: aquamarine;
+  overflow: auto;
+} */
+/* .clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+} */
+
+/* .gallery > li {
+  float: left;
+  list-style: none;
+  width: 130px;
+} */
+/* div:nth-child(2) {
+  background-color: aqua;
+}
+div:nth-child(3) {
+  background-color: rgb(209, 203, 190);
+  width: 30%;
+  height: 100px;
+  float: left;
+}
+div:nth-child(4) {
+  background-color: rgb(224, 21, 163);
+  width: 70%;
+  height: 150px;
+  float: right;
+}
+div:nth-child(5) {
+  background-color: aqua;
+  clear: both;
 } */
