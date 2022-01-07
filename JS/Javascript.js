@@ -2058,17 +2058,17 @@
 // console.log(clone)
 
 // let obj = {
-//     name: "Иван",
-//     sizes: {
-//       height: 182,
-//       width: 50
-//     }
-//   };
-//   let copy = Object.assign({},obj);
-//   console.log(copy.sizes.height)
-// let copy = JSON.parse(JSON.stringify(obj))
+//   name: 'Иван',
+//   sizes: {
+//     height: 182,
+//     width: 50,
+//   },
+// };
+// // let copy = Object.assign({},obj);
+// // console.log(copy.sizes.height)
+// let copy = JSON.parse(JSON.stringify(obj));
 // obj.sizes.width++;
-// console.log(copy.sizes.width)
+// console.log(copy.sizes.width);
 
 //   function clone(user){
 
@@ -2371,16 +2371,16 @@
 // // }
 
 // const obj = {
-//     birthYear: 1995,
-//     get age() {
-//         return 2021-this.birthYear
-//     },
-//     set age(val) {
-//         this.birthYear = val
-//     }
-// }
-// obj.age = "1997"
-// console.log(obj.age)
+//   birthYear: 1995,
+//   get age() {
+//     return 2021 - this.birthYear;
+//   },
+//   set age(val) {
+//     this.birthYear = val;
+//   },
+// };
+// obj.age = '1995';
+// console.log(obj.age);
 
 // let obj={
 //     birthYear:{
@@ -9255,3 +9255,1014 @@
 //   }
 // }
 // demo();
+
+// let statues = [6, 2, 3, 8];
+// function solution(statues) {
+//   let count = 0;
+
+//   for (let i = 0; i < statues.length; i++) {
+//     let stats = statues.sort();
+//     if (stats[i + 1] - stats[i] > 1) {
+//       count++;
+//       statues.push(stats[i] + 1);
+//     }
+//   }
+//   return count;
+// }
+// console.log(solution(statues));
+
+// let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+
+// .then((response) => response.json())
+// .then((commit) => commit[1].author.login)
+// .then(console.log);
+// async function h(url) {
+//   let fetched = await fetch(url);
+//   let commits = await fetched.json();
+
+//   console.log(commits[1].author.login);
+// }
+// h(url);
+
+// async function h(url) {
+//   let response = await fetch(url);
+//   let text = await response.text();
+//   console.log(text.slice(0, 81));
+// }
+// h(url);
+
+// async function bl(url) {
+//   let response = await fetch(url);
+//   // console.log([...response.headers.entries()]);
+//   for (let key of response.headers) {
+//     console.log(`${key}`);
+//   }
+// }
+// bl(url);
+
+// async function h() {
+//   let response = await fetch('/article/fetch/post/user', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json;charset=utf-8',
+//     },
+//     body: JSON.stringify(user),
+//   });
+
+//   let result = await response.json();
+//   alert(result.message);
+// }
+// h();
+// const url = `https://jsonplaceholder.typicode.com/users`;
+
+// const body = {
+//   name: 'John',
+//   surname: 'Smith',
+// };
+
+// function send(method, url, body = null) {
+//   const headers = {
+//     'Content-type': 'application/json',
+//   };
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(body),
+//     headers: headers,
+//   }).then((response) => {
+//     if (response.ok) {
+//       return response.json();
+//     } else
+//       return response.json().then((err) => {
+//         throw new Error('something went wrong');
+//       });
+//   });
+//   // .then(console.log);
+// }
+
+// send(`POST`, url, body).then(console.log);
+
+// async function send(method, url, body = null) {
+//   const headers = {
+//     'Content-type': 'application/json',
+//   };
+//   let response = await fetch(url, {
+//     method: method,
+//     body: JSON.stringify(body),
+//     headers: headers,
+//   });
+//   let h = await response.json();
+
+//   return h;
+// }
+
+// send(`POST`, url, body).then(console.log);
+// async function getUsers(names) {
+//   let jobs = [];
+
+//   for (let name of names) {
+//     let job = fetch(`https://api.github.com/users/${name}`).then(
+//       (successResponse) => {
+//         if (successResponse.status != 200) {
+//           return null;
+//         } else {
+//           return successResponse.json();
+//         }
+//       },
+//       (failResponse) => {
+//         return null;
+//       }
+//     );
+//     jobs.push(job);
+//   }
+
+//   let results = await Promise.all(jobs);
+
+//   return results;
+// }
+
+// getUsers(['iliakan']);
+
+// let names = ['iliakan', 'remy', 'jeresig'];
+// // let requests = names.map((item) => fetch(`https://api.github.com/users/${item}`));
+// // Promise.all(requests)
+// //   .then((response) => Promise.all(response.map((item) => item.json())))
+// //   .then((response) => {
+// //     return response.forEach((item) => console.log(item.name));
+// //   });
+
+// async function ret(names) {
+//   let result = [];
+//   for (let name of names) {
+//     let job = await fetch(`https://api.github.com/users/${name}`).then((response) => {
+//       if (response.ok) {
+//         return response.json();
+//       }
+//       return null;
+//     });
+
+//     result.push(job);
+//   }
+//   let results = Promise.all(result).then((response) => {
+//     response.forEach((response) => console.log(response.name));
+//   });
+//   return result;
+// }
+// ret(names);
+
+// new Promise((resolve, reject) => {
+//   resolve('hello World');
+//   reject(new Error('smth'));
+// }).then(console.log);
+
+// canva.onmousemove = (event) => {
+//   let ctx = canva.getContext(`2d`);
+//   ctx.lineTo(event.clientX, event.clientY);
+//   ctx.stroke();
+// };
+
+// canvasElem.onmousemove = function (e) {
+//   let ctx = canvasElem.getContext('2d');
+//   ctx.lineTo(e.clientX, e.clientY);
+//   ctx.stroke();
+// };
+
+// formElem.onsubmit = async (event) => {
+//   event.preventDefault();
+//   let el = await fetch('https://learn.javascript.ru/article/formdata/post/user', {
+//     body: new FormData(formElem),
+//     method: 'POST',
+//   });
+//   let res = await el.json();
+//   console.log(res.message);
+// };
+
+// let formData = new FormData();
+// formData.append('header', 'zero');
+// formData.append('header1', 'zero1');
+// for (let [name, value] of formData) {
+//   console.log(`${name}=${value}`);
+// }
+
+// formElem.onsubmit = async (event) => {
+//   event.preventDefault();
+//   let get= await fetch('https://learn.javascript.ru/article/formdata/post/user',{
+//     method:'POST',
+//     body:new FormData(formElem),
+//   })
+//   let set= await get.json()
+// };
+
+// const controller = new AbortController();
+// let signal = controller.signal;
+// // signal.addEventListener('abort', () => console.log('reset'));
+// controller.abort();
+// console.log(controller.signal.aborted);
+
+// const controller = new AbortController();
+// // const signal =controller.signal
+// setTimeout(() => controller.abort(), 1000);
+
+// (async function () {
+//   try {
+//     let sn = await fetch('https://learn.javascript.ru/article/fetch-abort/demo/hang', {
+//       signal: controller.signal,
+//     });
+//   } catch (error) {
+//     if (error.name == 'AbortError') {
+//       alert('Aborted!');
+//     } else {
+//       throw error;
+//     }
+//   }
+// })();
+
+// (async () => {
+//   let response = await fetch('https://site.com/service.json', {
+//     method: 'PATCH',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'API-Key': 'secret',
+//     },
+//   });
+//   return response;
+// })();
+
+// let url = new URL(
+//   'https://www.google.com/search?q=%3Bjbn%3Bj&oq=%3Bjbn%3Bj&aqs=chrome..69i57j0i19j0i10i19j0i19l7.1036j0j15&sourceid=chrome&ie=UTF-8'
+// );
+// console.log(url.protocol);
+
+// let url = new URL('https://google.com/search');
+// url.searchParams.set('q', 'text me!');
+// url.searchParams.set('vhq', 'fh:y');
+
+// url.searchParams.set('g', 'егвег');
+// console.log(url.toString());
+// for (let [name, value] of url.searchParams) {
+//   console.log(`${name}=${value}`);
+// }
+
+// const uri = encodeURIComponent('rock&roll');
+// const uri1 = encodeURI('rock&roll');
+// let url = new URL(`https://google.com/search/${uri1}`);
+// console.log(url.toString());
+
+// let xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits?per_page=100');
+// xhr.send();
+// xhr.onload=()=>{
+//   if(xhr.status!=200){
+//     console.log("forbidden")
+//   }else alert(`${xhr.length}`)
+// }
+// xhr.onprogress=()=>{
+
+// }
+
+// xhr.onload = () => {
+//   alert(`${xhr.response}`);
+// };
+
+// xhr.onerror = () => {
+//   alert(`forbidden`);
+// };
+// xhr.progress = (event) => {
+//   if (event.lengthComputable) {
+//     alert(`${event.loaded} from ${event.total}`);
+//   }
+// };
+// xhr.timeout = 3000;
+
+// xhr.onload = () => {
+//   if (xhr.status != 200) {
+//     console.log(`forbidden ${xhr.status},${xhr.statusText}`);
+//   } else {
+//     console.log(`ready, got ${xhr.response.length}`);
+//   }
+// };
+// xhr.onprogress = (event) => {
+//   if (event.lengthComputable) {
+//     console.log(`${event.loaded} from  ${event.total}`);
+//   } else {
+//     console.log(` got ${event.loaded} bytes`);
+//   }
+// };
+// xhr.onerror = () => {
+//   console.log('error');
+// };
+
+// let xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits?per_page=100');
+// xhr.responseType = 'json';
+// xhr.send();
+// // xhr.onload = () => {
+// //   console.log(xhr.response[0]);
+// //   console.log(xhr.getResponseHeader('Cache-Control'));
+// // };
+
+// let formdata = new FormData(document.forms[0]);
+// let xhr = new XMLHttpRequest();
+// xhr.open('POST', 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits?per_page=100');
+// xhr.send(formdata);
+// xhr.onload = () => {
+//   console.log(xhr.response);
+// };
+
+// let json = JSON.stringify({
+//   name: 'hello',
+//   surname: 'world',
+// });
+// let xhr = new XMLHttpRequest();
+// xhr.open('POST', 'link');
+// xhr.setRequestHeader('Content-Type', 'application/json');
+// xhr.send(json);
+
+// function upload(file) {
+//   let xhr = new XMLHttpRequest();
+//   xhr.upload.onprogress = (event) => {
+//     if (event.lengthComputable) {
+//       console.log(`${event.loaded} from ${event.total}`);
+//     } else {
+//       console.log(`${event.total}`);
+//     }
+//   };
+
+//   xhr.onloadend = () => {
+//     if (xhr.status != 200) {
+//       console.log('error' + this.status);
+//     } else {
+//       console.log('win');
+//     }
+//   };
+//   xhr.open('POST', '/article/xmlhttprequest/post/upload');
+//   xhr.send(file);
+// }
+
+// for (let key in user) {
+// console.log(user.key);
+// }
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
+
+// for (let prop in menu) {
+//   if (typeof menu[prop] === 'number') {
+//     menu[prop] *= 2;
+//   }
+// }
+// console.log(menu);
+
+// let user = {
+//   name: 'Джон',
+//   hi() {
+//     alert(this.name);
+//   },
+// };
+
+// // разделим получение метода объекта и его вызов в разных строках
+// let hi = user.hi;
+// let hi2 = hi.bind(user);
+// hi2();
+
+// let obj = {
+//   read() {
+//     this.a = +prompt('a');
+//     this.b = +prompt('b');
+//   },
+//   sum() {
+//     alert(this.a + this.b);
+//   },
+//   mul() {
+//     alert(this.a * this.b);
+//   },
+// };
+// obj.read();
+// // console.log(obj.a + obj.b);
+// obj.sum();
+// obj.mul();
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function () {
+//     // показывает текущую ступеньку
+//     alert(this.step);
+//   },
+// };
+
+// // ladder.up();
+// // ladder.up();
+// // ladder.up();
+// // ladder.down();
+// // ladder.showStep();
+
+// ladder.up().up().up().down().showStep();
+
+// function Ret() {
+//   this.name = 'JOn';
+//   return { name: 'johfewfn' };
+// }
+// let user = new Ret();
+// console.log(user.name);
+
+// function Ret() {
+//   this.name = 'JOn';
+//   return;
+// }
+// let user = new Ret();
+// console.log(user.name);
+
+// function Const(name) {
+//   this.name = name;
+//   this.sayHi = function () {
+//     console.log('hello' + this.name);
+//   };
+// }
+
+// let user = new Const('vasya');
+// user.sayHi();
+// let obj = {};
+
+// function A() {
+//   return obj;
+// }
+// function B() {
+//   return obj;
+// }
+// let a = new A();
+// let b = new B();
+// console.log(a === b);
+
+// function Cons() {
+//   this.read = function () {
+//     this.a = +prompt('a');
+//     this.b = +prompt('b');
+//   };
+
+//   this.sum = function () {
+//     alert(this.a + this.b);
+//   };
+
+//   this.mul = function () {
+//     alert(this.a * this.b);
+//   };
+// }
+// let obj = new Cons();
+// obj.read();
+// obj.sum();
+
+// function Acum(val) {
+//   this.read = function () {
+//     val += +prompt('a');
+//     console.log(val);
+//   };
+// }
+// let obj = new Acum(2);
+// obj.read();
+// obj.read();
+
+// let user = { address: 'hello' };
+// console.log(user?.address);
+// let obj1 = {
+//   admin() {
+//     alert(1);
+//   },
+// };
+// let obj2 = {};
+// obj1.admin?.();
+// obj2.admin?.();
+
+// let user = {
+//   home: 1,
+// };
+
+// let id = Symbol('id');
+// user[id] = 2;
+// console.log(user[id]);
+
+// let id = Symbol();
+// let user = {
+//   home: 1,
+//   [id]: 2,
+// };
+
+// console.log(user[id]);
+
+// let id = Symbol.for('id');
+// let newid = Symbol.for('id');
+// console.log(id == newid);
+// console.log(Symbol.keyFor(id));
+
+// let id = Symbol.for('id');
+// let newid = Symbol('id2');
+// console.log(Symbol.keyFor(id));
+// console.log(newid.description);
+
+// let user = {
+//   name: 'john',
+//   age: 1000,
+//   [Symbol.toPrimitive](hint) {
+//     console.log(`hint: ${hint}`);
+//     return hint == 'string' ? `{name: "${this.name}"}` : this.age;
+//   },
+// };
+// console.log(user);
+
+// let user = {
+//   name: 'john',
+//   age: 1000,
+//   valueOf() {
+//     return this.age;
+//   },
+//   toString() {
+//     return this.name;
+//   },
+// };
+// console.log(user + 500);
+
+//
+
+// let user = {
+//   year: 1995,
+//   get age() {
+//     return 2022 - this.year;
+//   },
+//   set age(value) {
+//     this.year = value;
+//   },
+// };
+// user.age = '2001';
+// console.log(user.age);
+
+// let user = {
+//   get name() {
+//     return this._name;
+//   },
+//   set name(value) {
+//     if (value.length < 4) {
+//       console.log('nothing');
+//       return;
+//     }
+//     this._name = value;
+//   },
+// };
+// user.name = ';4334g';
+// console.log(user.name);
+
+// let user = {
+//   age: 100,
+//   name: 'john',
+//   adress: {
+//     street: 23,
+//   },
+// };
+// Object.defineProperty(user, 'age', { writable: false });
+
+// let clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(user));
+// user.adress.street = 24;
+// let des = Object.getOwnPropertyDescriptors(clone, 'age');
+// console.log(des);
+
+// let animal1 = {
+//   eats: true,
+//   walk() {
+//     alert('Animal walk');
+//   },
+// };
+
+// // let rabbit = {
+// //   jumps: true,
+// //   __proto__: animal,
+// // };
+// // console.log(rabbit.eats);
+
+// let animal = {
+//   eat: true,
+// };
+// function RAbbit(name) {
+//   this.name = name;
+// }
+// RAbbit.prototype = animal;
+
+// let rabbir = new RAbbit('white');
+// console.log(rabbir.eats);
+// RAbbit.prototype = animal1;
+// let rb = new RAbbit('ifgn');
+// console.log(rb.eats);
+
+// String.prototype.repeatt = function (n) {
+//   return new Array(n).join(this);
+// };
+// console.log('la la'.repeat(3));
+
+// function f(a, b) {
+//   alert(a + b);
+// }
+
+// Function.prototype.defer = function (ms) {
+//   setTimeout(this, ms);
+// };
+// f.defer(2000)(1, 2);
+
+// function make(phrase) {
+//   return class {
+//     sayhi() {
+//       console.log(phrase);
+//     }
+//   };
+// }
+// let User = make('hi');
+// new User().sayhi();
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   set name(val) {
+//     if (val.length < 4) {
+//       alert('short');
+//       return;
+//     }
+//     this._name = val;
+//   }
+// }
+// let obj = new User('jofefdn');
+// console.log(obj.name);
+
+// class Animal {
+//   constructor(name) {
+//     this.speed = 0;
+//     this.name = name;
+//   }
+//   run(speed) {
+//     this.speed = speed;
+//     alert(`${this.name} бежит со скоростью ${this.speed}.`);
+//   }
+//   stop() {
+//     this.speed = 0;
+//     alert(`${this.name} стоит.`);
+//   }
+// }
+// class Rabbit extends Animal {
+//   constructor(name, elength) {
+//     super(name);
+//     this.elength = elength;
+//   }
+//   hide() {
+//     alert(`${this.name} прячется!`);
+//   }
+//   stop() {
+//     super.stop(this.hide());
+//   }
+// }
+
+// let rabbit = new Rabbit('bunny');
+// // rabbit.speed = 12;
+// rabbit.stop();
+
+// let animal = {
+//   name: 'Animal',
+//   eat() {
+//     alert(`${this.name} ест.`);
+//   },
+// };
+
+// let rabbit = {
+//   __proto__: animal,
+//   name: 'Кролик',
+//   eat() {
+//     // вот как предположительно может работать super.eat()
+//     this.__proto__.eat.call(this); // (*)
+//   },
+// };
+
+// rabbit.eat(); // Кролик ест.
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Rabbit extends Animal {
+//   constructor(name) {
+//     super(name);
+//     this.created = Date.now();
+//   }
+// }
+
+// let rabbit = new Rabbit('Белый кролик'); // Error: this is not defined
+// alert(rabbit.name);
+
+// class Rabbit extends Object {
+//   constructor(name) {
+//     super();
+//     this.name = name;
+//   }
+// }
+
+// let rabbit = new Rabbit('Кроль');
+
+// alert(rabbit.hasOwnProperty('name'));
+
+// class Article {
+//   constructor(name, date) {
+//     this.name = name;
+//     this.date = date;
+//   }
+//   static compare(a, b) {
+//     return a.date - b.date;
+//   }
+// }
+
+// let articles = [
+//   new Article('HTML', new Date(2019, 1, 1)),
+//   new Article('CSS', new Date(2019, 0, 1)),
+//   new Article('JavaScript', new Date(2019, 11, 1)),
+// ];
+// articles.sort(Article.compare);
+// console.log(articles[0].date);
+
+// class Machine {
+//   _water = 0;
+//   get water() {
+//     return this._water;
+//   }
+//   set water(value) {
+//     if (value < 0) {
+//       throw new Error('you cant set it below zero');
+//     } else this._water = value;
+//   }
+//   constructor(power) {
+//     this._power = power;
+//   }
+//   get power() {
+//     return this._power;
+//   }
+
+//   #waterlimit = 200;
+//   #checkwater(value) {
+//     if (value < 0) throw new Error('you cant bro');
+//     if (value > this.#waterlimit) throw new Error('too muchbro');
+//   }
+// }
+
+// let cofe = new Machine(200);
+// // cofe.power = -6;
+// console.log(cofe.#waterlimit);
+
+// class Arr extends Array {
+//   isempty() {
+//     return this.length === 0;
+//   }
+// }
+
+// let arr = new Arr(1, 2, 3, 4, 5, 8, 90.45);
+// let filtered = arr.filter((item) => item > 5);
+
+// console.log(arr instanceof Arr);
+
+// let mix = {
+//   sayHI() {
+//     console.log('hi' + this.name);
+//   },
+//   sayBye() {
+//     console.log('bye' + this.name);
+//   },
+// };
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// Object.assign(User.prototype, mix);
+// let user = new User('JOhn');
+// user.sayHI();
+
+// let mix = {
+//   say(phrase) {
+//     console.log(phrase);
+//   },
+// };
+
+// let mix2 = {
+//   __proto__: mix,
+//   sayHi() {
+//     super.say('hello' + this.name);
+//   },
+//   sayBy() {
+//     super.say('by' + this.name);
+//   },
+// };
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// Object.assign(User.prototype, mix2);
+// let user = new User('JOhn');
+// user.sayHi();
+
+// class Dinglemouse{
+
+//   constructor( firstName, lastName ){
+//     this.firstName=firstName
+//     this.lastName=lastName
+//   }
+
+//   getFullName(){
+//     return firstName+" "+lastName
+//   }
+
+// }
+
+// class Person {
+//   constructor(name, lastname, age, gender) {
+//     if (!name) {
+//       this.name = 'John';
+//     } else this.name = name;
+//     if (!lastname) {
+//       this.lastname = 'Doe';
+//     } else this.lastname = lastname;
+//     if (!age) {
+//       this.age = 0;
+//     } else this.age = age;
+//     if (!gender) {
+//       this.gender = 'Male';
+//     } else this.gender = gender;
+//   }
+
+//   get fullname() {
+//     return `${this.name} ${this.lastname}`;
+//   }
+
+//   static greetExtraTerrestrials(raceName) {
+//     return `Welcome to Planet Earth ${raceName}`;
+//   }
+// }
+// let person = new Person();
+
+// console.log(person.fullname);
+// console.log(Person.greetExtraTerrestrials('Garo'));
+
+// class Animal {
+//   constructor(name, age, legs, species, status) {
+//     this.name = name;
+//     this.age = age;
+//     this.legs = legs;
+//     this.species = species;
+//     this.status = status;
+//   }
+//   introduce() {
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// class Shark extends Animal {
+//   constructor(name, age, status) {
+//     super(name, age, status);
+//     this.legCOunt = 0;
+//     this.species = 'shark';
+//   }
+// }
+
+// class Cat extends Animal {
+//   constructor(name, age, status) {
+//     super(name, age, status);
+//     this.legCOunt = 4;
+//     this.species = 'cat';
+//   }
+
+//   introduce() {
+//     super.introduce();
+//     console.log('Meow Meow');
+//   }
+// }
+// let cat = new Cat('Asli', 34, 'happy');
+// cat.introduce();
+
+// class Dog extends Animal{
+//   constructor(name,age,status,master){
+//   super(name,age,status)
+//   this.master=master
+
+//   }
+//   static introcude(master){
+//     console.log("hello"+master)
+//   }
+// }
+
+// class Cuboid {
+//   constructor(length, width, height) {
+//     this.length = length;
+//     this.height = height;
+//     this.width = width;
+//   }
+
+//   get area() {
+//     console.log(this.height * this.width);
+//   }
+//   get volume() {
+//     console.log(this.height * this.width * this.length);
+//   }
+// }
+
+// class Cub extends Cuboid {
+//   constructor(length) {
+//     super(length);
+//   }
+// }
+// let cub = new Cub(12, 13);
+// console.log(cub.width);
+
+// class Filed {
+//   constructor(fullname, context) {
+//     this._fullname = fullname;
+//     this._context = context;
+//     this._filename = this._fullname.substring(0, this._fullname.length - 4);
+//     this._ext = this._fullname.substring(this._fullname.length - 3);
+//   }
+
+//   get fullname() {
+//     return this._fullname;
+//   }
+//   get ext() {
+//     return this._ext;
+//   }
+//   get filename() {
+//     return this._filename;
+//   }
+//   get context() {
+//     return this._context;
+//   }
+// }
+// let cub = new Filed('hello.qdhqdnq.php', 'world');
+// cub.ext = 'qwfinqijf';
+// console.log(cub.ext);
+
+// class Dict {
+//   entry(word, descr) {
+//     this.word = word;
+//     this.descr = descr;
+//   }
+
+//   look(word) {
+//     if (word === this.word) {
+//       console.log(this.descr);
+//     } else {
+//       console.log('cant find fruit');
+//     }
+//   }
+
+//   // entry(word,descr){
+//   //   if(word){
+//   //     return descr
+//   //   }
+//   // }
+// }
+// let apple = new Dict();
+// apple.entry('apple', 'fruit');
+// apple.look('appe');
+// console.log(apple.look());
+
+// class Filename {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   extension() {
+//     return this.name.substring(this.name.length - 3);
+//   }
+//   filename() {
+//     for (let i = this.name.length; i < 0; i--) {
+//       if (i == '/') break;
+//       return this.name.substring(this.name.indexOf(i), this.name.length - 3);
+//     }
+//   }
+// }
+// const fm = new Filename('/Users/person1/Pictures/house.png');
+// console.log(fm.filename());
+
+// setTimeout(() => {
+//   try {
+//     engoeg;
+//   } catch (err) {
+//     if (err) {
+//       console.log(err.stack);
+//     }
+//   }
+// }, 1000);

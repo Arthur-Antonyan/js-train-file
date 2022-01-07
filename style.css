@@ -688,3 +688,87 @@ div:nth-child(5) {
   background-color: aqua;
   clear: both;
 } */
+
+/* ul > li {
+  list-style-type: none;
+}
+.icon {
+  float: left;
+}
+.icon:hover {
+  cursor: pointer;
+} */
+/* .nav {
+  height: 40px;
+  width: 80%;
+  margin: auto;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.pages > li {
+  display: inline;
+  margin: 1%;
+  list-style-type: none;
+  line-height: 40px;
+}
+.pages {
+  vertical-align: middle;
+  margin-left: 31%;
+} */
+
+/* .left {
+  float: left;
+  width: 30%;
+  background: #aef;
+}
+
+.right {
+  float: right;
+  width: 70%;
+  background: tan;
+  border-left: 1px solid black;
+  padding-left: 2px;
+  box-sizing: border-box;
+} */
+/* .right:before {
+  content: ',';
+  display: block;
+  clear: left;
+} */
+/* body {
+  position: relatve;
+}
+#box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background: #aef;
+  opacity: 0.7;
+}
+
+p,
+button {
+  margin: 35px;
+} */
+
+/* .outer {
+  text-align: center;
+  border: 1px solid blue;
+  height: 500px;
+  position: relative;
+}
+.inner {
+  width: 100px;
+  border: 1px solid red;
+  position: absolute;
+  top: calc(50%-50px);
+} */
