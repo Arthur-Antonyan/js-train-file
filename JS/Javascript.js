@@ -1869,10 +1869,10 @@
 // },0)
 // console.log(newarr)
 
-// let arr= [10,20,10,40,50,60,70];
-// let newarr = arr.reduce((a,b)=>{
-// return Math.max(a,b)
-// })
+// let arr = [10, 20, 10, 40, 50, 60, 70];
+// let newarr = arr.reduce((a, b) => {
+//   return Math.max(a, b);
+// });
 // console.warn(newarr);
 
 // var wizards = [
@@ -4648,19 +4648,18 @@
 // console.log(obj.method2(65,65))
 // console.timeEnd()
 
-// function fib(n){
-//     let i=n-1
-//     let a = setTimeout(function b(){
-//         if(i>1){
-
-//             console.log(n*=i)
-//             i--
-//             setTimeout(b,1000)
-//         }clearTimeout(a)
-//     },1000)
-
+// function fib(n) {
+//   let i = n - 1;
+//   let a = setTimeout(function b() {
+//     if (i > 1) {
+//       console.log((n *= i));
+//       i--;
+//       setTimeout(b, 1000);
+//     }
+//     clearTimeout(a);
+//   }, 1000);
 // }
-// fib(15)
+// fib(15);
 
 // function add(n,...arguments){
 //     return n(...arguments)
@@ -10266,3 +10265,3528 @@
 //     }
 //   }
 // }, 1000);
+
+// let json = '{"name":"John", "age": 30}';
+// let user = JSON.parse(json);
+// console.log(user.name);
+
+// let json = '{"age": 30}';
+// try {
+//   let user = JSON.parse(json);
+
+//   if (!user.name) {
+//     throw new SyntaxError('object has no name');
+//   }
+//   console.log(user.name);
+// } catch (err) {
+//   // console.log('there is an error');
+//   // console.log(err.message);
+//   console.log(err.name);
+//   // console.log(err.stack);
+// }
+
+// let json = '{"age": 30}';
+
+// try {
+//   // let user = JSON.parse(json);
+//   // if (!user.name) {
+//   //   throw new SyntaxError('Данные неполны: нет имени');
+//   // }
+//   blabla();
+// } catch (err) {
+//   if (err.name == 'SyntaxError') {
+//     console.log(err.name);
+//   } else throw err;
+// }
+
+// function read() {
+//   let json = '{"age": 30}';
+//   try {
+//     rhtrg();
+//   } catch (err) {
+//     if (err.name != 'SyntaxError') {
+//       throw err;
+//     }
+//   }
+// }
+
+// try {
+//   read();
+// } catch (err) {
+//   console.log(err);
+// }
+
+// try {
+//   console.log('fderg');
+//   wfr;
+// } catch (err) {
+//   console.log(err.message);
+// } finally {
+//   console.log('finished');
+// }
+
+// let result, dif;
+// let num = +prompt('Введите положительное целое число?', 35);
+// function fib(n) {
+//   if (n < 0 || Math.trunc(n) != n) {
+//     throw new Error('no such number');
+//   }
+//   return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+// }
+// let start = Date.now();
+// try {
+//   result = fib(num);
+//   console.log(result);
+// } catch (err) {
+//   console.log(err.message);
+// } finally {
+//   dif = Date.now() - start;
+// }
+
+// console.log(dif + 'ms');
+
+// let student = {
+//   name: 'John',
+//   age: 30,
+//   isAdmin: false,
+//   courses: ['html', 'css', 'js'],
+//   wife: null,
+// };
+
+// let json = JSON.stringify(student);
+// alert(json);
+
+// let room = {
+//   number: 23,
+// };
+
+// let meetup = {
+//   title: 'Conference',
+//   participants: [{ name: 'John' }, { name: 'Alice' }],
+//   place: room, // meetup ссылается на room
+// };
+
+// room.x = meetup;
+// // console.log(JSON.stringify(meetup, ['title', 'participants', 'name', 'place', 'number']));
+
+// // console.log(
+// JSON.stringify(meetup, (key, value) => {
+//   console.log(`${key}: ${value}`);
+//   return key == 'x' ? undefined : value;
+// });
+// // );
+
+// let user = {
+//   name: 'John',
+//   age: 25,
+//   roles: {
+//     isAdmin: false,
+//     isEditor: true,
+//   },
+// };
+
+// console.log(JSON.stringify(user, null, 2));
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// let json = JSON.parse(str, (key, value) => {
+//   if (key == 'date') {
+//     return new Date(value);
+//   }
+//   return value;
+// });
+// console.log(json.date.getDate());
+
+// let user = {
+//   name: 'Василий Иванович',
+//   age: 35,
+// };
+
+// let obj = JSON.parse(JSON.stringify(user));
+// console.log(obj);
+
+// let room = {
+//   number: 23,
+// };
+
+// let meetup = {
+//   title: 'Совещание',
+//   occupiedBy: [{ name: 'Иванов' }, { name: 'Петров' }],
+//   place: room,
+// };
+
+// // цикличные ссылки
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// alert(
+//   JSON.stringify(meetup, function replacer(key, value) {
+//     return key != '' && value == meetup ? undefined : value;
+//   })
+// );
+
+// let recipeMap = new Map([
+//   ['огурец', 500],
+//   ['помидор', 350],
+//   ['лук', 50],
+// ]);
+
+// for (let rp of recipeMap.entries()) {
+//   console.log(rp);
+// }
+
+// let obj = {
+//   name: 'John',
+//   age: 30,
+// };
+
+// let map = new Map(Object.entries(obj));
+// console.log(map);
+
+// let prices = new Map([
+//   ['banana', 1],
+//   ['orange', 2],
+//   ['meat', 4],
+// ]);
+
+// let obj = Object.fromEntries(prices.entries());
+// console.log(obj.banana);
+
+// let set = new Set();
+// let john = { name: 'John' };
+// let pete = { name: 'Pete' };
+// let mary = { name: 'Mary' };
+// set.add(john);
+// set.add(pete);
+// set.add(mary);
+// set.add(john);
+// for (let sets of set.keys()) {
+//   console.log(sets);
+// }
+
+// let set = new Set(['апельсин', 'яблоко', 'банан']);
+// set.forEach((value1, value2, set) => console.log(value1));
+
+// let values = ['Hare', 'Krishna', 'Hare', 'Krishna', 'Krishna', 'Krishna', 'Hare', 'Hare', ':-O'];
+
+// function ret(data) {
+//   let set = new Set(data);
+//   return Array.from(set);
+// }
+// console.log(ret(values));
+
+// let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+// let narr = [],
+//   set;
+// for (let i = 0; i < arr.length; i++) {
+//   narr.push(arr[i].toString().toLowerCase().split('').sort().join(''));
+//   set = new Set(narr);
+// }
+// console.log(Array.from(set));
+
+// let arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
+// let map = new Map();
+// for (let i = 0; i < arr.length; i++) {
+//   let word = arr[i].toLowerCase().split('').sort().join('');
+//   map.set(word, arr[i]);
+//   console.log(Array.from(map.values()));
+// }
+
+// let map = new Map();
+// map.set('name', 'John');
+// let keys = Array.from(map.keys());
+// keys.push('more');
+// console.log(keys);
+
+// let john = { name: 'John' };
+
+// // let map = new Map();
+// // map.set('john', '.nj');
+// // console.log(map.get('john'));
+
+// // let weak = new WeakMap();
+// // weak.set(john, 'ok');
+// // john = null;
+// // console.log(weak);
+
+// let map = new Map();
+// function get(user) {
+//   let count = 0;
+//   map.set(user, count + 1);
+//   console.log(count);
+// }
+// get(john);
+// get(john);
+
+// let cache = new WeakMap();
+// function user(user) {
+//   if (!cache.has(user)) {
+//     cache.set(user, new Date().getMilliseconds());
+//   }
+//   return cache.get(user);
+// }
+// lena = { name: 'lena' };
+// alex = { name: 'alex' };
+// user(lena);
+// user(alex);
+// alex = null;
+// console.log(cache.has(alex));
+
+// let messages = [
+//   { text: 'Hello', from: 'John' },
+//   { text: 'How goes?', from: 'John' },
+//   { text: 'See you soon', from: 'Alice' },
+// ];
+
+// let sett = new WeakSet();
+// sett.add(messages[0]);
+// sett.add(messages[1]);
+// messages[1] = null;
+// sett.add(messages[2]);
+// console.log(sett);
+
+// let arr = [1, 23];
+// let [first, second] = arr;
+// console.log(first);
+
+// let arr = ['Julius', 'Caesar', 'Consul', 'of the Roman Republic'];
+// let [name, , title] = arr;
+// console.log(title);
+
+// let [ad, b, c] = 'abc';
+// console.log(ad);
+
+// let user = new Map();
+// user.set('name', 'John');
+// user.set('age', '30');
+
+// for (let [key, value] of user) {
+//   console.log(`${key}`, `${value}`);
+// }
+
+// let [name = prompt('enter it'), surname = prompt('enter it')] = ['joulis'];
+// console.log(surname);
+
+// let options = {
+//   title: 'Menu',
+//   width: 100,
+//   height: 200,
+// };
+
+// let { title, height } = options;
+// let { title: v1, width: v2 } = options;
+// console.log(v1);
+
+// let options = {
+//   size: {
+//     width: 100,
+//     height: 200,
+//   },
+//   items: ['Cake', 'Donut'],
+//   extra: true,
+// };
+
+// let {
+//   size: { width, height },
+//   items: [item1, item2],
+//   extra,
+// } = options;
+// console.log(width);
+
+// let options = {
+//   title: 'hello',
+//   items: ['item1', 'item2'],
+// };
+
+// // function pt({ title = 'untitled', width = 100, height = 200, items: [item1, item2] }) {
+// //   console.log(title);
+// // }
+// // pt(options);
+
+// function p({}) {
+//   console.log(title);
+// }
+// p(options);
+
+// let user = {
+//   name: 'John',
+//   years: 30,
+// };
+
+// let { name, years, isAdmin = false } = user;
+// console.log(isAdmin);
+
+// let salaries = {
+//   John: 100,
+//   Pete: 300,
+//   Mary: 250,
+//   levon: 550,
+// };
+
+// function get(salaries) {
+//   let arr = [];
+
+//   for (let value of Object.values(salaries)) {
+//     arr.push(value);
+//   }
+//   z = Math.max(...arr);
+//   for (let [key, value] of Object.entries(salaries)) {
+//     if (value == z) {
+//       console.log(key);
+//     }
+//   }
+// }
+// get(salaries);
+
+// function get(salaries) {
+//   let val = 0;
+//   let n = null;
+//   for (let [key, value] of Object.entries(salaries)) {
+//     if (value > val) {
+//       val = value;
+//       n = key;
+//     }
+//   }
+//   console.log(n);
+// }
+// get(salaries);
+// let date = new Date(24 * 3600 * 1000);
+// // let date1 = new Date(50000000000);
+// // console.log(date);
+// console.log(date);
+
+// let date = new Date('1995.01.02');
+// console.log(date);
+
+// let date = new Date();
+// date.getDate();
+// console.log(date.getDate());
+// // console.log(date.getTimezoneOffset());
+// date.setHours(0);
+// console.log(date);
+
+// let date = new Date(2016, 1, 28);
+// date.setDate(date.getDate() + 2);
+// console.log(date);
+
+// let date = new Date();
+// date.setSeconds(date.getSeconds() - 70);
+// console.log(date);
+// console.log(new Date());
+
+// let start = new Date();
+// // console.log(+date);
+// for (let i = 0; i < 10000; i++) {
+//   let don = i * i;
+//   console.log(don);
+// }
+// let end = new Date();
+// console.log(end - start);
+
+// let start = Date.now();
+// // console.log(+date);
+// for (let i = 0; i < 10000; i++) {
+//   let don = i * i;
+//   console.log(don);
+// }
+// let end = Date.now();
+// console.log(end - start);
+
+// function compare1(date1, date2) {
+//   return date2 - date1;
+// }
+
+// function compare2(date1, date2) {
+//   return date2.getTime() - date1.getTime();
+// }
+
+// function bench(f) {
+//   let date1 = new Date(0);
+//   let date2 = new Date();
+//   let start = Date.now();
+//   for (let i = 0; i < 100000; i++) {
+//     f(date1, date2);
+//   }
+
+//   return Date.now() - start;
+// }
+// console.log(bench(compare2));
+// console.log(bench(compare1));
+
+// let date = new Date(2012, 1, 20, 3, 12);
+// console.log(date);
+
+// let date = new Date(2012, 0, 3).getDay();
+// // console.log(date);
+
+// switch (date) {
+//   case 0:
+//     console.log('Sat');
+//     break;
+//   case 1:
+//     console.log('Mon');
+//     break;
+//   case 2:
+//     console.log('Tue');
+//     break;
+//   case 3:
+//     console.log('Wed');
+//     break;
+//   case 4:
+//     console.log('Thi');
+//     break;
+//   case 5:
+//     console.log('Fri');
+//     break;
+//   case 6:
+//     console.log('Sat');
+//     break;
+// }
+
+// let date = new Date(2012, 0, 3);
+
+// function show(date) {
+//   let date1 = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+//   return date1[date.getDay()];
+// }
+// console.log(show(date));
+
+// let date = new Date(2012, 0, 3);
+
+// // function show(date) {
+// //   let date1 = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
+// //   return date1[date.getUTCDay()];
+// // }
+// // console.log(show(date));
+
+// console.log(date.getUTCDay());
+
+// let date = new Date(2015, 0, 2);
+// function show(date, days) {
+//   let copy = new Date(date);
+//   copy.setDate(date.getDate() - days);
+//   return copy.getDate();
+// }
+// console.log(show(date, 365));
+
+// let date = new Date(2020, 1);
+// let date1 = new Date(date);
+// date1.setDate(date1.getDate() + 30);
+// for (let i = 0; i <= 5; i++) {
+//   if (date1.getMonth() == date.getMonth()) {
+//     console.log(date1);
+//   } else {
+//     date1.setDate(date1.getDate() - i);
+//   }
+// }
+// console.log(date1);
+
+// let date = new Date(2013, 1);
+// let date1 = new Date(date);
+// date1.setDate(date1.getDate() + 30);
+// for (let i = 0; i < 4; i++) {
+//   if (date1.getMonth() == date.getMonth()) {
+//     date1.getDate();
+//   } else {
+//     date1.setDate(date1.getDate() - i);
+//     console.log(date1);
+//   }
+// }
+
+// function d(year, date) {
+//   let dd = new Date(year, date + 1, 0);
+//   console.log(dd.getDate());
+// }
+// d(2013, 11);
+
+// let dd = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+// let dd2 = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1);
+// let dd1 = new Date();
+// console.log((dd2 - dd1) / 1000 / 3600);
+// let date1 = new Date(2022, 1, 8, 20, 21, 13);
+// let date2 = new Date(2022, 1, 9, 20, 21, 15);
+
+// let date1 = new Date();
+// let date2 = new Date(new Date() - 86400 * 1000);
+
+// function format(date) {
+//   let n = (date1 - date) / 1000;
+//   if (n < 1) {
+//     console.log('just now');
+//   } else if (n < 60 && n > 1) {
+//     console.log(` ${n} sec before`);
+//   } else if (n > 60 && n < 3600) {
+//     console.log(` ${n / 60} min before`);
+//   } else {
+//     let date3 = [
+//       '' + date.getFullYear(),
+//       '0' + date.getMonth() + 1,
+//       '0' + date.getDate(),
+//       '0' + date.getHours(),
+//       '0' + date.getMinutes(),
+//     ].map((item) => item.slice(-2));
+
+//     console.log(date3.slice(0, 3).join('.') + ' ' + date3.slice(3).join(':'));
+//   }
+// }
+// format(date2);
+
+// let inputArray = ['aba', 'aa', 'ad', 'vcd', 'aba'];
+
+// function solution(inputArray) {
+//   let inp = inputArray.map((item) => item.length);
+//   let len = Math.max(...inp);
+//   let g = inputArray.filter((item) => item.length == len);
+//   console.log(g);
+// }
+
+// solution(inputArray);
+
+// s1 = 'aabcc';
+// s2 = 'adcaa';
+// function solution(s1, s2) {
+//   let count = 0;
+
+//   for (let i = 0; i < s2.length; i++) {
+//     if (s1.includes(s2[i])) {
+//       s1 = s1.replace(s2[i], '');
+//       count++;
+//     }
+//   }
+//   console.log(count);
+// }
+// solution(s1, s2);
+
+// n = 239017;
+
+// function solution(n) {
+//   let h = n.toString().split('');
+//   let count1 = 0;
+//   let count2 = 0;
+//   for (let i = 0; i < h.length / 2; i++) {
+//     count1 += parseInt(h[i]);
+//   }
+//   let g = h.reverse();
+//   for (let i = 0; i < g.length / 2; i++) {
+//     count2 += parseInt(g[i]);
+//   }
+//   console.log(count2 == count1);
+// }
+// solution(n);
+
+// let a = [4, 2, 9, 11, 2, 16];
+
+// function solution(a) {
+//   let b = [];
+
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] != -1) {
+//       b.push(a[i]);
+//       delete a[i];
+//     }
+//   }
+//   let c = b.sort();
+//   for (let j = 0; j < c.length; j++) {
+//     if (!a[j]) {
+//       a[j] = c[j - 1];
+//       a[j + 1] = c[j];
+//     }
+//   }
+//   console.log(a);
+// }
+// solution(a);
+
+// function solution(a) {
+//   let b = [...a].sort((a, b) => a - b).filter((item) => item != -1);
+//   let index = 0;
+//   for (let i = 0; i < a.length; i++) {
+//     if (a[i] === -1) continue;
+//     else {
+//       a[i] = b[index];
+//       index++;
+//     }
+//   }
+//   console.log(a);
+// }
+// solution(a);
+
+// let b = str.split('(').pop().split(')')[0];
+// console.log(b);
+// function solution(inputString) {
+//   let arr = str.split('');
+//   let newarr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === '(') {
+//       newarr.push(arr[i + 1]);
+//       i ++;
+//       if (arr[i] === ')') break;
+//     }
+//   }
+//   console.log(newarr);
+// }
+// solution(str);
+
+// solution = (s) => {
+//   if (s.indexOf('(') == -1) return s;
+
+//   const rev = s.split('(').pop().split(')')[0];
+//   s = s.replace('(' + rev + ')', rev.split('').reverse().join(''));
+
+//   // return solution(s);
+//   return solution(s);
+// };
+// console.log(solution(str));
+// let s = 'foo(bar)baz(jdk)';
+
+// function solution(s) {
+//   while (1) {
+//     let c = s.indexOf(')');
+
+//     if (c === -1) {
+//       break;
+//     }
+
+//     let o = s.substring(0, c).indexOf('(');
+
+//     let start = s.substring(0, o);
+//     let middle = s
+//       .substring(o + 1, c)
+//       .split('')
+//       .reverse()
+//       .join('');
+//     let end = s.substring(c + 1, s.length);
+
+//     s = start + middle + end;
+//   }
+
+//   return s;
+// }
+// console.log(solution(s));
+
+// let s = 'foo(bar)baz(jdk)';
+// function sol(s) {
+//   while (true) {
+//     let c = s.indexOf(')');
+//     if (c === -1) break;
+
+//     let o = s.substring(0, c).indexOf('(');
+//     let start = s.substring(0, o);
+//     let middle = s
+//       .substring(o + 1, c)
+//       .split('')
+//       .reverse()
+//       .join('');
+//     let end = s.substring(c + 1);
+//     s = start + middle + end;
+//   }
+//   return s;
+// }
+// console.log(sol(s));
+
+// a = [50, 60, 60, 45, 70];
+
+// function sl(a) {
+//   let count1 = 0;
+//   let count2 = 0;
+//   for (let i = 1; i < a.length; i = i + 2) {
+//     count1 += a[i];
+//   }
+//   for (let i = 0; i < a.length; i = i + 2) {
+//     count2 += a[i];
+//   }
+//   return [count1, count2];
+// }
+// console.log(sl(a));
+
+// function* hi(){
+//   yield 1;
+//   yield 2;
+//   return 3;
+// }
+
+// let g = hi()
+// let gh =
+
+// function gh(x) {
+//   return function (y) {
+//     return x + y;
+//   };
+// }
+// console.log(gh(2)(3));
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// function inb(arr) {
+//   let narr = [];
+
+//   return function (a, b) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] >= a && arr[i] <= b) {
+//         narr.push(arr[i]);
+//       }
+//     }
+//     return narr;
+//   };
+// }
+// let ing = inb(arr);
+// console.log(arr.filter(inb(3, 6)));
+
+// function inb(arr) {
+//   return function (x) {
+//     for (let prop in arr) {
+//       if (x == arr[prop]) {
+//         return x;
+//       }
+//     }
+//   };
+// }
+// let ing = inb(arr);
+// console.log(arr.filter(inb([3, 4])));
+
+// let users = [
+//   { name: 'John', age: 20, surname: 'Johnson' },
+//   { name: 'Pete', age: 18, surname: 'Peterson' },
+//   { name: 'Ann', age: 19, surname: 'Hathaway' },
+// ];
+
+// function s(cryt) {
+//   return function (a, b) {
+//     return a[cryt] > b[cryt] ? 1 : -1;
+//   };
+// }
+// console.log(users.sort(s('age')));
+
+// function* gen() {
+//   yield 1;
+//   yield 2;
+//   return 3;
+// }
+
+// let gh = gen();
+// // let one = gh.next();
+// // console.log(JSON.stringify(one));
+// // console.log(gh.next());
+// // console.log(gh.next());
+// for (let prop of gh) {
+//   console.log(prop);
+// }
+
+// let obj = {
+//   from: 1,
+//   to: 5,
+// };
+// obj[Symbol.iterator] = function () {
+//   return {
+//     current: this.from,
+//     last: this.to,
+
+//     next() {
+//       if (this.current <= this.last) {
+//         return { done: false, value: this.current++ };
+//       } else {
+//         return { done: true };
+//       }
+//     },
+//   };
+// };
+// for (let num of obj) {
+//   console.log(num);
+// }
+
+// let obj = {
+//   from: 1,
+//   to: 5,
+// };
+
+// obj[Symbol.iterator] = function () {
+//   return {
+//     current: this.from,
+//     last: this.to,
+
+//     next() {
+//       if (this.current <= this.last) {
+//         return { done: false, value: this.current++ };
+//       } else {
+//         return { done: true };
+//       }
+//     },
+//   };
+// };
+// for (let prop of obj) {
+//   console.log(prop);
+// }
+
+// let obj = {
+//   from: 1,
+//   to: 5,
+//   [Symbol.iterator]: function () {
+//     return this;
+//   },
+//   next() {
+//     if (this.from <= this.to) {
+//       return { done: false, value: this.from++ };
+//     } else {
+//       return { done: true };
+//     }
+//   },
+// };
+// for (let prop of obj) {
+//   console.log(prop);
+// }
+
+// let str = 'hello';
+// // for (let prop of str) {
+// //   console.log(prop);
+// // }
+
+// let iterator = str[Symbol.iterator]();
+// while (true) {
+//   let result = iterator.next();
+//   if (result.done) break;
+//   else console.log(result.value);
+// }
+
+// let arr = Array.from(obj, (item) => item * 2);
+// console.log(arr);
+
+// let num = 2344_2434324_4234324;
+// console.log(num);
+
+// let obj = {
+//   from: 1,
+//   to: 5,
+//   *[Symbol.iterator]() {
+//     for (let val = this.from; val < this.to; val++) {
+//       yield val;
+//     }
+//   },
+// };
+// console.log([...obj]);
+
+// let obj = {
+//   from: 1,
+//   to: 5,
+//   *[Symbol.iterator]() {
+//     for (let val = this.from; val <= this.to; val++) {
+//       yield val;
+//     }
+//   },
+// };
+// console.log([...obj]);
+
+// function* gen(start, end) {
+//   for (let i = start; i < end; i++) {
+//     yield i;
+//   }
+// }
+
+// function* combine() {
+//   yield* gen(48, 57);
+//   yield* gen(65, 90);
+//   yield* gen(97, 122);
+// }
+
+// let g = combine();
+// for (let val of g) {
+//   console.log(String.fromCharCode(val));
+// }
+
+// function* gen() {
+//   let result = yield '2+2=?';
+//   console.log(result);
+// }
+// let g = gen();
+// g.next();
+
+// setTimeout(() => g.next(4), 2000);
+
+// function* gen() {
+//   let res1 = yield '2+2=?';
+//   console.log(res1);
+//   let res2 = yield '3+3=?';
+//   console.log(res2);
+// }
+// let g = gen();
+// console.log(g.next().value);
+// console.log(g.next(4).value);
+// console.log(g.next(9).value);
+
+// function* gen() {
+//   try {
+//     let result = yield '2+2=?';
+//     console.log(result);
+//   } catch (error) {
+//     alert(error);
+//   }
+// }
+// let g = gen();
+// g.next();
+// g.throw(new Error('something bad happend'));
+
+// function* gen() {
+//   let result = yield '2+2=?';
+//   console.log(result);
+// }
+// let g = gen();
+// g.next();
+// try {
+//   g.throw(new Error('something bad happend'));
+// } catch (error) {
+//   alert(error);
+// }
+
+// function* rand(n) {
+//   while (true) {
+//     n = (n * 16807) % 2147483647;
+//     yield n;
+//   }
+// }
+
+// let g = rand(1);
+// let one = g.next();
+// let two = g.next();
+// let three = g.next();
+// console.log(three);
+
+// let range = {
+//   from: 1,
+//   to: 5,
+// };
+
+// range[Symbol.asyncIterator] = function () {
+//   return {
+//     current: this.from,
+//     last: this.to,
+
+//     async next() {
+//       await new Promise((resolve) => setTimeout(resolve, 1000));
+//       if (this.current <= this.last) {
+//         return { done: false, value: this.current++ };
+//       } else {
+//         return { done: true };
+//       }
+//     },
+//   };
+// };
+
+// (async () => {
+//   for await (let prop of range) {
+//     console.log(prop);
+//   }
+// })();
+
+// import { sayhi } from './new.js';
+// console.loh(sayhi);
+
+// import say from './new.js';
+// say();
+
+// let arr = [
+//   { heroe: 'heroe1', power: 'money', id: 'gustav' },
+//   { heroe: 'heroe2', power: 'water', id: 'aqua' },
+// ];
+
+// // import { getValue } from './new.js';
+// // getValue(arr, 'heroe');
+// // // import { mapA } from './new.js';
+// // mapA(arr, 'heroe');
+
+// import { gv, mp } from './helper.js';
+// gv(arr, 'heroe');
+// // mp(arr, 'heroe');
+// gv(arr, 'power');
+
+// import { obj } from './helper.js';
+// console.log(obj);
+// obj.name = 'John';
+
+// import { admin, sayHi } from './helper.js';
+// admin.name = 'JOhn';
+// console.log(admin.name);
+// sayHi();
+
+// import * as help from './helper.js';
+// help.admin.name = 'JOhn';
+// // console.log(help.admin.name);
+// help.sayHi();
+
+// import { sayHi as hi } from './helper.js';
+// hi();
+
+// import * as say from './helper.js';
+// say.hi();
+
+// import { default as User, hi } from './helper.js';
+// hi();
+
+// import { sayHi } from './new.js';
+// sayHi();
+
+// import { hio } from './new.js';
+// hio();
+
+// import { default as User, hi } from './new.js';
+// let obj = new User('john');
+// console.log(obj.name);
+// hi();
+
+// async function load() {
+//   let say = await import('./helper.js');
+//   say.hi();
+// }
+// load();
+
+// function sumto(n) {
+//   if (n == 1) {
+//     return n;
+//   } else return n + sumto(--n);
+// }
+// console.log(sumto(3));
+
+// function fact(n) {
+//   if (n == 1) {
+//     return n;
+//   } else return n * fact(--n);
+// }
+// console.log(fact(5));
+
+// function fib(n) {
+//   if (n <= 1) {
+//     return n;
+//   } else return setInterval(() => fib(n - 1) + fib(n - 2), 1000);
+// }
+// console.log(fib(7));
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null,
+//       },
+//     },
+//   },
+// };
+
+// function obj(list) {
+//   if (list.value) console.log(list.value);
+//   if (list.next) {
+//     obj(list.next);
+//   }
+// }
+// console.log(obj(list));
+
+// function obj(list) {
+//   if (list.next) {
+//     obj(list.next);
+//   }
+//   console.log(list.value);
+// }
+// console.log(obj(list));
+
+// function ret(n) {
+//   if (n < 10) {
+//     return n;
+//   } else n = (n % 10) * Math.trunc(n / 10);
+//   return ret(n);
+// }
+// console.log(ret(99));
+// function get(i) {
+//   try {
+//     return get(++i);
+//   } catch (error) {
+//     return i;
+//   }
+// }
+// console.log(get(0));
+// let n = 999;
+// n = n
+//   .toString()
+//   .split('')
+//   .map((item) => +item)
+//   .reduce((acc, item) => acc * item);
+// console.log(n);
+
+// function ret(n) {
+//   if (n < 10) {
+//     return n;
+//   } else
+//     n = n
+//       .toString()
+//       .split('')
+//       .map((item) => +item)
+//       .reduce((acc, item) => acc * item);
+//   return ret(n);
+// }
+// console.log(ret(999));
+
+// const people = {
+//   Ram: {
+//     fullName: 'Ram Kumar',
+//     details: {
+//       age: 31,
+//       isEmployed: true,
+//     },
+//   },
+//   Sourav: {
+//     fullName: 'Sourav Singh',
+//     details: {
+//       age: 22,
+//       isEmployed: false,
+//     },
+//   },
+//   Jay: {
+//     fullName: 'Jay Grewal',
+//     details: {
+//       age: 26,
+//       isEmployed: true,
+//     },
+//   },
+// };
+// function rec(obj, ar = []) {
+//   const arr = ar;
+//   Object.keys(obj).forEach((key) => {
+//     let value = obj[key];
+//     if (typeof value != 'object') {
+//       arr.push(value);
+//     } else if (typeof value === 'object') {
+//       rec(value, arr);
+//     }
+//   });
+//   return arr;
+// }
+// console.log(rec(people));
+
+// let obj = {
+//   a: {
+//     b: {
+//       c: 12,
+//       d: 'Hello World',
+//     },
+//     e: [1, 2, 3],
+//   },
+// };
+
+// function rec(obj, ar = []) {
+//   Object.keys(obj).forEach((key) => {
+//     let value = obj[key];
+//     if (typeof value != 'object') {
+//       ar.push(value);
+//     } else if (typeof value === 'object') {
+//       rec(value, ar);
+//     }
+//   });
+//   return ar;
+// }
+// console.log(rec(obj));
+
+// let arr = [1, 2, [1, 2]];
+
+// function rec(arr, count = 0) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!Array.isArray(arr[i])) {
+//       count += arr[i];
+//     } else if (Array.isArray(arr[i])) {
+//       count += rec(arr[i]);
+//     }
+//   }
+//   return count;
+// }
+// console.log(rec(arr));
+
+// let arr = [1, 2, [1, 2]];
+
+// function rec(arr) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'number') {
+//       count += arr[i];
+//     } else if (Array.isArray(arr[i])) {
+//       count += rec(arr[i]);
+//     }
+//   }
+//   return count;
+// }
+// console.log(rec(arr));
+
+// function rec(n) {
+//   if (n == 1) {
+//     return n;
+//   } else return n + rec(--n);
+// }
+// console.log(rec(10));
+
+// const l = [10, [[10], 10], [10]];
+
+// function sumSquares(arr) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'number') {
+//       count += Math.pow(arr[i], 2);
+//     } else if (typeof arr[i] === 'object') {
+//       count += sumSquares(arr[i]);
+//     }
+//   }
+//   return count;
+// }
+// console.log(sumSquares(l));
+
+// let num = 4321;
+
+// // function rec(num) {
+// //   if (n < 10) {
+// //     return n;
+// //   } else
+// //     n = n
+// //       .toString()
+// //       .split('')
+// //       .map((item) => +item)
+// //       .reverse();
+// //   return ret(n);
+// // }
+
+// let parseInt(n) = num
+//   .toString()
+//   .split('')
+//   .map((item) => +item)
+//   .reverse()
+//   .join('');
+
+// console.log(n);
+
+// function ret(n) {
+//   if (n < 10) {
+//     return n;
+//   } else
+//     n = n
+//       .toString()
+//       .split('')
+//       .map((item) => +item)
+//       .reduce((acc, item) => acc + item);
+//   return ret(n);
+// }
+// console.log(ret(999));
+
+// const animals = [
+//   {
+//     id: 1,
+//     type: 'cat',
+//     pets: [
+//       { id: 1, name: 'Toby', breed: 'Tabby' },
+//       { id: 2, name: 'Golden Girl', breed: 'Russian Blue' },
+//     ],
+//   },
+//   { id: 2, type: 'dog', pets: [{ id: 3, name: 'Goldilocks', breed: 'Poodle' }] },
+//   { id: 3, type: 'fish', pets: [{ id: 4, name: 'Marigold', breed: 'Goldfish' }] },
+// ];
+
+// function rec(arr, cryt, array = [], count = 0) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let obj = arr[i];
+//     Object.keys(obj).forEach((key) => {
+//       let value = obj[key];
+//       if (!Array.isArray(value) && key === cryt) {
+//         array.push(value);
+//         // count++;
+//         // console.log(value);
+//       } else if (Array.isArray(value)) {
+//         rec(value, cryt, array, count);
+//       }
+//     });
+//   }
+//   return count, array;
+// }
+
+// console.log(rec(animals, 'name'));
+
+// function rec(arr, cryt, array = []) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let obj = arr[i];
+//     Object.keys(obj).forEach((key) => {
+//       let value = obj[key];
+//       if (!Array.isArray(value) && typeof value === 'string' && value.includes(cryt)) {
+//         array.push(value);
+//       } else if (Array.isArray(value)) {
+//         rec(value, cryt, array);
+//       }
+//     });
+//   }
+//   return array.length;
+// }
+// console.log(rec(animals, 'Gold'));
+
+// const people = {
+//   Ram: {
+//     fullName: 'Ram Kumar',
+//     details: {
+//       age: 31,
+//       isEmployed: true,
+//     },
+//   },
+//   Sourav: {
+//     fullName: 'Sourav Singh',
+//     details: {
+//       age: 22,
+//       isEmployed: false,
+//     },
+//   },
+//   Jay: {
+//     fullName: 'Jay Grewal',
+//     details: {
+//       age: 26,
+//       isEmployed: true,
+//     },
+//   },
+// };
+
+// function rec(obj, cryt, arr = []) {
+//   Object.keys(obj).forEach((key) => {
+//     let value = obj[key];
+
+//     if (typeof value != 'object' && key === cryt) {
+//       arr.push(value);
+//     } else if (typeof value === 'object') {
+//       rec(value, cryt, arr);
+//     }
+//   });
+//   return arr;
+// }
+// console.log(rec(people, 'age'));
+
+// function fib(n) {
+//   if (n <= 1) {
+//     return n;
+//   } else return fib(n - 1) + fib(n - 2);
+// }
+// function cache(fun) {
+//   let map = new Map();
+//   return function (x) {
+//     if (map.has(x)) {
+//       return map.get(x);
+//     } else {
+//       let result = fun(x);
+//       map.set(x, result);
+//       return result;
+//     }
+//   };
+// }
+// fib = cache(fib);
+// console.log(fib(15));
+
+// function say(phrase) {
+//   console.log(phrase + this.name);
+// }
+
+// let obj = {
+//   name: 'john',
+// };
+
+// say.call(obj, 'hello');
+
+// let num = 29;
+// function rec(num) {
+//   if (num < 10) {
+//     return num;
+//   } else return (num % 10) + Math.trunc(rec(num / 10));
+// }
+// console.log(rec(29));
+
+// function num(n) {
+//   if (n === 1) {
+//     return 9;
+//   } else return parseInt('9' + num(--n));
+// }
+// console.log(num(1));
+
+// function sum(n, m) {
+//   return Math.trunc(m / n) * n;
+// }
+// console.log(sum(3, 10));
+
+// let a = [1, 2, 2];
+// let b = [2, 1, 1];
+// // let b = Array.from(new Set(a));
+// // console.log(b);
+
+// function sol(a, b) {
+//   let a1 = Array.from(new Set(a));
+//   let b1 = Array.from(new Set(b));
+//   return a1.every((item) => b1.includes(item));
+
+// }
+
+// console.log(sol(a, b));
+
+// let user = {
+//   firstName: 'Вася',
+//   sayHi() {
+//     alert(`Привет, ${this.firstName}!`);
+//   },
+// };
+// let f = user.sayHi;
+// setTimeout(f.bind(user), 1000);
+
+// let user = {
+//   firstName: 'Вася',
+// };
+
+// function func(phrase) {
+//   alert(phrase + this.firstName);
+// }
+// let f = func.bind(user);
+// f('hi');
+
+// let user = {
+//   firstName: 'Вася',
+//   sayHi() {
+//     alert(`Привет, ${this.firstName}!`);
+//   },
+// };
+// let f = user.sayHi.bind(user);
+// setTimeout(f, 1000);
+
+// function dub(a, b) {
+//   return a * b;
+// }
+
+// let d = dub.bind(null, 2);
+// console.log(d(4));
+
+// function askPassword(ok, fail) {
+//   let password = prompt('Password?', '');
+//   if (password == 'rockstar') ok();
+//   else fail();
+// }
+
+// let user = {
+//   name: 'Вася',
+
+//   loginOk() {
+//     alert(`${this.name} logged in`);
+//   },
+
+//   loginFail() {
+//     alert(`${this.name} failed to log in`);
+//   },
+// };
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+// let arr = [1, 1, 1];
+
+// function sol(arr) {
+//   for (let i = 0; i < arr.length; ) {
+//     if (arr[i + 1] - arr[i] != 1) {
+//       arr[i + 1]++;
+//       i++;
+//     }
+//   }
+//   console.log(arr);
+// }
+// sol(arr);
+// let arr = [1, 2, 3];
+
+// function myevery(arr, cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!cb(arr[i])) {
+//       return false;
+//     } else return true;
+//   }
+// }
+// console.log(myevery(arr, (item) => item > 2));
+
+// let arr = [1, 2, 3];
+
+// function mysome(arr, cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (cb(arr[i])) {
+//       return true;
+//     } else return false;
+//   }
+// }
+// console.log(mysome(arr, (item) => item > 1));
+
+// let person = {
+//   log(job) {
+//     console.log('hello ' + this.name);
+//     console.log(job);
+//   },
+// };
+
+// let lena = {
+//   name: 'lena',
+// };
+
+// person.log.apply(lena, );
+
+// let arr = [1, 2, 3, 4, 5];
+
+// // Array.prototype.mult = function (n) {
+// //   return this.map((item) => item * n);
+// // };
+// // console.log(arr.mult(2));
+
+// function some(arr, cb) {
+//   for (let prop of arr) {
+//     if (cb(prop)) return true;
+//   }
+//   return false;
+// }
+// console.log(some(arr, (item) => item > 6));
+
+// let btn = document.querySelector('.btn');
+
+// // btn.onclick = change;
+// let btn2 = document.querySelector('.btn2');
+
+// btn2.onclick = () => {
+//   change.call(btn, 'green');
+// };
+// function change(color) {
+//   this.style.backgroundColor = color;
+// }
+// console.log(btn2);
+
+// let user = {
+//   firstName: 'Вася',
+//   sayHi() {
+//     alert(`Привет, ${this.firstName}!`);
+//   },
+// };
+// let usr = user.sayHi.bind(user);
+// setTimeout(usr, 1000);
+
+// let user = {
+//   firstName: 'Вася',
+//   say(phrase) {
+//     alert(`${phrase}, ${this.firstName}!`);
+//   },
+// };
+// let usr = user.say.bind(user, 'hello');
+// usr();
+
+// let user = {
+//   name: 'john',
+//   say() {
+//     console.log(`${this.name} ${phrase} ${date}`);
+//   },
+// };
+// function partial(func, ...arguments) {
+//   return function (...args) {
+//     return func.bind(this, arguments, args);
+//   };
+// }
+
+// let count = 0;
+// function add() {
+//   this.innerHTML = count;
+//   count++;
+// }
+
+// let btn = document.querySelector('.btn');
+// let btn2 = document.querySelector('.btn2');
+// // console.log(btn);
+// // btn2.addEventListener('click', () => {
+// //   add.call(btn);
+// // });
+
+// // btn2.addEventListener('click', () => {
+// //   add.call(btn);
+// // });
+
+// function sum(a, b, c) {
+//   this.innerHTML = a + b + c;
+// }
+
+// // btn2.addEventListener('click', () => {
+// //   sum.call(btn, 3, 5);
+// // });
+
+// // let sum2 = btn2.addEventListener('click', sum.bind(btn));
+// const sum2 = sum.bind(btn2, 100);
+// btn2.addEventListener('click', () => {
+//   sum2(3, 7);
+// });
+
+// let obj = {
+//   login: '12345',
+//   pass: '1256',
+//   isValid: false,
+//   say() {
+//     console.log(this);
+//     return this.pass.length > 5 ? true : false;
+//   },
+// };
+// console.log(obj.say());
+// let obj2 = {
+//   pass: '1233456',
+// };
+// let say2 = obj.say.bind(obj2);
+// console.log(say2());
+
+// function askPassword(ok, fail) {
+//   let password = prompt('Password?', '');
+//   if (password == 'rockstar') ok();
+//   else fail();
+// }
+
+// let user = {
+//   name: 'Вася',
+
+//   loginOk() {
+//     alert(`${this.name} logged in`);
+//   },
+
+//   loginFail() {
+//     alert(`${this.name} failed to log in`);
+//   },
+// };
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?", '');
+//   if (password == "rockstar") ok();
+//   else fail();
+// }
+
+// let user = {
+//   name: 'John',
+
+//   login(result) {
+//     alert( this.name + (result ? ' logged in' : ' failed to log in') );
+//   }
+// };
+// askPassword(login.)
+
+// let arr = [1, 1, 1];
+
+// function q(arr) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length-1; i++) {
+//     while (arr[i] >= arr[i + 1]) {
+//       arr[i + 1]++;
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(q(arr));
+
+// let promise = new Promise((resolve, reject) => {
+//   reject(new Error('cant be done'));
+// });
+// promise.then((result, error) => {
+//   console.log(error);
+// });
+
+// function loadScript(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+//     document.head.append(script);
+//   }).then(
+//     (result) => console.log(`${result.src} загружен!`),
+//     (error) => console.log(error)
+//   );
+// }
+
+// loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js');
+
+// function delay(ms) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('ok'), ms);
+//   });
+// }
+
+// delay(3000).then(() => alert('выполнилось через 3 секунды'));
+
+// let promise = new Promise((resolve) => {
+//   setTimeout(() => resolve(1), 1000);
+// });
+// promise
+//   .then((result) => {
+//     console.log(result);
+//     return new Promise((resolve) => {
+//       setTimeout(() => resolve(result * 2), 2000);
+//     });
+//   })
+// .then((result) => {
+//   console.log(result);
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(result * 2), 3000);
+//   });
+// })
+// .then(console.log);
+
+// function loadScript(src) {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement('script');
+//     script.src = src;
+//     script.onload = () => resolve(script);
+//     script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+//     document.head.append(script);
+//   });
+// }
+// loadScript('https://learn.javascript.ru//article/promise-chaining/one.js')
+//   .then((result) => loadScript('https://learn.javascript.ru//article/promise-chaining/two.js'))
+//   .then((result) => loadScript('https://learn.javascript.ru//article/promise-chaining/three.js'))
+//   .then((result) => {
+//     one(), two(), three();
+//   });
+
+// class Thenable {
+//   constructor(num) {
+//     this.num = num;
+//   }
+//   then(result) {
+//     setTimeout(() => result(this.num * 2), 1000);
+//   }
+// }
+// new Promise((resolve) => {
+//   resolve(1);
+// })
+//   .then((result) => {
+//     return new Thenable(result);
+//   })
+//   .then(console.log);
+
+// fetch('https://learn.javascript.ru/article/promise-chaining/user.json')
+//   .then((response) => response.json())
+//   .then((response) => {
+//     return fetch(`https://api.github.com/users/${response.name}`);
+//   })
+//   .then((response) => response.json())
+//   .then((response) => {
+//     return new Promise((resolve) => {
+//       let img = document.createElement('img');
+//       img.src = response.avatar_url;
+//       document.body.append(img);
+//       setTimeout(() => {
+//         img.remove(), resolve(response);
+//       }, 3000);
+//     }).then((response) => console.log(response.name));
+//   });
+
+// function loadscr(src) {
+//   return fetch(src).then((response) => response.json());
+// }
+// function loadUser(response) {
+//   return fetch(`https://api.github.com/users/${response.name}`).then((response) => response.json());
+// }
+// function avatar(response) {
+//   return new Promise((resolve) => {
+//     let img = document.createElement('img');
+//     img.src = response.avatar_url;
+//     document.body.append(img);
+//     setTimeout(() => {
+//       img.remove(), resolve(response);
+//     }, 3000);
+//   });
+// }
+
+// loadscr('https://learn.javascript.ru/article/promise-chaining/user.json')
+//   .then((response) => loadUser(response))
+//   .then(avatar)
+//   .then((response) => console.log(response.name));
+
+// fetch('https://learn.javascript.ru/article/promise-chaining/user.json')
+//   .then((response) => response.json())
+//   .then((response) => {
+//     return fetch(`https://api.github.com/users/${response.name}`);
+//   })
+//   .then((response) => response.json())
+//   .then((response) => {
+//     return new Promise((resolve) => {
+//       let img = document.createElement('img');
+//       img.src = response.avatar_url;
+//       document.body.append(img);
+//       setTimeout(() => {
+//         img.remove(), resolve(response);
+//       }, 3000);
+//     }).then((response) => console.log(response.name));
+//   })
+//   .catch((err) => console.log(err.message));
+
+// new Promise((resolve, reject) => {
+//   reject(new Error('bad error'));
+// })
+//   .catch((err) => {
+//     if (err instanceof URIError) {
+//       console.log('managed');
+//     } else {
+//       throw err;
+//     }
+//   })
+//   .then((result) => console.log('new result'))
+// .catch((err) => console.log(err));
+
+// new Promise(function () {
+//   noSuchFunction(); // Ошибка (нет такой функции)
+// })
+//   // .catch((err) => {
+//   //   if (err.name === 'ReferenceError') {
+//   //     console.log('its ok');
+//   //   } else throw Error;
+//   // })
+//   .then((response) => {});
+
+// window.addEventListener('unhandledrejection', (event) => {
+//   console.log(event.promise);
+//   console.log(event.reason);
+// });
+
+// new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     reject(new Error('Whoops!'));
+//   }, 1000);
+// }).catch(alert);
+
+// Promise.all([
+//   new Promise((resolve) => setTimeout(() => resolve(1), 3000)),
+//   new Promise((resolve) => setTimeout(() => resolve(2), 2000)),
+//   new Promise((resolve) => setTimeout(() => resolve(3), 1000)),
+// ]).then(alert);
+
+// let urls = ['https://api.github.com/users/iliakan', 'https://api.github.com/users/remy', 'https://api.github.com/users/jeresig'];
+// let fetched = urls.map((item) => fetch(item));
+// Promise.all(fetched).then((response) =>
+//   response.forEach((item) => {
+//     console.log(item.url);
+//   })
+// );
+
+// let arr = [1, 2, 3, 4];
+// Array.prototype.myfind = function find(cb) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i])) {
+//       return i;
+//     }
+//   }
+// };
+// // console.log(find(arr, (item) => item == 2));
+// console.log(arr.myfind((item) => item == 2));
+// let arr = [1, 2, 3, 4];
+// Array.prototype.mfilter = function (cb) {
+//   let ar = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i])) {
+//       ar.push(this[i]);
+//     }
+//   }
+//   return ar;
+// };
+// // console.log(filter(arr, (item) => item > 2));
+// console.log(arr.mfilter((item) => item > 2));
+// Array.prototype.includ = function (cb) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i], i, this)) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(arr.includ((item) => item == 2));
+
+// Array.prototype.mjoin = function (str) {
+//   let string = '';
+//   for (let i = 0; i < this.length; i++) {
+//     string += this[i].toString() + str;
+//   }
+//   if (string.substring(string.length - 1) === this[this.length - 1]) {
+//     return string;
+//   } else return string.substring(0, string.length - 1);
+// };
+// console.log(arr.mjoin(''));
+
+// Array.prototype.mypop = function () {
+//   for (let i = 0; i < this.length; i++) {
+//     let a = this[this.length - 1];
+//     this.length = this.length - 1;
+//     return a;
+//   }
+// };
+// console.log(arr.mypop());
+// console.log(arr);
+
+// Array.prototype.mypush = function (...val) {
+//   for (let i = 0; i < this.length; i++) {
+//     this[this.length] = val;
+//     return this.flat();
+//   }
+// };
+// console.log(arr.mypush(6, 7, 8));
+
+// Array.prototype.myslice = function (start, end) {
+//   let newarr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (i >= start && i < end) {
+//       newarr.push(this[i]);
+//     }
+//   }
+//   return newarr;
+// };
+// console.log(arr.myslice(0, 4));
+
+// Array.prototype.myunshift = function (...val) {
+//   for (let i = 0; i < val.length; i++) {
+//     this.reverse();
+//     this[this.length] = val[i];
+
+//     this.reverse();
+//   }
+//   return this;
+// };
+
+// console.log(arr.myunshift(23, 24));
+
+// Array.prototype.myreverse = function () {
+//   for (let i = 0; i < this.length / 2; i++) {
+//     let temp = this[i];
+//     this[i] = this[this.length - 1 - i];
+//     this[this.length - 1 - i] = temp;
+//   }
+//   return this;
+// };
+// console.log(arr.myreverse());
+
+// let arr = [1, 2, 3, 4];
+
+// Array.prototype.mySplice = function (start, to, ...val) {
+//   let newarr = [...this.slice(0, start), ...val, ...this.slice(start + to)];
+
+//   while (this.length) {
+//     this.pop();
+//   }
+//   this.push(...newarr);
+//   return this;
+// };
+// arr.mySplice(2, 5, 23);
+// let arr = [10, 20, 10, 40, 50, 60, 70];
+// Array.prototype.myreduce = function (cb) {
+//   let res = 0;
+//   for (let i = 0; i < this.length; i++) {
+//     res = cb(res, this[i]);
+//   }
+//   return res;
+// };
+// // console.log(arr.myreduce((acc, next) => acc + next));
+
+// let newarr = arr.myreduce((a, b) => {
+//   return Math.max(a, b);
+// });
+// console.warn(newarr);
+
+// let x = 'dog';
+// function comb(x) {
+//   let arr = Array.from(x);
+//   let newarr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 1; j <= arr.length; j++) {
+//       newarr.push(arr.slice(i, j));
+//     }
+//   }
+//   console.log(newarr);
+// }
+// comb(x);
+
+// let x = 'Web Development Tutorial';
+// function red(x) {
+//   let y = x.split(' ');
+//   let z = y.myreduce((a, b) => {
+//     if (a.length > b.length) {
+//       return a;
+//     } else return b;
+//   });
+//   return z;
+// }
+// console.log(red(x));
+
+// let names = ['iliakan', 'remy', 'jeresig'];
+// let fetched = names.map((item) => fetch(`https://api.github.com/users/${item}`));
+// Promise.all(fetched)
+//   .then((response) => response.map((item) => item.json()))
+
+// .then((response) => Promise.all(response))
+// .then((response) => response.forEach((item) => console.log(item.id)));
+// let form = document.querySelector('div');
+
+// form.addEventListener('click', (event) => {
+//   event.stopImmediatePropagation();
+// });
+// form.addEventListener('click', () => {
+//   alert('div');
+// });
+
+// let elem = document.querySelectorAll('*');
+// for (let element of elem) {
+//   element.addEventListener(
+//     'click',
+//     () => {
+//       alert('capturing ' + element.tagName);
+//     },
+//     true
+//   );
+// element.addEventListener('click', () => {
+//   alert('bubbling ' + element.tagName);
+// });
+// }
+
+// document.querySelector('#three').addEventListener('click', (event) => {
+//   console.log(3);
+//   event.stopPropagation();
+// });
+// document.querySelector('#two').addEventListener(
+//   'click',
+//   (event) => {
+//     console.log(2);
+//   },
+//   true
+// );
+
+// fetch('https://learn.javascript.ru/article/promise-chaining/user.json')
+//   // Загружаем данные в формате json
+//   .then((response) => response.json())
+//   // Делаем запрос к GitHub
+//   .then((user) => fetch(`https://api.github.com/users/${user.name}`))
+//   // Загружаем ответ в формате json
+//   .then((response) => response.json())
+//   // Показываем аватар (githubUser.avatar_url) в течение 3 секунд (возможно, с анимацией)
+//   .then((githubUser) => {
+//     let img = document.createElement('img');
+//     img.src = githubUser.avatar_url;
+//     img.className = 'promise-avatar-example';
+//     document.body.append(img);
+
+//     setTimeout(() => img.remove(), 3000); // (*)
+//   });
+
+// async function avatar() {
+//   let x = await fetch('https://learn.javascript.ru/article/promise-chaining/user.json');
+//   let response = await x.json();
+//   let user = await fetch(`https://api.github.com/users/${response.name}`);
+//   let resp = await user.json();
+//   let img = document.createElement('img');
+//   img.src = user.avatar_url;
+//   img.className = 'promise-avatar-example';
+//   document.body.append(img);
+//   await new Promise((resolve, reject) => setTimeout(() => resolve(img.remove()), 3000));
+//   return resp;
+// }
+// avatar();
+// function loadJson(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else {
+//       throw new Error(response.status);
+//     }
+//   });
+// }
+
+// loadJson('no-such-user.json') // (3)
+//   .catch(alert); // Error: 404
+
+// async function loadJson(url) {
+//   let response = await fetch(url);
+//   // return resp.status == 200 ? resp.json() : new Error(resp.status);
+
+//   if (response.status == 200) {
+//     return response.json();
+//   } else {
+//     throw new Error(response.status);
+//   }
+// }
+
+// loadJson('no-such-user.json') // (3)
+//   .catch(alert); // Error: 404
+
+// class HttpError extends Error {
+//   constructor(response) {
+//     super(`${response.status} for ${response.url}`);
+//     this.name = 'HttpError';
+//     this.response = response;
+//   }
+// }
+
+// function loadJson(url) {
+//   return fetch(url).then((response) => {
+//     if (response.status == 200) {
+//       return response.json();
+//     } else {
+//       throw new HttpError(response);
+//     }
+//   });
+// }
+
+// // Запрашивать логин, пока github не вернёт существующего пользователя.
+// function demoGithubUser() {
+//   let name = prompt('Введите логин?', 'iliakan');
+
+//   return loadJson(`https://api.github.com/users/${name}`)
+//     .then((user) => {
+//       alert(`Полное имя: ${user.name}.`);
+//       return user;
+//     })
+//     .catch((err) => {
+//       if (err instanceof HttpError && err.response.status == 404) {
+//         alert('Такого пользователя не существует, пожалуйста, повторите ввод.');
+//         return demoGithubUser();
+//       } else {
+//         throw err;
+//       }
+//     });
+// }
+
+// demoGithubUser();
+
+//
+
+// async function x(url) {
+//   let response = await fetch(url);
+//   if (response.ok) {
+//     let json = await response.json();
+//   } else alert(response.status);
+// }
+// x('wonown');
+
+// async function x(url) {
+//   let response = await fetch(url);
+//   if (response.ok) {
+//     let json = await response.json();
+//     console.log(json[0]);
+//   } else alert(response.status);
+// }
+
+// x('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+
+// new Promise((resolve, reject) => {
+//   resolve(fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits'));
+// })
+//   .then((response) => response.json())
+//   .then((response) => console.log(response[0].author.login));
+
+// async function x(url) {
+//   let response = await fetch(url);
+//   console.log(response.headers.get('content-type'));
+// }
+// x('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+
+// let user = {
+//   name: 'John',
+//   surname: 'Smith'
+// };
+
+// async function send(){
+//   let sended = await fetch('https://learn.javascript.ru/article/fetch/post/user',{
+//     method:"POST",
+//     headers:{
+//       'Content-Type': 'application/json;charset=utf-8'
+//     },
+//     body:JSON.stringify(user)
+// }
+//   )
+//   let sult = await sended.json()
+// }
+// let users = ['iliakan', 'remy', 'no.such.users'];
+
+// async function getName(names) {
+//   let arr = [];
+//   // try {
+//   for (let name of names) {
+//     let response = await fetch(`https://api.github.com/users/${name}`);
+//     if (response.status == 200) {
+//       let json = await response.json();
+//       arr.push(json);
+//     }
+//     if (response.status == 404) {
+//       arr.push(null);
+//     }
+//   }
+//   // } catch (error) {
+//   //   alert(error);
+//   // }
+//   console.log(arr);
+// }
+// getName(users).catch(console.log);
+
+// let buffer = new ArrayBuffer(16);
+// let view = new Uint32Array(buffer);
+// console.log(view.byteLength);
+// view[0] = 1234;
+// console.log(view);
+// document.cookie = 'name=JOhn';
+
+// console.log(document.cookie);
+
+// let name1 = ' my john';
+// let surname = 'brown';
+// document.cookie = encodeURIComponent(name1) + '=' + encodeURIComponent(surname);
+// console.log(document.cookie);
+
+// document.cookie = 'name=John';
+// document.cookie = 'name=Hello';
+// console.log(document.cookie);
+// let name1 = ' my Arthur';
+// let surname = 'Antonyan';
+// document.cookie = encodeURIComponent(name1) + '=' + encodeURIComponent(surname);
+// console.log(document.cookie);
+
+// document.cookie = 'username=Jon Doe; max-age=10; path=/';
+
+// function cookie(cname, cvalue, exsecs) {
+// let d = new Date();
+// d.setTime(d.getTime() + exsecs * 1000);
+//   let expires = 'expires =' + d.toUTCString();
+//   document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+// }
+
+// cookie('garnik', 'Antonyan', 2);
+// console.log(document.cookie);
+// let d = new Date();
+// d.setTime(d.getTime() + 10000);
+
+// let expires = d.toUTCString();
+// console.log(expires);
+// document.cookie = `names=avss; expires=${expires};path=/;`;
+
+// document.cookie = `name=lyov;max-age=10;domain=.site.com;path=/`;
+// console.log(document.cookie);
+
+////////////////////////////////cookie functions
+// function getCookie(name) {
+//   let matches = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
+//   return matches ? decodeURIComponent(matches[1]) : undefined;
+// }
+// console.log(getCookie('Ol'));
+
+// function setCookie(name, value, obj = {}) {
+//   // let d = new Date();
+//   obj = {
+//     path: '/',
+//     // expires: d.setTime(d.getTime() + 3000),
+//     ...obj,
+//   };
+
+//   if (obj.expires instanceof Date) {
+//     obj.expires = obj.expires.toUTCString();
+//   }
+//   let updated = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+//   for (let prop in obj) {
+//     updated += '; ' + prop;
+//     if (obj[prop] !== true) {
+//       updated += '=' + obj[prop];
+//     }
+//   }
+//   document.cookie = updated;
+// }
+
+// setCookie('email', 'kamila', { secure: true, 'max-age': 3600 });
+
+// function deleteCookie(name) {
+//   setCookie(name, '', { 'max-age': -1 });
+// }
+
+// deleteCookie('email');
+
+// let obj = { test: 23 };
+// let str = JSON.stringify(obj);
+
+// localStorage.setItem(2, str);
+// // localStorage.setItem('text', 1);
+// // console.log(localStorage.getItem('text'));
+
+// console.log(JSON.parse(localStorage.getItem(2)));
+
+// console.log(localStorage.length);
+
+// for (let i = 0; i < localStorage.length; i++) {
+//   let key = localStorage.key(i);
+//   // console.log(key);
+//   console.log(key + '=' + localStorage.getItem(key));
+// }
+
+// for (let key in localStorage) {
+//   if (localStorage.hasOwnProperty(key)) {
+//     console.log(key);
+//   }
+// }
+
+// console.log(JSON.stringify(localStorage, null, 2));
+
+// sessionStorage.setItem('test', 234);
+
+// window.addEventListener('storage', (event) => {
+//   if (event.key != 'now') return;
+//   alert(event.key, event.newValue, event.url);
+// });
+// localStorage.setItem('now', new Date());
+
+// window.onstorage = (event) => {
+//   if (event.key != 'now') return;
+//   alert(event.key + ':' + event.newValue + ' at ' + event.url);
+// };
+
+// localStorage.setItem('now', Date.now());
+// localStorage.setItem('text', 1);
+
+// let area = document.querySelector('#area');
+// area.addEventListener('change', (event) => {
+//   let value = event.target.value;
+//   localStorage.setItem('test', `${value}`);
+// });
+// area.value = localStorage.getItem('test');
+
+// let count1 = document.querySelector('.count');
+
+// window.addEventListener('storage', (event) => {
+//   count1.textContent = localStorage.getItem('txtx');
+//   console.log(event.oldValue);
+//   console.log(event.storageArea);
+// });
+
+// let tag = new RegExp(`<h3>`);
+// console.log(tag);
+
+// let str = 'Любо, братцы, любо!';
+// let res = str.match(/любо/i);
+// console.log(res.index);
+
+// let str = 'We will, we will';
+// // console.log(str.replace(/we/gi, 'I'));
+// console.log(str.replace(/we/gi, '$& I'));
+
+// let str = 'Я ЛюБлЮ JavaScript';
+// let reg = /люблю/i;
+// console.log(reg.test(str));
+
+// let str = '+7(903)-123-45-67';
+// let reg = /\d/g;
+// console.log(str.match(reg).join(''));
+
+// let str = 'Есть ли стандарт CSS4?';
+// let reg = /CSS\d/;
+// console.log(reg.test(str));
+// console.log(str.match(reg));
+
+// let str = 'I love HTML5!';
+// let reg = /\s\w\w\w\w\d/;
+// console.log(str.match(reg));
+
+// let str = 'A ბ ㄱ';
+// let reg = /\p{L}/gu;
+// console.log(str.match(reg));
+
+// let str = `Hello Привет 你好 123_456`;
+// let reg = /\p{sc=Han}/gu;
+// console.log(str.match(reg));
+
+// let str = `Цены: $2, €1, ¥9`;
+// let reg = /\p{Sc}\d/gu;
+// console.log(str.match(reg));
+
+// let str1 = 'Mary had a little lamb';
+// let reg1 = /^Mary/;
+// let reg2 = /lamb$/g;
+// console.log(str1.match(reg2));
+
+// let goodInput = '12:34';
+// let reg = /^\d\d:\d\d$/;
+// console.log(goodInput.match(reg));
+
+// let str = `1е место: Винни
+// 2е место: Пятачок
+// 3е место: Слонопотам`;
+
+// let reg = /^\d/gm;
+// console.log(str.match(reg));
+
+// let str = `Винни: 1
+// Пятачок: 2
+// Слонопотам: 3`;
+// // let reg = /\d$/gm;
+// // console.log(str.match(reg));
+
+// let reg = /\d\n/gm;
+// console.log(str.match(reg));
+
+// let str = 'Hello, JavaScript!';
+// let reg = /\bJavaScript\b/i;
+// console.log(str.match(reg));
+
+// const str = 'Завтрак в 09:00 в комнате 123:456.';
+// const reg = /\b\d\d:\d\d\b/g;
+// let reg2 = /\d\d:\d\d/;
+// console.log(str.match(reg2));
+
+// console.log('5.1'.match(/\d\.\d/));
+// console.log('function g()'.match(/g\(\)/));
+// console.log('1\\\\2'.match(/\\/g));
+// console.log('/'.match(/\//));
+// console.log('/'.match(new RegExp('/')));
+// console.log('5.1'.match(new RegExp('\\d\\.\\d')))
+// console.log('Топ хоп'.match(/х[оп]/gi));
+// console.log('Exception 0xAF'.match(/x[A-Z][A-Z]/g));
+// console.log('Exception 0xAF'.match(/x\w\w/g));
+
+// let regexp = /[\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{Join_C}]/gu;
+
+// let str = `Hi 你好 12`;
+// console.log(str.match(regexp));
+// console.log('alice15@gmail.com'.match(/[^a-z0-9\s]/g));
+// console.log('alice15@gmail.com'.match(/[^\w\s]/g));
+
+// let reg = /[+-]/g;
+// console.log('1 + 2 - 3'.match(reg));
+
+// console.log('𝒳'.match(/[𝒳𝒴]/u));
+// let regexp = /\b\d\d[:-]\d\d\b/g;
+// console.log('Завтрак в 09:00. Ужин в 21-30'.match(regexp));
+// console.log('Мне не 12, 2345 а 1234 года'.match(/\d{3,5}/g));
+// console.log('+7(903)-123-45-67'.match(/\d{1,}/g));
+// console.log('+7(903)-123-45-67'.match(/\d+/g));
+// console.log('0 1 12.345 7890'.match(/\d+\.\d+/g));
+// console.log('<body> ... </body>'.match(/<\/?[a-z]+>/g));
+// let regexp = /\.+/g;
+// console.log('Привет!... Как дела?.....'.match(regexp));
+
+// let regexp = /#[a-z0-9]{6}\b/gi;
+
+// let str = 'color:#121212; background-color:#AA00ef bad-colors:f#fddee #fd2 #12345678';
+
+// console.log(str.match(regexp));
+
+// let str = 'a "witch" and her "broom" is one';
+// // let reg = /".+?"/g;
+// let reg = /"[^"]+"/g;
+// console.log(str.match(reg));
+
+// let str = '...<a href="link1" class="doc">... <a href="link2" class="doc">...';
+// let str = '...<a href="link1" class="wrong">... <p style="" class="doc">..';
+// // let reg = /<a href=".*?" class="doc">/g;
+// let reg = /<a href="[^"]+" class="doc">/g;
+// console.log(str.match(reg));
+
+// let str = `... <!-- My -- comment
+//  test --> ..  <!----> ..
+// `;
+// // let reg = /<![^>]+>/g;
+// // let reg = /<!--.*?-->/gs;
+// console.log(str.match(reg));
+
+// let str = '<> <a href="/"> <input type="radio" checked> <b>';
+
+// let reg = /[^<>]<.+>/gi;
+// console.log(str.match(reg));
+
+// let str = 'Gogogo now!';
+// let str = 'smith.users.mail.com';
+// // let reg = /(go)+/gi;
+// // let reg = /\.mail.com/;
+// let reg = /(\w+\.)+\w+/g;
+// console.log(str.match(reg));
+
+// let str = 'my@mail.com @ his@site.com.uk';
+// let reg = /\w+@(\w+\.)+[\w]+/g;
+
+// console.log(str.match(reg));
+
+// let str = '<h1>Hello, world!</h1>';
+// let reg = /<(.+?)>/g;
+// let tag = str.match(reg);
+// console.log(tag[1]);
+
+// let str = '<span class="my">';
+// let reg = /<((\w+) ([^>]+))>/;
+// let tag = str.match(reg);
+// console.log(tag[2]);
+// let str = '<h1> <h2>';
+// let reg = /<(.+?)>/g;
+// // console.log(Array.from(str.matchAll(reg)));
+// let result = str.matchAll(reg);
+// let [item1, item2] = result;
+// console.log(item1[1]);
+
+// let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;
+// let str = '2019-04-30';
+// let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/;
+// let str = '2019-10-30 2020-01-01';
+// let group = str.matchAll(reg).groups;
+// console.log(group.year);
+// let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/g;
+// let str = '2019-10-30 2020-01-01';
+// let group = str.matchAll(reg);
+// let [date1, date2] = group;
+// console.log(date1[2]);
+
+// let str = 'John Bull';
+// let reg = /(\w+) (\w+)/;
+// console.log(str.replace(reg, `$2,$1`));
+
+// let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/;
+// let str = '2019-10-30 2020-01-01';
+// console.log(str.replace(reg, '$<day>.$<month>.$<year>'));
+
+// let str = 'Gogogo John!';
+// let reg = /(?:go)+ (\w+)/i;
+// let res = str.match(reg);
+// console.log(res[0]);
+
+// let str = 'color: #3f3; background-color: #AA00ef;  and: #abcd';
+// let reg = /#(\w{3}){1,3}\b/g;
+// console.log(str.match(reg));
+
+// let str = '-1.5 0 2 -123.4.';
+// let reg = /-?\d+(\.\d+)?/g;
+
+// console.log(str.match(reg));
+
+// let str = '0 1 12.345 -78.90';
+// let reg = /-?\d+\.\d+/g;
+// console.log(str.match(reg));
+
+// let str = '<body> ... </body>';
+// let reg = /<\/?\w+>/g;
+// console.log(str.match(reg));
+
+// let str = 'Привет!... Как дела?.....';
+// let reg = /\.{3,}/g;
+// console.log(str.match(reg));
+
+// let str = 'color:#121212; background-color:#AA00ef bad-colors:f#fddee #fd2 #12345678';
+// let reg = /#\d?\w{6}\b/g;
+// console.log(str.match(reg));
+// let regexp = /".+?"/g;
+
+// let str = 'a "witch" and her "broom" is one';
+
+// console.log(str.match(regexp));
+
+// let regexp = /<!--.+?-->/gs;
+
+// let str = `... <!-- My -- comment
+//  test --> ..  <!----> ..
+// `;
+
+// console.log(str.match(regexp));
+
+// let str = '<> <a href="/"> <input type="radio" checked> <b>';
+// let reg = /[^<>]<.+?>/g;
+// console.log(str.match(reg));
+
+// let str = 'site.com my.site.com';
+// let reg = /(\w+\.)+\w+/g;
+// console.log(str.match(reg));
+
+// let str = 'my@mail.com @ his@site.com.uk';
+// let reg = /\w+@\w+\.\w+(\.\w+)?/g;
+// console.log(str.match(reg));
+
+// let str = '<h1>Hello, world!</h1>';
+// let reg = /<(.+?)>/;
+// let res = str.match(reg);
+// console.log(res);
+
+// let str = '<span class="my">';
+// let reg = /<(\w+)\s+([^>]+)>/;
+// let res = str.match(reg);
+// console.log(res[2]);
+// console.log('a d'.match(/a (c)?(d)?/).length);
+
+// let regexp = /#(.{3}){1,2}\b/g;
+
+// let str = 'color: #3f3; background-color: #AA00ef; and: #abcd';
+
+// console.log(str.match(regexp));
+// let regexp = /[-\d]+(\.\d+)?/g;
+
+// let str = '-1.5 0 2 -123.4.';
+
+// console.log(str.match(regexp));
+
+// let str = '1.2 * 3.4';
+// let reg = /(?<a>\d+(\.\d+)?)\s*?(?<p>[\+\-\*\/])\s*?(?<b>\d+(\.\d+)?)/;
+// let groups = str.match(reg).groups;
+// console.log(groups.p);
+
+// let str = '01:32:54:67:89:AB';
+// // let reg = /[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}/gi;
+// let reg = /^([0-9a-f]{2}:){5}[0-9a-f]{2}$/gi;
+// console.log(str.match(reg));
+
+// let str = `He said: "She's the one!"`;
+// let reg = /"(\w+)([^"]+)"/g;
+// console.log(str.match(reg));
+
+// let str = `He said: "She's the one!".`;
+
+// let regexp = /(['"])(.*?)\1/g;
+
+// console.log(str.match(regexp));
+
+// let str = 'Сначала появился язык Java, затем HTML, потом JavaScript';
+// let reg = /HTML|Java(Script)?|PHP/gi;
+// console.log(str.match(reg));
+// let str = '00:00 10:10 23:59 25:99 1:2';
+// let reg = /([01]\d|2[0-3]):[0-5]\d/g;
+// console.log(str.match(reg));
+
+// let str = 'Java JavaScript PHP C++ C';
+// let reg = /PHP|Java(script)?|C(\+\+)?/gi;
+// console.log(str.match(reg));
+
+// let str = '..[url]http://ya.ru[/url]..';
+// let reg = /\[(b|url|quote)].+?\[\/\1]/gs;
+// console.log(str.match(reg));
+
+// let str = '<style> <styler> <style test="...">';
+// let reg = /<style\b(\s[^>]+)?>/g;
+// console.log(str.match(reg));
+// let str = '1 индейка 2$ стоит 30€';
+// // let reg = /\d+\p{Sc}/gu;
+// let reg = /\d+(?=€)/g;
+// console.log(str.match(reg));
+
+// let str = '1 индейка стоит 30€';
+// let reg = /\d+(?=\s)(?=.+30)/g;
+// console.log(str.match(reg));
+
+// let str = '1 индейка стоит 30€';
+// let reg = /\d+(?!€|\d)/g;
+// console.log(str.match(reg));
+
+// let str = '1 индейка стоит $30';
+// let reg = /(?<=\$)\d+/g;
+// console.log(str.match(reg));
+
+// let str = '1 индейка стоит $30';
+// let reg = /(?<!\$)\d+/;
+// console.log(str.match(reg));
+
+// let str = '1 индейка стоит 30€';
+// let reg = /\d+(?=(€|k))/;
+// console.log(str.match(reg));
+
+// let str = '0 12 -5 123 -18';
+// let reg = /(?<!\-|\d+)\d+/g;
+// console.log(str.match(reg));
+
+// let regexp = /^(\w+\s?)*$/;
+// let str = 'An input string that takes a long time or even makes this regexp to hang!';
+// alert(regexp.test(str));
+
+// let regexp = /^(\w+)*$/;
+// let str = '012345678901234567890123456789!';
+// alert(regexp.test(str));
+
+// function find(str) {
+//   let newarr = [];
+//   if (str.length < 2) {
+//     return str;
+//   } else {
+//     for (let i = 0; i < str.length; i++) {
+//       let x = str[i];
+//       if (str.indexOf(x) != i) continue;
+//       let perms = str.slice(0, i) + str.slice(i + 1);
+//       for (let perm of find(perms)) {
+//         newarr.push(x + perm);
+//       }
+//     }
+//   }
+//   return newarr;
+// }
+// let newarr = find('aba');
+// function check(arr) {
+//   let ar2 = arr.map((item) => item.split('').reverse().join(''));
+//   for (let i = 0; i < ar2.length; i++) {
+//     if (ar2[i] === arr[i]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// console.log(check(newarr));
+
+// let str = 'let varName';
+// let reg = /\w+/g;
+// // let word1 = reg.exec(str);
+// // let word2 = reg.exec(str);
+// while ((res = reg.exec(str))) {
+//   console.log(res[0]);
+// }
+
+// let str = '12-34-56';
+// console.log(str.replace(/\-/g, ':'));
+
+// let str = 'John Smith';
+// console.log(str.replace(/(\w+) (\w+)/g, '$2 $1'));
+// let str = 'html and css';
+// console.log(str.replace(/html|css/g, (str) => str.toUpperCase()));
+
+// console.log('Хо-Хо-хо'.replace(/хо/gi, (match, offset, input) => offset));
+
+// let str = 'John Smith';
+// console.log(str.replace(/(\w+) (\w+)/, (...match) => `${match[2]},${match[1]}`));
+
+// let str = 1000000;
+// let reg = /(\d)(\d{3})/g;
+// console.log(str.match(reg));
+// console.log(str.toLocaleString());
+// let str = 'goodbye';
+// // let reg = /[^aeiou]/gi;
+
+// // console.log(str.match(reg).join(''));
+// console.log(str.replace(/o/g, 'z'));
+
+// function replaceAll(input, find, replace) {
+//   let r = new RegExp(`${find}`, 'gi');
+//   return input.replace(r, replace);
+// }
+// console.log(replaceAll('1', '', '-'));
+
+// let str = '"example quote #1" some text "example quote #2"';
+// let reg = /".+?"/g;
+// console.log(str.match(reg));
+
+// let str = '-3.14e-21';
+// let reg = /(?<=\.).+/gi;
+// let arr = str.match(reg);
+// let newa = parseInt(arr.join(','));
+// console.log(newa);
+
+// console.log((2e-14).toFixed(2));
+
+// let num = 454793;
+// let st = new String(num);
+// let reg = /[13579](?=[13579])/g;
+// console.log(
+//   str.replace(reg, (match) => {
+//     return (match += '-');
+//   })
+// );
+
+// // console.log(st);
+// let newarr = [];
+// for (let i = 0; i < st.length; i++) {
+//   if (parseInt(st[i]) % 2 != 0 && parseInt(st[i + 1]) % 2 != 0 && i != st.length - 1) {
+//     st[i] += '-';
+//   }
+//   newarr.push(st[i]);
+// }
+// console.log(newarr.join(''));
+
+// let str = '7979797';
+// console.log(str.replace(/(?<=7)9(?=7)/g, ''));
+
+// let num = 1012356895;
+// let str = new String(num);
+// let reg = /([13579](?=[13579]))/g;
+// let reg2 = /([2468](?=[2468]))/g;
+
+// let newstr = str.replace(reg, (match) => {
+//   return (match += '-');
+// });
+// console.log(newstr.replace(reg2, (match) => (match += '*')));
+
+// let num = 'one.two.three';
+// let reg = /\./g;
+// console.log(num.replace(reg, '-'));
+
+// let str = 'Tomorrow is going to be raining';
+// let reg = /[a,e,i,o,u]/g;
+// reg.lastIndex = 2;
+// console.log(str.replace(reg, (match, offset) => offset));
+// let num = '123456789';
+// console.log(num.replace(/(...)(...)(.*)/, '($1) $2-$3'));
+
+// let str = 'the-stealth-warrior';
+// let reg = /\-(\w)/g;
+// let reg2 = /-/g;
+// let newstr = str.replace(reg, (match, p) => p.toUpperCase());
+// console.log(newstr);
+
+// function perm(str) {
+//   if (str.length < 2) {
+//     return str;
+//   }
+//   let arr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     let x = str[i];
+//     let z = str.slice(0, i) + str.slice(i + 1);
+//     if (str.indexOf(x) != i) continue;
+//     for (let prop of perm(z)) {
+//       arr.push(x + prop);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(perm('123'));
+// class Triple {
+//   static triple(n) {
+//     if (n === undefined) {
+//       n = 1;
+//     }
+//     return n * 3;
+//   }
+// }
+
+// class Triple2 extends Triple {
+//   static triple(n) {
+//     return super.triple(n) * super.triple(n);
+//   }
+// }
+// console.log(Triple.triple(3));
+// console.log(Triple2.triple(3));
+
+// class Car {
+//   constructor(price) {
+//     this.price = price;
+//   }
+//   static sell(car) {
+//     return `selling for ${car.price}`;
+//   }
+// }
+// let obj = new Car(100);
+// console.log(Car.sell(obj));
+
+// class Toy extends Car {
+//   constructor(price) {
+//     super(price);
+//   }
+//   static sell(car) {
+//     return `toyota${super.sell(car)}`;
+//   }
+// }
+// let obj2 = new Toy(300);
+// console.log(Toy.sell(obj2));
+
+// let sayHiMixin = {
+//   sayhi() {
+//     alert(`Привет, ${this.name}`);
+//   },
+//   sayBye() {
+//     alert(`Пока, ${this.name}`);
+//   },
+// };
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// Object.assign(User.prototype, sayHiMixin);
+// new User('john').sayhi();
+
+// let sayMix = {
+//   say(phrase) {
+//     console.log(phrase);
+//   },
+// };
+// let sayH = {
+//   __proto__: sayMix,
+//   sayHi() {
+//     super.say(`hello ${this.name}`);
+//   },
+//   sayBye() {
+//     super.say(`bye ${this.name}`);
+//   },
+// };
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// Object.assign(User.prototype, sayH);
+
+// let obj = new User('john');
+// obj.sayBye();
+
+// function test(selector, count) {
+//   let elem = document.querySelectorAll(selector);
+//   if (elem.length == count) {
+//     return true;
+//   } else return false;
+// }
+// console.log(test('*[data-action]:not([data-action*=" delete"])', 2));
+// console.log(test('li:nth-child(odd)', 3));
+// console.log(test('h3+ul', 1));
+// console.log(test('li:last-child', 1));
+// let video = document.querySelector('video');
+// let btn = document.querySelector('button');
+// // btn.addEventListener('click', () => {
+// //   if (video.paused) {
+// //     video.play();
+// //     btn.innerHTML = 'PLay';
+// //   } else {
+// //     video.pause();
+// //     btn.innerHTML = 'Pause';
+// //   }
+// // });
+
+// btn.addEventListener('click', () => {
+//   // if (video.classList) {
+//   //   video.unmute();
+//   //   btn.innerHTML = 'Mute';
+//   // } else {
+//   //   video.muted();
+//   //   btn.innerHTML = 'Unmute';
+//   // }
+//   // video.muted = true;
+//   video.volume -= 0.2;
+// });
+// let range = document.querySelector('#range');
+
+// let video = document.querySelector('video');
+
+// // setInterval(() => (video.volume = range.value), 1);
+// video.addEventListener('click', () => {
+//   video.muted = true;
+// });
+
+// let count = +prompt('enter');
+// Array.prototype.myfind = function (fn) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (fn(this[i])) {
+//       return this[i];
+//     } else return false;
+//   }
+// };
+// let arr = [1, 2, 3];
+// console.log(arr.myfind((item) => item > 0));
+
+// Array.prototype.myfind = function (fn) {
+//   let arr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (fn(this[i])) {
+//       arr.push(this[i]);
+//     }
+//   }
+//   return arr;
+// };
+// let arr = [1, 2, 3];
+// console.log(arr.myfind((item) => item > 1));
+
+// Array.prototype.myfind = function (fn) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (fn(this[i])) {
+//       return i;
+//     }
+//   }
+//   return false;
+// };
+// let arr = [1, 2, 3];
+// // console.log(arr.myfind((item) => item < 0));
+
+// Array.prototype.sm = function (fn) {
+//   for (let prop of this) {
+//     if (fn(prop)) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+// console.log(arr.sm((item) => item < 0));
+
+// Array.prototype.mrdc = function (fn) {
+//   let x = 0;
+//   for (let i = 0; i < this.length; i++) {
+//     x = fn(x, this[i]);
+//   }
+//   return x;
+// };
+// console.log(arr.mrdc((a, b) => a + b));
+
+// Array.prototype.mypop = function () {
+//   this.length -= 1;
+//   return this;
+// };
+
+// console.log(arr.mypop());
+// console.log(arr.mypop());
+// let arr = [1, 2, 3];
+// Array.prototype.mypush = function (...x) {
+//   for (let i = 0; i < x.length; i++) {
+//     this[this.length] = x[i];
+//   }
+//   return this;
+// };
+// arr.mypush(6, 7);
+// console.log(arr);
+
+// Array.prototype.myslice = function (x, y) {
+//   let newarr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (i >= x && i < y) {
+//       newarr.push(this[i]);
+//     }
+//   }
+//   return newarr;
+// };
+// console.log(arr.myslice(0, 2));
+// let arr = [1, 2, 3];
+// Array.prototype.myshift = function () {
+//   this.reverse();
+//   this.length -= 1;
+//   this.reverse();
+//   return this;
+// };
+// console.log(arr.myshift());
+// let arr = [1, 2, 3, 4, 5];
+// Array.prototype.myshift = function () {
+//   let a = this[0];
+//   this.reverse();
+//   this.length -= 1;
+//   this.reverse();
+//   return a;
+// };
+// console.log(arr.myshift());
+// console.log(arr);
+
+// Array.prototype.myunshift = function (...x) {
+//   this.reverse();
+//   for (let i = 0; i < x.length; i++) {
+//     this[this.length] = x[i];
+//   }
+//   return this.reverse();
+// };
+// arr.mypush(6, 7);
+// console.log(arr);
+
+// let arr = [1, 2, 3, 4, 5];
+
+// // Array.prototype.myreverse = function () {
+// //   for (let i = 0; i < this.length / 2; i++) {
+// //     let temp = this[i];
+// //     this[i] = this[this.length - 1 - i];
+// //     this[this.length - 1 - i] = temp;
+// //   }
+// //   return this;
+// // };
+// // arr.myreverse();
+// // console.log(arr);
+
+// Array.prototype.mysplice = function (x, y, ...z) {
+//   let arr = [...this.slice(0, x), ...z, ...this.slice(x + y)];
+//   while (this.length) {
+//     this.pop();
+//   }
+//   this.push(...arr);
+//   return this;
+// };
+// console.log(arr.mysplice(2, 1, 45));
+
+// let str = '123';
+// function comb(str) {
+//   let arr = [];
+//   if (str.length < 2) {
+//     return str;
+//   }
+//   for (let i = 0; i < str.length; i++) {
+//     let x = str[i];
+//     if (str.indexOf(x) != i) continue;
+//     let perm = str.slice(0, i) + str.slice(i + 1);
+//     for (let prop of comb(perm)) {
+//       arr.push(x + prop);
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(comb(str));
+
+// let x="dog"
+// function comb(x){
+//     let y = Array.from(x)
+//     let newarr=[]
+//     for(let i=0 ;i<=y.length;i++){
+//         for(let j=1;j<=y.length;j++){
+//             newarr.push(y.slice(i,j))
+//         }
+//     }
+//     return (newarr.filter(item=>item.length).join(", ").split(",").join(""))
+
+// }
+// console.log(comb(x))
+
+// let arr = [1, 2, 5, 3, 4, 5];
+// Array.prototype.last = function (num, from) {
+//   for (let i = from ? from : this.length; i != 0; i--) {
+//     if (num == this[i]) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
+// console.log(arr.last(5));
+
+// let str = 'the quick brown fox';
+// let reg = /\b\w/g;
+// console.log(str.replace(reg, (match) => match.toUpperCase()));
+
+// let str = 'Web Development Tutorial';
+// let reg = /\w+/g;
+// let arr = str.match(reg);
+// let min = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   if (min < arr[i].length) {
+//     min = arr[i].length;
+//   }
+// }
+// for (let i = 0; i < arr.length; i++) {
+//   if (min === arr[i].length) {
+//     console.log(arr[i]);
+//   }
+// }
+
+// let ball = document.querySelector('#ball');
+// document.addEventListener('keydown', (event) => {
+//   switch (event.key) {
+//     case 'ArrowRight':
+//       ball.style.left += 100 + 'px';
+//       break;
+//     case 'ArrowLeft':
+//       ball.style.left -= 100 + 'px';
+//       break;
+//     case 'ArrowUp':
+//       ball.style.top += 100 + 'px';
+//       break;
+//     case 'ArrowDown':
+//       ball.style.top -= 100 + 'px';
+//       break;
+//   }
+// });
+
+// Array.prototype.mufilter=function(cb){
+//   let arr=[]
+//   for(let i=0;i<this.length;i++){
+//     if()
+//   }
+// }
+
+// let arr = [99, 2, 2, 23, 19];
+// let newarr = arr.sort((a, b) => b - a);
+// console.log(newarr[0] + newarr[1]);
+// for (let i = 1; i < 100; i++) {
+//   if (i % 2 == 0) {
+//     console.log(i);
+//   }
+// }
+// const a = {
+//   function1: () => {
+//     const b = {
+//       function2: function () {
+//         const c = {
+//           function3: () => console.log(this),
+//         };
+//         c.function3();
+//       },
+//     };
+//     b.function2();
+//   },
+// };
+// a.function1();
+// let a = 10;
+// do {
+//   console.log(1);
+//   a++;
+// } while (a < 0);
+// do {
+//   console.log(1);
+//   a--;
+// } while (a >= 10);
+// while (a > 10) {
+//   console.log(1);
+//   a--;
+// }
+
+// function perm(str) {
+//   if (str.length < 2) {
+//     return str;
+//   }
+//   let arr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     let permuted = str.slice(0, i) + str.slice(i + 1);
+//     if (str.indexOf(char) != i) continue;
+//     for (let perms of perm(permuted)) {
+//       arr.push(char + perms);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(perm('abba'));
+// function rev(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i].reverse();
+//   }
+//   return arr;
+// }
+// console.log(rev(perm('abba')));
+
+// function abc() {
+//   let find =function (str) {
+//     let newarr = [];
+//     if (str.length < 2) {
+//       return str;
+//     } else {
+//       for (let i = 0; i < str.length; i++) {
+//         let x = str[i];
+//         if (str.indexOf(x) != i) continue;
+//         let perms = str.slice(0, i) + str.slice(i + 1);
+//         for (let perm of find(perms)) {
+//           newarr.push(x + perm);
+//         }
+//       }
+//     }
+//     return newarr;
+//   }
+//  ;
+//   function check(arr) {
+//     let ar2 = arr.map((item) => item.split('').reverse().join(''));
+//     for (let i = 0; i < ar2.length; i++) {
+//       if (ar2[i] === arr[i]) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
+//   return check(newarr);
+// }
+// console.log(abc()('abba'));
+/////////////////////////////////////canvas
+
+// var canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+// ctx.fillStyle = 'red';
+// ctx.fillRect(100, 50, 150, 75);
+// ctx.fillStyle = 'blue';
+// ctx.fillRect(150, 75, 120, 75);
+// ctx.clearRect(0, 0, 400, 200);
+// ctx.strokeStyle = 'green';
+// ctx.lineWidth = '10';
+// ctx.fillStyle = 'red';
+// ctx.rect(45, 50, 100, 30);
+// ctx.stroke();
+// ctx.fill();
+
+// var canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+// ctx.beginPath();
+// ctx.strokeStyle = 'red';
+// ctx.lineWidth = '10';
+// ctx.moveTo(50, 100);
+// ctx.lineTo(150, 150);
+
+// ctx.stroke();
+
+// // ctx.lineTo(300, 50);
+// ctx.beginPath();
+// ctx.strokeStyle = 'blue';
+// ctx.lineWidth = '30';
+// ctx.moveTo(200, 50);
+// ctx.lineTo(300, 50);
+// ctx.lineTo(300, 100);
+// // ctx.lineCap = 'round';
+// // ctx.lineCap = 'square';
+// // ctx.lineCap = 'butt';
+// ctx.stroke();
+// ctx.clearRect(0, 0, 400, 200);
+
+// ctx.beginPath();
+// ctx.moveTo(50, 150);
+// ctx.lineTo(250, 150);
+// ctx.lineTo(150, 50);
+// ctx.closePath();
+// // ctx.lineTo(50, 150);
+// ctx.lineCap = 'butt';
+// ctx.strokeStyle = 'red';
+// ctx.lineWidth = '5';
+// ctx.fillStyle = 'blue';
+
+// ctx.stroke();
+
+// // ctx.fill();
+
+// var canvas = document.getElementById('c1');
+// var color = document.getElementById('color');
+// // let ctx = canvas.getContext('2d');
+
+// // canvas.onmousemove = function (event) {
+// //   let x = event.clientX;
+// //   let y = event.clientY;
+// //   ctx.fillStyle = 'red';
+
+// //   ctx.fillRect(x - 10, y - 10, 10, 10);
+// // };
+
+// canvas.onmousedown = function (event) {
+//   canvas.onmousemove = function (event) {
+//     let x = event.clientX;
+//     let y = event.clientY;
+//     ctx.fillStyle = color.value;
+
+//     ctx.fillRect(x - 10, y - 10, 10, 10);
+//   };
+//   canvas.onmouseup = function (event) {
+//     canvas.onmousemove = null;
+//   };
+// };
+
+// console.log(color.value);
+
+// var canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+// let pi = Math.PI;
+// ctx.beginPath();
+// ctx.arc(100, 100, 75, 0, 2 * pi, false);
+// // ctx.closePath();
+// ctx.fillStyle = 'yellow';
+// ctx.lineWidth = 5;
+// ctx.strokeStyle = 'red';
+
+// ctx.stroke();
+// ctx.fill();
+
+// ctx.beginPath();
+// ctx.arc(300, 100, 75, 0, 2 * pi, false);
+// // ctx.closePath();
+// ctx.fillStyle = 'pink';
+// ctx.lineWidth = 5;
+// ctx.strokeStyle = 'blue';
+
+// ctx.stroke();
+// ctx.fill();
+
+// // canvas.onmousemove = (event) => {
+// //   ctx.clearRect(0, 0, 400, 200);
+// //   ctx.beginPath();
+// //   let x = event.clientX;
+// //   let y = event.clientY;
+// //   ctx.arc(x, y, Math.abs(x - 100), pi * 2, false);
+// //   ctx.stroke();
+// //   canvas.onclick = () => {
+// //     canvas.onmousemove = null;
+// //   };
+// // };
+// canvas.onmousedown = (event) => {
+//   canvas.onmousemove = (event) => {
+//     ctx.clearRect(0, 0, 400, 200);
+//     ctx.beginPath();
+//     let x = event.clientX;
+//     let y = event.clientY;
+//     ctx.arc(x, y, Math.abs(x - 100), pi * 2, false);
+//     ctx.stroke();
+//   };
+
+//   canvas.onmouseup = () => {
+//     canvas.onmousemove = null;
+//   };
+// };
+
+// var canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+// let x = 0;
+
+// function drawSin() {
+//   let y = 100 + 20 * Math.sin(x);
+//   if (x >= 400) {
+//     // x = 0;
+//     ctx.clearRect();
+//   } else {
+//     x += 0.3;
+//   }
+
+//   ctx.fillRect(x * 5, y, 10, 10);
+//   setTimeout(drawSin, 10);
+// }
+// drawSin();
+
+// var canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+
+// let x, y;
+
+// canvas.onmousemove = (event) => {
+//   ctx.clearRect(0, 0, 400, 200);
+//   x = event.offsetX;
+//   y = event.offsetY;
+//   ctx.beginPath();
+//   ctx.moveTo(50, 100);
+//   ctx.quadraticCurveTo(x, y, 200, 100);
+//   ctx.stroke();
+// };
+
+// growing.onclick = function () {
+//   this.style.cssText = `
+//   font-size:15px;
+//   color:red
+//   `;
+// };
+// digit.onclick = function () {
+//   stripe.classList.add('animate');
+// };
+
+// let fly = document.getElementById('flyjet');
+
+// fly.onclick = function () {
+//   this.style.cssText = `
+//     width:400px;
+//     height:240px
+
+//   `;
+//   // fly.addEventListener('transitionend', () => {
+//   //   alert('done');
+//   // });
+//   let ended = false;
+
+//   fly.addEventListener('transitionend', function () {
+//     if (!ended) {
+//       ended = true;
+//       alert('Done!');
+//     }
+//   });
+// };
+
+// let canvas = document.getElementById('c1');
+// let ctx = canvas.getContext('2d');
+// let pi = Math.PI;
+// ctx.arc(100, 50, 50, pi * 2, false);
+// // ctx.stroke();
+// canvas.onclick = function () {
+//   ctx.stroke();
+//   ctx.arc(100, 50, 100, pi * 2, false);
+//   ctx.stroke();
+// };
+// let div = document.getElementById('circle');
+// let div;
+// document.onclick = function (event) {
+//   div = document.createElement('div');
+//   document.body.append(div);
+//   div.style.width = '0px';
+//   div.style.height = '0px';
+//   div.style.borderRadius = '50%';
+//   div.style.backgroundColor = 'red';
+//   div.style.position = 'absolute';
+//   div.style.left = event.clientX - 150 + 'px';
+//   div.style.top = event.clientY - 150 + 'px';
+// };
+// setTimeout(() => {
+//   div.style.width = '300px';
+//   div.style.height = '300px';
+// }, 2000);
+// console.log(Date.now(), performance.now());
+
+// let prev = performance.now();
+// let times = 0;
+// requestAnimationFrame(function animate(time) {
+//   document.body.insertAdjacentHTML('beforeend', Math.floor(time - prev) + ' ');
+//   times++;
+//   prev = time;
+//   if (times <= 10) requestAnimationFrame(animate);
+// });
